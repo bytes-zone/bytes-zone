@@ -4,11 +4,12 @@
 <h1>{{ section.title }}</h1>
 {% for page in section.pages %}
 <article>
-  <h2><a href="{{page.permalink | safe }}">{{ page.title  }}</a></h2>
+  <h2><a href="{{page.permalink | safe }}">{{ page.title }}</a></h2>
+  <p><strong>Brian Hicks, {{ page.date }}</strong></p>
 
   {{ page.summary | safe }}
 
-  <p><a href="{{ page.permalink | safe }}#continue-reading">Continue →</a></p>
+  <p><a href="{{ page.permalink | safe }}#continue-reading">Continue Reading</a></p>
 </article>
 {% endfor %}
 {% endblock %}
