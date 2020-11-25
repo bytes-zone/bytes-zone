@@ -25,11 +25,7 @@ body {
     font: 1.3em/1.62 sans-serif;
 }
 
-h1, h2, h3, h4 {
-    line-height: 1.4;
-    padding: 0 0.25em;
-    margin: .22em 0 .22em -0.25em;
-}
+h1, h2, h3, h4 { line-height: 1.4; }
 
 h1::before, h2::before, h3::before, h4::before {
     content: " ";
