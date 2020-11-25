@@ -87,3 +87,24 @@ hr {
 footer {
     margin-top: 5em;
 }
+
+header {
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li {
+    margin-left: 1em;
+}
+
+#site-title {
+    font-weight: bold;
+}
