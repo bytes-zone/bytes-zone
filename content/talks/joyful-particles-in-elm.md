@@ -1,7 +1,9 @@
 +++
 title = "Joyful Particles in Elm"
-event = "Oslo Elm Day"
 date = 2019-02-21
+
+[extra]
+event = "Oslo Elm Day"
 +++
 
 <youtube id="goL7LeDHFi4"></youtube>

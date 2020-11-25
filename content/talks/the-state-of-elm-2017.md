@@ -1,7 +1,9 @@
 +++
 title = "The State of Elm 2017 (and Extended Edition)"
-event = "Elm Europe and Oslo Elm Day"
 date = 2017-06-16
+
+[extra]
+event = "Elm Europe and Oslo Elm Day"
 +++
 
 I gave this talk twice.

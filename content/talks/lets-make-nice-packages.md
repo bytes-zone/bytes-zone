@@ -1,7 +1,9 @@
 +++
 title = "Let's Make Nice Packages"
-event = "Elm Europe"
 date = 2018-07-18
+
+[extra]
+event = "Elm Europe"
 +++
 
 This year at [Elm Europe](https://2018.elmeurope.org) I gave a talk called “Let’s Make Nice Packages!”
