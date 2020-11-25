@@ -1,6 +1,7 @@
 @media(prefers-color-scheme: light) {
     :root {
         --primary: #111;
+        --dim: #CCC;
         --accent: #78E2A0;
         --background: #EEE;
     }
@@ -8,6 +9,7 @@
 @media(prefers-color-scheme: dark) {
     :root {
         --primary: #EEE;
+        --dim: #333;
         --accent: #2B317C;
         --background: #111;
     }
@@ -48,6 +50,13 @@ a {
 
 #zola-continue-reading a {
     padding: 0
+}
+
+code {
+    font-size: 1.1em;
+    padding: 0.1em 0.3em;
+    background-color: var(--dim);
+    border-radius: 0.3em;
 }
 
 @media print {
