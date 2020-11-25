@@ -41,6 +41,7 @@ a {
     font-weight: bold;
     text-decoration: none;
     background: linear-gradient(to top, var(--accent), var(--accent) 38%, rgba(255,255,255,0) 38%);
+    padding: 0 0.1em;
 }
 
 @media print {
