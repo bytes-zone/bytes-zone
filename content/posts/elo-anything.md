@@ -12,6 +12,8 @@ This makes the job much harder!
 After a recent quarter where we didn't accomplish any ownership work at all (screaming face emoji), something had to change.
 So I built a tool to help!
 
+<!-- more -->
+
 Before we continue, I'm assuming it's possible to get time allocated to maintenance/ownership work.
 I've heard of (and been on) engineering teams that can't get this time, but that's not a problem my current team has.
 I have a good enough relationship with our stakeholders that they trust me if I say something needs to be worked on.

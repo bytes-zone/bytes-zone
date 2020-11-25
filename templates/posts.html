@@ -5,7 +5,10 @@
 {% for page in section.pages %}
 <article>
   <h2><a href="{{page.permalink | safe }}">{{ page.title  }}</a></h2>
-  <p><a href="{{ page.permalink | safe }}">Continue →</a></p>
+
+  {{ page.summary | safe }}
+
+  <p><a href="{{ page.permalink | safe }}#continue-reading">Continue →</a></p>
 </article>
 {% endfor %}
 {% endblock %}
