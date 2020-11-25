@@ -27,13 +27,19 @@ body {
 
 h1, h2, h3, h4 {
     line-height: 1.4;
-    display: inline-block;
     padding: 0 0.25em;
     margin: .22em 0 .22em -0.25em;
-    /* this will be a lot easier when the `lh` element is fine to use. But
-       who knows how long that will be? */
-    background: repeating-linear-gradient(to top, var(--accent), var(--accent) 0 0.53em, rgba(255,255,255,0) 0.53em 1.4em);
-    background-repeat: repeat;
+}
+
+h1::before, h2::before, h3::before, h4::before {
+    content: " ";
+    position: relative;
+    display: block;
+    margin-left: -1.2em;
+    margin-bottom: -1.1em;
+    width: 1em;
+    height: 1em;
+    background-color: var(--accent);
 }
 
 h1 { font-size: 2em; }
