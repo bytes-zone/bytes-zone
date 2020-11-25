@@ -2,14 +2,9 @@
 
 {% block content %}
 <h1>{{ section.title }}</h1>
+<ul>
 {% for page in section.pages %}
-<article>
-  <h2><a href="{{page.permalink | safe }}">{{ page.title }}</a></h2>
-  {% if page.date %}<p><em>{{ page.date | date(format="%B %d, %Y") }}</em></p>{% endif %}
-
-  {{ page.summary | safe }}
-
-  <p><a href="{{ page.permalink | safe }}#continue-reading">Continue Reading</a></p>
-</article>
+  <li><a href="{{page.permalink | safe }}">{{ page.title }}</a>{% if page.date %}, <em>{{ page.date | date(format="%B %d, %Y") }}</em>{% endif %}</li>
 {% endfor %}
+</ul>
 {% endblock %}
