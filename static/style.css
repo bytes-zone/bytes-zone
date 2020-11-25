@@ -77,3 +77,13 @@ code {
         max-width: none
     }
 }
+
+hr {
+    height: 0.2em;
+    border: 0;
+    background-color: var(--accent);
+}
+
+footer {
+    margin-top: 5em;
+}
