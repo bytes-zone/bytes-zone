@@ -1,7 +1,9 @@
 +++
 title = "Robot Buttons from Mars"
-event = "Elm in the Spring"
 date = 2019-04-26
+
+[extra]
+event = "Elm in the Spring"
 +++
 
 <youtube id="PDyWP-0H4Zo"></youtube>
