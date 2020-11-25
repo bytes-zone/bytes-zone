@@ -52,7 +52,7 @@ h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover {
 a {
     color: var(--primary);
     text-decoration: none;
-    background: linear-gradient(to top, var(--accent), var(--accent) 38%, rgba(255,255,255,0) 38%);
+    background: linear-gradient(to top, var(--accent), var(--accent) 30%, rgba(255,255,255,0) 30%);
     padding: 0 0.1em;
     transition: all 0.2s;
 }
