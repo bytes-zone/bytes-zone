@@ -3,6 +3,9 @@ title = "Reducing Asset Size With Subsetting"
 date = 2020-03-03
 +++
 
+**Note:** as of December 2020, this site no longer uses custom fonts.
+This script is still useful, but you're not loading the output in your browser *right now*.
+
 When I was building this site, I noticed that my web fonts were kind of big:
 
 ```
@@ -21,6 +24,8 @@ If you happened to load all the fonts with a cold cache, you'd be downloading a 
 These were by far the heaviest part of the site, especially compared to the HTML files.
 Those are something like 12kb each, a quarter of the size of even one font.
 I don't like that difference, so let's see if we can make them smaller!
+
+<!-- more -->
 
 But what's in those files anyway?
 Why are they so big?
