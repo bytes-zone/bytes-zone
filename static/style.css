@@ -42,7 +42,6 @@ h1 > a, h2 > a, h3 > a, h4 > a {
 
 a {
     color: var(--primary);
-    font-weight: bold;
     text-decoration: none;
     background: linear-gradient(to top, var(--accent), var(--accent) 38%, rgba(255,255,255,0) 38%);
     padding: 0 0.1em;
