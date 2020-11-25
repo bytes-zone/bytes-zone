@@ -2,9 +2,9 @@
 
 {% block content %}
 <h1>{{ section.title }}</h1>
-<ul>
 {% for page in section.pages %}
-  <li><a href="{{page.permalink | safe }}">{{ page.title }}</a>{% if page.date %}, <em>{{ page.date | date(format="%B %d, %Y") }}</em>{% endif %}</li>
+<article>
+  <a href="{{page.permalink | safe }}">{{ page.title }}</a>{% if page.date %}, <em>{{ page.date | date(format="%B %d, %Y") }}</em>{% endif %}
+</article>
 {% endfor %}
-</ul>
 {% endblock %}
