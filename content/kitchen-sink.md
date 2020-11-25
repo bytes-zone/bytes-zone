@@ -1,7 +1,6 @@
 +++
 title = "Kitchen Sink"
 template = "post.html"
-date = 2020-11-24
 +++
 
 This is a kitchen sink page for me to make sure all the styled elements on this site look OK in one go.
