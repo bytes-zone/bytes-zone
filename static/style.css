@@ -3,7 +3,7 @@
         --primary: #222;
         --dim: #DDD;
         --accent: #78E2A0;
-        --background: #EEE;
+        --background: #FFF;
     }
 }
 @media(prefers-color-scheme: dark) {
