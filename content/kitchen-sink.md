@@ -12,7 +12,6 @@ It's really not meant to be used by anyone but me!
 
 ---
 
-# heading level one
 ## heading level two
 ### heading level three
 #### heading level four
