@@ -1,19 +1,22 @@
 @media(prefers-color-scheme: light) {
     :root {
-        background-color: #EEE;
-        color: #111;
+        --primary: #111;
         --accent: #78E2A0;
+        --background: #EEE;
     }
 }
 @media(prefers-color-scheme: dark) {
     :root {
-        background-color: #111;
-        color: #EEE;
+        --primary: #EEE;
         --accent: #2B317C;
+        --background: #111;
     }
 }
 
 body {
+    background-color: var(--background);
+    color: var(--primary);
+
     margin: 1em auto;
     max-width: 40em;
     padding: 0 1em;
@@ -26,6 +29,11 @@ h1, h2, h3 {
     padding: 0 0.25em;
     margin: .22em 0 .22em -0.25em;
     background: linear-gradient(to top, var(--accent), var(--accent) 38%, rgba(255,255,255,0) 38%);
+}
+
+h1 > a, h2 > a, h3 > a {
+    text-decoration: none;
+    color: var(--primary);
 }
 
 @media print {
