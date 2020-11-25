@@ -9,6 +9,8 @@ It's really not meant to be used by anyone but me!
 
 **TODO:** figure out how to make this not show up in the sitemap.
 
+<!-- more -->
+
 ---
 
 # heading level one
