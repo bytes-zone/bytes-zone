@@ -1,0 +1,74 @@
++++
+title = "Kitchen Sink"
+template = "post.html"
+date = 2020-11-24
++++
+
+This is a kitchen sink page for me to make sure all the styled elements on this site look OK in one go.
+It's really not meant to be used by anyone but me!
+
+**TODO:** figure out how to make this not show up in the sitemap.
+
+---
+
+# heading level one
+## heading level two
+### heading level three
+#### heading level four
+##### heading level five
+###### heading level six
+
+This is a paragraph with some *emphasized text*, **strongly emphasized text**, <del>struck-through text</del>, and `inline code`. Oh, and [here's a link to the homepage](/).
+
+- unordered
+- list
+- items
+
+1. ordered
+1. list
+2. items
+
+## Elm Code Sample
+
+```elm
+catDecoder : Decoder Cat
+catDecoder =
+    Decode.succeed Cat
+        |> Pipeline.required "name" Decode.string
+        |> Pipeline.required "color" Decode.string
+```
+
+## Ruby Code Sample
+
+```ruby
+class Cat << T::Struct
+  prop :name, String
+  prop :color, String
+end
+```
+
+## Haskell Code Sample
+
+```haskell
+data Cat =
+  Cat
+    { name :: Text,
+      color :: Text
+    }
+```
+
+## Nix Code Sample
+
+```nix
+{ pkgs ? import <nixpkgs> {}, ... }:
+pkgs.stdenv.mkDerivation {
+  name = "cats";
+  src = ./.;
+  
+  buildPhase = "true";
+  installPhase = ''
+    mkdir $out/share/cats
+    cp -r cats/ $out/share/cats
+  '';
+}
+```
