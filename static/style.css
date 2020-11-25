@@ -109,6 +109,10 @@ nav > ul > li {
     margin-left: 1em;
 }
 
+nav > ul > li > a {
+    background-image: none;
+}
+
 #site-title {
     font-weight: bold;
 }
