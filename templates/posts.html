@@ -5,7 +5,7 @@
 {% for page in section.pages %}
 <article>
   <h2><a href="{{page.permalink | safe }}">{{ page.title }}</a></h2>
-  <p><strong>Brian Hicks, {{ page.date }}</strong></p>
+  {% if page.date %}<p><em>{{ page.date | date(format="%B %d, %Y") }}</em></p>{% endif %}
 
   {{ page.summary | safe }}
 
