@@ -25,20 +25,16 @@ body {
     font: 1.2em/1.62 sans-serif;
 }
 
-h1, h2, h3, h4 { line-height: 1.4; }
+h1 { font-size: 2em; }
 
-h1::before, h2::before, h3::before, h4::before {
-    content: " ";
-    position: relative;
-    display: block;
-    margin-left: -1.2em;
-    margin-bottom: -1.2em;
-    width: 1em;
-    height: 1em;
-    background-color: var(--accent);
+h1, h2, h3, h4 {
+    display: inline-block;
+    margin: .2em 0 .2em -0.1em;
+    padding: 0 .1em;
+    line-height: 1.4;
+    background: repeating-linear-gradient(to top, var(--accent), var(--accent) .6em, rgba(255,255,255,0) .6em 1.4em);
 }
 
-h1 { font-size: 2em; }
 
 h1 > a, h2 > a, h3 > a, h4 > a {
     text-decoration: none;
