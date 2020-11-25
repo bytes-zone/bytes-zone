@@ -1,6 +1,6 @@
 @media(prefers-color-scheme: light) {
     :root {
-        --primary: #111;
+        --primary: #222;
         --dim: #CCC;
         --accent: #78E2A0;
         --background: #EEE;
@@ -9,9 +9,9 @@
 @media(prefers-color-scheme: dark) {
     :root {
         --primary: #EEE;
-        --dim: #333;
-        --accent: #2B317C;
-        --background: #111;
+        --dim: #555;
+        --accent: #455C4C;
+        --background: #222;
     }
 }
 
