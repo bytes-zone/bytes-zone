@@ -46,6 +46,10 @@ a {
     padding: 0 0.1em;
 }
 
+#zola-continue-reading a {
+    padding: 0
+}
+
 @media print {
     body {
         max-width: none
