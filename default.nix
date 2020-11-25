@@ -2,9 +2,10 @@
 let
   sources = import ./nix/sources.nix;
   nixpkgs = import sources.nixpkgs { };
+  gitignore = import sources.gitignore { };
 in nixpkgs.stdenv.mkDerivation {
   name = "bytes.zone";
-  src = ./.;
+  src = gitignore.gitignoreSource ./.;
 
   buildInputs = [ nixpkgs.zola ];
   buildPhase = ''
