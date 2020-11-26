@@ -102,6 +102,27 @@ blockquote {
     padding-left: 0.75em;
 }
 
+.youtube-embed {
+    padding: 0;
+    margin: 2em 0;
+}
+
+.youtube-embed > div {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.youtube-embed > div > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 /* HEADER */
 
 header {

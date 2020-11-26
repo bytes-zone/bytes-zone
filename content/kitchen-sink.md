@@ -44,6 +44,8 @@ How about some inspiration?
 >
 > — Michael Scott
 
+{{ youtube(id="LNCC6ZYI3SI") }}
+
 ## Elm Code Sample
 
 ```elm
