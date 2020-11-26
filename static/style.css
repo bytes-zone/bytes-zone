@@ -127,8 +127,8 @@ blockquote {
 
 header {
     display: flex;
-    margin-top: 1em;
-    margin-bottom: 4em;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
 }
 
 header > p {
