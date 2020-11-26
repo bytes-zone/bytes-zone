@@ -6,4 +6,4 @@ date = 2019-02-21
 event = "Oslo Elm Day"
 +++
 
-<youtube id="goL7LeDHFi4"></youtube>
+{{ youtube(id="goL7LeDHFi4") }}

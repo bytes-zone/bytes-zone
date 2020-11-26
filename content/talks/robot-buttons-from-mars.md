@@ -6,4 +6,4 @@ date = 2019-04-26
 event = "Elm in the Spring"
 +++
 
-<youtube id="PDyWP-0H4Zo"></youtube>
+{{ youtube(id="PDyWP-0H4Zo") }}
