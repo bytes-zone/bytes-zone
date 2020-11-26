@@ -96,6 +96,12 @@ pre {
     overflow-x: auto;
 }
 
+blockquote {
+    border-left: 2px solid var(--accent);
+    margin-left: 0.5em;
+    padding-left: 0.75em;
+}
+
 /* HEADER */
 
 header {

@@ -20,15 +20,29 @@ It's really not meant to be used by anyone but me!
 
 ## this is a really long second level header, intended to break onto several lines to see how well the underline background works
 
-This is a paragraph with some *emphasized text*, **strongly emphasized text**, <del>struck-through text</del>, and `inline code`. Oh, and [here's a link to the homepage](/).
+This is a paragraph with some *emphasized text*, **strongly emphasized text**, <del>struck-through text</del>, and `inline code`.
+Oh, and [here's a link to the homepage](/).
+
+Now for an unordered list:
 
 - unordered
 - list
 - items
 
+Great, and an ordered one:
+
 1. ordered
 1. list
 2. items
+
+Cool.
+How about some inspiration?
+
+>> You miss 100% of the shots you don't take
+>>
+>> — Wayne Gretzky
+>
+> — Michael Scott
 
 ## Generic Code Sample
 
