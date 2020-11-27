@@ -13,6 +13,17 @@
     {% block rss -%}
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="index.xml", trailing_slash=false) | safe }}">
     {% endblock -%}
+
+    {% block metadata -%}
+    <meta property="og:title" content="bytes.zone">
+    <meta property="og:url" content="{{ current_url | safe }}">
+    <meta property="og:description" content="{{ config.description }}">
+    <meta property="og:site_name" content="{{ config.title }}">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="{{ config.title }}">
+    <meta property="twitter:description" content="{{ config.description }}">
+    <meta property="og:type" content="website">
+    {% endblock -%}
   </head>
   <body>
     <header>
