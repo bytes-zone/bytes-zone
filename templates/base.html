@@ -7,6 +7,7 @@
     <link href="/style.css" rel="stylesheet">
 
     <title>{% block title %}bytes.zone{% endblock %}</title>
+    <link rel="canonical" href="{{ current_url | safe }}">
 
     {% block rss -%}
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="index.xml", trailing_slash=false) }}">
