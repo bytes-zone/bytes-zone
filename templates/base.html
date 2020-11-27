@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/png" href="data:image/png;base64,">
     <link href="/style.css" rel="stylesheet">
+    {% block rss -%}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="index.xml", trailing_slash=false) }}">
+    {% endblock -%}
   </head>
   <body>
     <header>
