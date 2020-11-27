@@ -7,15 +7,18 @@ in pkgs.stdenv.mkDerivation {
   name = "bytes.zone";
   src = gitignore.gitignoreSource ./.;
 
-  buildInputs =
-    [ pkgs.zola pkgs.yuicompressor pkgs.nodePackages.html-minifier ];
+  buildInputs = [
+    pkgs.zola
+    pkgs.nodePackages.html-minifier
+    pkgs.nodePackages.clean-css-cli
+  ];
   buildPhase = ''
     zola build
 
     echo "compressing CSS"
     find public \
       -type f -name '*.css' \
-      -exec yuicompressor -o {}.min {} \; \
+      -exec cleancss -O 1 -o {}.min {} \; \
       -exec mv {}.min {} \;
 
     echo "compressing HTML"
