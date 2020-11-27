@@ -1,6 +1,7 @@
 +++
 title = "Reducing Asset Size With Subsetting"
 date = 2020-03-03
+description = "I reduced the size of my site's fonts by 87% with subsetting!"
 +++
 
 **Note:** as of December 2020, this site no longer uses custom fonts.
@@ -87,7 +88,6 @@ First we start the browser and load a page:
     
     // the rest of our script (next code block)
   }
-  
 })();
 ```
 

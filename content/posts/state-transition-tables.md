@@ -1,6 +1,7 @@
 +++
 title = "state-transition tables"
 date = 2020-10-13
+description = "A simple exercise to check our thinking about state."
 +++
 
 I was reading Wikipedia the other day (as you do) and found out about [state-transition tables](https://en.wikipedia.org/wiki/State-transition_table).

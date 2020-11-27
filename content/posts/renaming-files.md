@@ -1,6 +1,7 @@
 +++
 title = "Renaming Files with Braces"
 date = 2020-10-19
+description = "shell syntax to make renaming or moving files much easier"
 +++
 
 This has been well-documented elsewhere, but in the interests of helping someone else join [the lucky ten thousand](https://xkcd.com/1053/) today:

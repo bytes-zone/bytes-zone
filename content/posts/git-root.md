@@ -1,6 +1,7 @@
 +++
 title = "git root"
 date = 2020-09-10
+description = "getting back to the root of a project quickly"
 +++
 
 I sometimes find myself in a situation where I've `cd`'d several levels into a project and don't remember exactly where I am, but I want to get back to the project root for my next command.

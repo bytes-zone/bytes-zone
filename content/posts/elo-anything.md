@@ -1,6 +1,7 @@
 +++
 title = "elo-anything"
 date = 2020-11-24
+description = "using the Elo rating system to sort items in our backlog."
 +++
 
 Part of my job as a team lead is dealing with a big list of work that my team is responsible for, but which we're not going to do immediately.

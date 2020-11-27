@@ -1,6 +1,7 @@
 +++
 title = "callCabal2nix"
 date = 2020-09-22
+description = "you don't have to run cabal2nix all the time. There's a function to do it for you!"
 +++
 
 When you're setting up a Haskell project in Nix, most advice says "call `cabal init` and then `cabal2nix . > default.nix` to get a buildable Haskell project."

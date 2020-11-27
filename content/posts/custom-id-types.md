@@ -1,6 +1,7 @@
 +++
 title = "Tradeoffs of Custom ID Types in Elm"
 date = 2020-10-26
+description = "Custom ID types are great, but what are you giving up? Is it worth it?"
 +++
 
 In Elm, we store data in records.

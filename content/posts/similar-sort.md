@@ -1,6 +1,7 @@
 +++
 title = "Fuzzy Finding with Levenstein Distance"
 date = 2020-10-06
+description = "fuzzy find other files based on names most similar to the one you're editing"
 +++
 
 When I'm navigating around a codebase I know, I prefer to use a fuzzy file finder instead of browsing a directory tree.

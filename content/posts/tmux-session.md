@@ -1,6 +1,7 @@
 +++
 title = "tmux-session"
 date = 2020-04-16
+description = "tmux-session, a little script to create and fast-switch between tmux sessions"
 +++
 
 I wrote a little script to create and fast-switch between different [tmux](https://github.com/tmux/tmux/wiki) sessions, and thought I'd share it real quick so others can use it too.

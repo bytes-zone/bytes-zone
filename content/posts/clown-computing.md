@@ -1,6 +1,7 @@
 +++
 title = "clown computing"
 date = 2020-10-12
+description = "putting as much software as possible in a single VM"
 +++
 
 I keep using the term "clown computing" in conversations but I've never defined it.

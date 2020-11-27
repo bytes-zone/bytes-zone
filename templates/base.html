@@ -8,6 +8,7 @@
 
     <title>{% block title %}bytes.zone{% endblock %}</title>
     <link rel="canonical" href="{{ current_url | safe }}">
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
 
     {% block rss -%}
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="index.xml", trailing_slash=false) | safe }}">
