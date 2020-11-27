@@ -1,6 +1,7 @@
 @media(prefers-color-scheme: light) {
     :root {
         --primary: #16171F;
+        --deemphasized: #6E7189;
         --dim: #E2E2E7;
         --accent: #78E2A0;
         --background: #F0F0F3;
@@ -10,6 +11,7 @@
 @media(prefers-color-scheme: dark) {
     :root {
         --primary: #F0F0F3;
+        --deemphasized: #8F8FA6;
         --dim: #2B303B;
         --accent: #455C4C;
         --background: #16171F;
@@ -121,6 +123,25 @@ blockquote {
     left: 0;
     height: 100%;
     width: 100%;
+}
+
+/* TABLES */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 2px solid var(--primary);
+}
+
+tbody > tr {
+    border-bottom: 1px solid var(--deemphasized);
+}
+
+th, td {
+    padding: 0.5em 0.25em;
 }
 
 /* HEADER */
