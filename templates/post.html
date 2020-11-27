@@ -4,6 +4,17 @@
 
 {% block description %}{{ page.description }}{% endblock %}
 
+{% block metadata %}
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:url" content="{{ current_url | safe }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta property="twitter:card" content="summary">
+<meta property="twitter:title" content="{{ page.title }}">
+<meta property="twitter:description" content="{{ page.description }}">
+<meta property="og:type" content="website">
+{% endblock %}
+
 {% block content %}
 <article>
   <h1>{{ page.title }}</h1>
