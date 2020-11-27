@@ -19,10 +19,7 @@ in pkgs.stdenv.mkDerivation {
       -exec mv {}.min {} \;
 
     echo "compressing HTML"
-    find public \
-      -type f -name '*.html' \
-      -exec html-minifier --collapse-whitespace --decode-entities --remove-comments --remove-attribute-quotes --remove-redundant-attributes --remove-optional-tags --remove-script-type-attributes --remove-style-link-type-attributes -o {}.min {} \; \
-      -exec mv {}.min {} \;
+    html-minifier --collapse-whitespace --decode-entities --remove-comments --remove-attribute-quotes --remove-redundant-attributes --remove-optional-tags --remove-script-type-attributes --remove-style-link-type-attributes --input-dir public --output-dir public
   '';
 
   installPhase = ''
