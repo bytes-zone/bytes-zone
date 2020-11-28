@@ -12,7 +12,7 @@ It’s about research.
 
 No, wait, come back!
 
-{{ youtube(id="yVn7FOQuwDM") }}
+{{ youtube(id="yVn7FOQuwDM", title="Let's Make Nice Packages") }}
 
 I really appreciate the opportunity to speak, and the conference was a blast! Elm Europe is worth attending, and I plan to be there myself next year if I can.
 

@@ -44,7 +44,7 @@ How about some inspiration?
 >
 > — Michael Scott
 
-{{ youtube(id="LNCC6ZYI3SI") }}
+{{ youtube(id="LNCC6ZYI3SI", title="You would never guess this is what a rhino sounds like.") }}
 
 ## Elm Code Sample
 
