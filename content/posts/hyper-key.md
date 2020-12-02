@@ -1,11 +1,8 @@
----
-{
-  "type": "post",
-  "title": "the hyper key",
-  "summary": "ALL the modifier keys!",
-  "published": "2020-08-31T00:00:00-05:00",
-}
----
++++
+title = "the hyper key"
+description = "ALL the modifier keys!"
+date = 2020-12-02
++++
 
 Have you ever noticed that no app binds a default keyboard shortcut to shift+control+option+command+whatever?
 That means you have a potential global keybinding prefix that will never have any conflicts!
