@@ -1,11 +1,9 @@
----
-{
-  "type": "post",
-  "title": "Phantom ID Types",
-  "summary": "Another point in the design space of avoiding primitive obsession in IDs.",
-  "published": "2020-08-31T00:00:00-05:00",
-}
----
++++
+title = "Phantom ID Types"
+description = "Another point in the design space of avoiding primitive obsession in IDs."
+date = 2021-01-01
+draft = true
++++
 
 I previously wrote about tradeoffs of custom ID types in Elm, and promised to explore a few points in the space.
 This is one!
