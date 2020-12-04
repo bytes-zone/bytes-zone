@@ -1,11 +1,9 @@
----
-{
-  "type": "post",
-  "title": "Bang Shortcuts",
-  "summary": "stop typing things twice in the shell by using ! shortcuts",
-  "published": "2020-08-31T00:00:00-05:00",
-}
----
++++
+title = "Bang Shortcuts"
+description = "stop typing things twice in the shell by using ! shortcuts"
+date = 2021-01-01
+draft = true
++++
 
 Another you-get-to-join-the-[lucky-ten-thousand](https://xkcd.com/1053/) post here!
 
