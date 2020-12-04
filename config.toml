@@ -17,5 +17,8 @@ build_search_index = false
 generate_feed = true
 feed_filename = "index.xml"
 
+[[taxonomies]]
+name = "series"
+
 [extra]
 # Put all your custom variables here

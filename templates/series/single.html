@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ term.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ term.name }}</h1>
+{% for page in term.pages %}
+<article>
+  <a href="{{page.permalink | safe }}">{{ page.title }}</a>{% if page.date %}, <em>{{ page.date | date(format="%B %-d, %Y") }}</em>{% endif %}
+</article>
+{% endfor %}
+{% endblock %}
+
+
