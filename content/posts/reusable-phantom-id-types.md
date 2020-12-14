@@ -1,11 +1,10 @@
 +++
 title = "Phantom ID Types"
 description = "Another point in the design space of avoiding primitive obsession in IDs."
-date = 2021-01-01
-draft = true
+date = 2020-12-14
 +++
 
-I previously wrote about tradeoffs of custom ID types in Elm, and promised to explore a few points in the space.
+I previously wrote about [tradeoffs of custom ID types in Elm](@/posts/custom-id-types.md), and promised to explore a few points in the space.
 This is one!
 
 Recently I built a little game for my son to learn his letters and decided to see if I could find a nicer way to solve id-as-string problem.
@@ -121,8 +120,6 @@ But with these tradeoffs:
 - To get IDs in the records themselves (as opposed to just in `Dict`s or whatever) you have to do a type trick.
 
 So would I do this again?
-It's a big maybe!
-
 I think I would avoid using this in a project where I didn't have a high confidence that my fellow programmers knew the intent of the module.
 That means that I wouldn't to publish a package using this, or contribute code to a high-traffic open source repo using this pattern.
 But on my work team in private code, or in small apps that I build for myself, I'll definitely be coming back to this!
