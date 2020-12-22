@@ -1,8 +1,7 @@
 +++
-title = "time to horse"
-date = 2021-01-01
+title = "time-to-horse"
+date = 2021-12-22
 description = "how long does it take after someone joins your team for them to make meaningful contributions?"
-draft = true
 +++
 
 Some colleagues of mine at NoRedInk coined a new term: time-to-horse, the time it takes you to get on your horse and ride.
