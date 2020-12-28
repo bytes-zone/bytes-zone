@@ -7,5 +7,5 @@ let
 in with nixpkgs;
 stdenv.mkDerivation {
   name = "bytes.zone";
-  buildInputs = [ niv.niv git zola pa11y.pa11y ];
+  buildInputs = [ niv.niv git zola pa11y.pa11y pngcrush ];
 }

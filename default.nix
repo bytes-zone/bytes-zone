@@ -12,6 +12,7 @@ in pkgs.stdenv.mkDerivation {
     pkgs.nodePackages.html-minifier
     pkgs.nodePackages.clean-css-cli
     pkgs.nodePackages.uglify-js
+    pkgs.pngcrush
   ];
   buildPhase = ''
     zola build
@@ -41,6 +42,9 @@ in pkgs.stdenv.mkDerivation {
       --file-ext html \
       --input-dir public \
       --output-dir public
+
+    echo "compressing images"
+    find public -type f -name '*.png' | xargs -n 1 pngcrush -ow -brute
   '';
 
   installPhase = ''
