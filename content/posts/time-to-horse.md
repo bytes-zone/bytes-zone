@@ -1,6 +1,6 @@
 +++
 title = "time-to-horse"
-date = 2021-12-22
+date = 2020-12-22
 description = "how long does it take after someone joins your team for them to make meaningful contributions?"
 +++
 
