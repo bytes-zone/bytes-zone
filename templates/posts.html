@@ -6,7 +6,7 @@
 <h1>{{ section.title }}</h1>
 {% for page in section.pages %}
 <article>
-  <a href="{{page.permalink | safe }}">{{ page.title }}</a>{% if page.date %}, <em>{{ page.date | date(format="%B %-d, %Y") }}</em>{% endif %}
+  <a href="{{page.permalink | safe }}">{{ page.title | markdown(inline=true) | safe }}</a>{% if page.date %}, <em>{{ page.date | date(format="%B %-d, %Y") }}</em>{% endif %}
 </article>
 {% endfor %}
 {% endblock %}
