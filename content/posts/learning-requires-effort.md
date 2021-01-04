@@ -11,19 +11,19 @@ The core idea I took away from the book is that *learning requires effort*.
 
 I think people generally recognize that learning requires effort, but have an easier time applying that to physical activities than mental ones.
 You don't really go around assuming that Olympic athletes are just people who jumped out of bed the morning of the games and decided to win gold in ice dancing.
-Instead, we recognize that athletes train for years, prioritizing their sport above many other aspects in their life, in order to reach the top of the field.
+Instead, we recognize that athletes train hard for many years in order to reach the top of the field.
 
-But when it comes to learning in more abstract ways, it's easy to forget that effort is necessary!
+But when it comes to learning in more abstract ways, it's somehow easier to forget that effort is necessary!
 For example, I've made the mistake many times of assuming I learned something just because I reached the last page of a book.
 The Zettelkasten method ([covered](https://zettelkasten.de/posts/overview/) [many](https://www.fastcompany.com/90535318/this-simple-but-powerful-analog-method-will-rocket-your-productivity) [places](https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125)) is one way to avoid this, and the one that *How to Take Smart Notes* recommends.
 In this method, "effort" looks like making notes by rephrasing and making connections to things you already know.
 
-Outside of note-taking, I also recognize this in how programmers learn new tools and techniques.
-When someone says they want to learn, a common response goes "well, make a small but useful project and see."
-I've even told people that many times without recognizing that I'm telling people to learn through effort.
+Outside of note-taking, I see this in how programmers learn new tools and techniques.
+When someone says they want to learn something, a common response goes "well, make a small but useful project and see."
+I've told people that many times myself without recognizing that I'm telling people to learn through effort.
 
 This makes "learning requires effort" seem pretty general to me, since it applies both in places I expected and places I didn't.
-That has the feel of a useful principle, and now I can use it to judge if I'm learning or not!
+That has the feel of a useful principle which I can use to judge if I'm learning or not!
 Am I putting in effort?
 If not, I'm probably not learning!
 
@@ -35,23 +35,23 @@ That's another mistake I've made many times over the years!
 It's natural for me to try and find the perfect resource when what I actually need to just get into the work of effortful learning as quickly as I can.
 
 I've seen this show up in several ways.
-The first is conflating collecting information with learning.
-Computers are great at storing information: web pages, PDFs, videos, etc.
-But where's the learning effort in collecting information from other people?
-If you're not putting in the effort to connect new stuff to what you already know, you're just playing gotta-catch-em-all with papers!
+The first is conflating building a collection with learning.
+Where's the learning effort in just collecting information from other people, whether papers, conference talks, or blog posts?
+If you're not putting in the effort to connect new stuff to what you already know, you're just playing gotta-catch-em-all with PDFs!
 
 The second is similar, but a little more specific: using other people's flashcards.
 I've seen quite a few places where you can download flashcard decks for various computer science concepts.
 At first glace, that seems fine, but where's the learning there?
-It's certainly a lot of *effort* to memorize a flashcard deck by rote, but that effort makes you learn the deck, not the subject.
+It's certainly a lot of *effort* to memorize a flashcard deck by rote, but it's the kind of effort that makes you learn the deck, not the subject.
 Making flashcards, on the other hand, can actually create connections as you think about how best to structure the subject in flashcard form.
 
 ## Put It All Together
 
-So, if learning requires effort, how can we make ourselves learn?
-Simple: you've just got to put in the effort.
-But, not so simple: what effort is *right for you and for what you're learning*?
+So, if learning requires effort, how can we learn?
+Simple: just put in the effort.
 
+But, oops, it's actually not so simple: *what* effort?
+What's right for you and for what you're learning?
 If you just thrash and flail, by trying things that are way beyond your current skill or level of understanding, you won't actually learn much.
 To be effective, the things you're trying to learn have to be just beyond what you can do already (in the [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development).)
 
