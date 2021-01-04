@@ -1,5 +1,5 @@
 +++
-title = "An Invitation"
+title = "Open Invitation"
 template = "post.html"
 +++
 
