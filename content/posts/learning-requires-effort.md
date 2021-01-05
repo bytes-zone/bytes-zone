@@ -1,7 +1,6 @@
 +++
 title = "Learning Requires Effort"
 date = 2021-01-05
-draft = true
 +++
 
 I recently finished [*How to Take Smart Notes*](https://takesmartnotes.com).
