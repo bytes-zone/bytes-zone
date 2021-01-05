@@ -15,14 +15,19 @@ Instead, we recognize that athletes train hard for many years in order to reach 
 
 But when it comes to learning in more abstract ways, it's somehow easier to forget that effort is necessary!
 For example, I've made the mistake many times of assuming I learned something just because I reached the last page of a book.
-The Zettelkasten method ([covered](https://zettelkasten.de/posts/overview/) [many](https://www.fastcompany.com/90535318/this-simple-but-powerful-analog-method-will-rocket-your-productivity) [places](https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125)) is one way to avoid this, and the one that *How to Take Smart Notes* recommends.
+
+With that in mind, I can think of at least two ways of putting in the effort to learn.
+There are definitely more, though!
+
+*How to Take Smart Notes* recommends using the Zettelkasten (slip-box) system [covered](https://zettelkasten.de/posts/overview/) [many](https://www.fastcompany.com/90535318/this-simple-but-powerful-analog-method-will-rocket-your-productivity) [places](https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125) this past summer.
 In this method, "effort" looks like making notes by rephrasing and making connections to things you already know.
+Educationally speaking, this is called elaboration.
 
 Outside of note-taking, I see this in how programmers learn new tools and techniques.
 When someone says they want to learn something, a common response goes "well, make a small but useful project and see."
 I've told people that many times myself without recognizing that I'm telling people to learn through effort.
 
-This makes "learning requires effort" seem pretty general to me, since it applies both in places I expected and places I didn't.
+These examples make "learning requires effort" seem pretty general to me, since it applies both in places I expected and places I didn't.
 That has the feel of a useful principle which I can use to judge if I'm learning or not!
 Am I putting in effort?
 If not, I'm probably not learning!
