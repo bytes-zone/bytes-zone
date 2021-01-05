@@ -6,7 +6,7 @@ date = 2021-01-05
 I recently finished [*How to Take Smart Notes*](https://takesmartnotes.com).
 The core idea I took away from the book is that *learning requires effort*.
 
-## Learn by Doing
+## Two Kinds of Effort
 
 I think people generally recognize that learning requires effort, but have an easier time applying that to physical activities than mental ones.
 You don't really go around assuming that Olympic athletes are just people who jumped out of bed the morning of the games and decided to win gold in ice dancing.
