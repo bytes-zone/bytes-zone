@@ -3,7 +3,7 @@ title = "Open Invitation"
 template = "post.html"
 +++
 
-I love hearing from people and talking shop, so like like [other](https://www.kalzumeus.com/standing-invitation/) [nice](https://hillelwayne.com/open-invite/) people on the internet, I extend an invitation to you: [email me about whatever](mailto:brian@brianthicks.com)!
+I love hearing from people and talking shop, so like [other](https://www.kalzumeus.com/standing-invitation/) [nice](https://hillelwayne.com/open-invite/) people on the internet, I extend an invitation to you: [email me about whatever](mailto:brian@brianthicks.com)!
 
 Some things I'd love to talk about, or hear about:
 
