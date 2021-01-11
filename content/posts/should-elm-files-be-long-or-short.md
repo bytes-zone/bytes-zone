@@ -1,7 +1,6 @@
 +++
 title = "Should Elm files be long or short?"
 date = 2021-01-11
-draft = true
 +++
 
 [the Elm Guide page on app Structure](https://guide.elm-lang.org/webapps/structure.html) says:
