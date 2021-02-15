@@ -7,6 +7,8 @@ In the beginning of February, I spent a lot of time working on a new library for
 (Basically, the existing libraries did not have `andThen` and I needed it!)
 
 The resulting library turned out quite nice, I think, and in addition it's very fast!
-I gave talk to the Elm London user group about it, which you can see at [elm-csv: be as boring—and as fast—as possible](@/talks/elm-csv-be-as-boring-and-as-fast-as-possible.md).
+I gave talk to the Elm London user group about it, which you can see at [elm-csv: be as boring—and as fast—as possible](@/talks/elm-csv-be-as-boring-and-as-fast-as-possible.md) or below.
 
 If you'd just like to see the code, it lives at [github.com/BrianHicks/elm-csv](https://github.com/BrianHicks/elm-csv).
+
+{{ youtube(id="_z6V1143TDE", title="elm-csv: be as boring—and as fast—as possible") }}
