@@ -6,16 +6,17 @@ base_url = "https://bytes.zone"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-highlight_theme = "one-dark"
-
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
 generate_feed = true
 feed_filename = "index.xml"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "one-dark"
 
 [[taxonomies]]
 name = "series"
