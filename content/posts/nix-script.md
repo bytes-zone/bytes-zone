@@ -1,14 +1,13 @@
 +++
 title = "nix-script"
 date = 2021-02-23
-draft = true
 +++
 
 I like writing quick little scripts to avoid having to remember how to do things.
 Most of the time I start in bash, thinking the task won't be too complicated... but then before I know it I'm having to reread the bash man pages to figure out how arrays work for the thousandth time.
 
-So really, I'd rather write scripts in a language that offers some more safety and programmer ergonomics.
-We're trying to learn Haskell at work, so maybe that could work?
+So really, I'd rather write scripts in a language that offers some more safety and better data structures.
+We're trying to learn Haskell at work, so maybe that?
 
 Let's see a hello world:
 
@@ -26,7 +25,8 @@ It's reasonable to solve this, though: I can just use `nix-shell` to get a `ghc`
 
 ```haskell
 #!/usr/bin/env nix-shell
-#!nix-shell -i runghc -p "(pkgs.haskellPackages.ghcWithPackages (ps: [ ps.text ]))"
+#!nix-shell -p "(pkgs.haskellPackages.ghcWithPackages (ps: [ ps.text ]))"
+#!nix-shell -i runghc
 
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -36,13 +36,13 @@ main :: IO ()
 main = Data.Text.IO.putStrLn "Hello, World!"
 ```
 
-Well, that works, but I've traded speed for this flexibility: run time has grown to over 2 seconds!
+Well, that works, but I've traded speed for flexibility: run time has grown to over 2 seconds!
 Eep!
 
 I don't think I should have to make this trade, so I wrote [`nix-script`](https://github.com/BrianHicks/nix-script).
-It transparently manages a compilation and nix-shell cache for scripts, and lets you specify dependencies and build commands inside your source file!
+It transparently manages a compilation cache for these kinds of scripts, and lets you specify dependencies and build commands inside your source file!
 
-That means the example above can be rewritten like so:
+That means the `nix-shell` example above can be rewritten like so:
 
 ```haskell
 #!/usr/bin/env nix-script
@@ -57,9 +57,9 @@ main :: IO ()
 main = Data.Text.IO.putStrLn "Hello, World!"
 ```
 
-The first time you run that, it'll compile the script to a binary and run it.
+The first time you run that, it'll compile the script to a binary, then run it.
 That takes about two seconds on my machine.
-The second time you run it, we'll just use the compiled binary.
+The second time, and going forward until you change the script, it detects that it already compiled to a binary, so it just runs the compiled version.
 That takes 30ms or so for me!
 Big improvement!
 
@@ -77,7 +77,7 @@ main :: IO ()
 main = Data.Text.IO.putStrLn "Hello, World!"
 ```
 
-And, in addition to the speed boost, we can depend on any package in the nix ecosystem!
+And, in addition to the speed boost, we can depend on any package in the Nix ecosystem!
 For example, here's how you'd add and call `jq`:
 
 ```haskell
@@ -96,9 +96,10 @@ main = do
   putStr formatted
 ```
 
-It's also pretty easy to create more wrapping interpreters, so we also ship one for bash (even though it's not compiled, we can cache the nix environment with your exact dependencies!)
+It's also pretty easy to create more wrapping interpreters, so we also ship one for bash.
+Even though it's not a compiled language, we can cache the nix environment with the exact dependencies the script needs!
 
 You can get this at [github.com/BrianHicks/nix-script](https://github.com/BrianHicks/nix-script).
 There are installation instructions in the README, both for standalone use and use within a larger Nix project.
 
-Enjoy, and let me know how you use this!
+Enjoy, and let me know if&mdash;and how&mdash;you use this!
