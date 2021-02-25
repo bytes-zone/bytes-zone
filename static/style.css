@@ -175,6 +175,43 @@ nav > ul > li > a {
     font-weight: bold;
 }
 
+/* SIGNUP FORM */
+
+.convertkit {
+    margin-top: 3em;
+    padding: 1em;
+    background-color: var(--dim);
+}
+
+.convertkit > p {
+    margin-top: 0;
+}
+
+.convertkit > form {
+    display: flex;
+    margin: 0.5em auto 0 auto;
+    max-width: 30em;
+}
+
+.convertkit > form > input[type=email] {
+    flex-grow: 1;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-right: 0.5em;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--deemphasized);
+}
+
+.convertkit > form > button {
+    min-width: 10em;
+    border: 0;
+    border-bottom: 1px solid var(--accent);
+    background: var(--accent);
+    color: var(--text);
+    font-size: 1em;
+}
+
 /* FOOTER */
 
 hr {
