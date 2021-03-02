@@ -1,13 +1,13 @@
 +++
-title = "Trying (and Failing) to Speed Up String.beginsWith"
+title = "Trying (and Failing) to Speed Up String.startsWith"
 date = 2021-03-01
 +++
 
-When I was optimizing [elm-csv](@/posts/elm-csv-package-and-talk.md), I noticed that Elm's `String.beginsWith` is implemented using JavaScript's `indexOf` method.
+When I was optimizing [elm-csv](@/posts/elm-csv-package-and-talk.md), I noticed that Elm's `String.startsWith` is implemented using JavaScript's `indexOf` method.
 It looks something like this:
 
 ```javascript
-function beginsWith(haystack, needle) {
+function startsWith(haystack, needle) {
   return haystack.indexOf(needle) === 0
 }
 ```
@@ -19,7 +19,7 @@ That seems to waste a lot of cycles on work after we already know the result.
 After thinking about it for a little bit, I imagined a faster way:
 
 ```javascript
-function beginsWith(haystack, needle) {
+function startsWith(haystack, needle) {
   return haystack.slice(0, needle.length) === needle
 }
 ```
@@ -28,7 +28,7 @@ But, I didn't know for sure if it would be faster, so I started measuring things
 After a few benchmarks things were looking promising!
 I found that `String.prototype.slice` and `String.prototype.length` operate in more-or-less constant time, and that `===`, while not constant-time, is heavily optimized.
 
-*Hypothetically*, I thought, this means that a `slice`-based implementation of `beginsWith` could run much quicker than scanning through the whole string with `indexOf`.
+*Hypothetically*, I thought, this means that a `slice`-based implementation of `startsWith` could run much quicker than scanning through the whole string with `indexOf`.
 
 ## Chrome Uses Actual Magic in Their Strings
 
@@ -162,7 +162,7 @@ So, just to be explicit about that:
 - The `needle` strings are neither a single character nor a worst-case scenario for `indexOf` performance.
 - Success and failure cases are equally likely.
   We can't make any assumption other than that at the runtime level, although we could make a good argument to switch this for individual applications.
-  For example, we could choose to use `slice` in an application where we expected most checks on `beginsWith` would succeed, since that's basically a wash in Chrome and much faster in Firefox and Safari.
+  For example, we could choose to use `slice` in an application where we expected most checks on `startsWith` would succeed, since that's basically a wash in Chrome and much faster in Firefox and Safari.
 - We care about browsers based on global total share instead of splitting out into desktop or mobile.
   This is another area where you could make different decisions at the application level: if the users of your app skew more towards using Chrome or more towards Safari, this payoff for this optimization gets better or worse.
 
