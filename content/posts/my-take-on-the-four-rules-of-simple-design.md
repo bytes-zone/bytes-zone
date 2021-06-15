@@ -1,7 +1,7 @@
 +++
 title = "My Take on The Four Rules of Simple Design"
 date = 2021-06-15
-description = "Custom ID types are great, but what are you giving up? Is it worth it?"
+description = "A new series about designing simple systems."
 +++
 
 I've been thinking about how to write better tests recently, and I happened on Kent Beck's four rules for simple design.
