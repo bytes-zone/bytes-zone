@@ -1,5 +1,5 @@
 +++
-title = "My Take on The Four Rules of Simple Design"
+title = "My Take on the Four Rules of Simple Design"
 date = 2021-06-15
 description = "A new series about designing simple systems."
 +++
@@ -50,7 +50,7 @@ If you're here after July 2021, welcome!
 Get started by clicking the links below.
 Otherwise, you can sign up to be notified about new posts by putting your email in the box at the bottom of the post.
 
-1. Refactor When the Program Works (June 22)
+1. [Simplify When the Program Works](@/posts/rule-1-simplify-when-the-program-works.md) (June 22)
 2. Clarify Your Intent (June 29)
 3. Centralize Behavior (July 6)
 4. Code for Now (July 13)
