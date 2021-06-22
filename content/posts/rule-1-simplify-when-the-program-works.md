@@ -32,7 +32,7 @@ Well, when I've ignored this advice, I notice I tend to start ripping out useful
 I end up totally muddling my code with unrelated changes, and despite all the effort the program *still* doesn't work right.
 Eventually, I've maybe made something kinda-sorta like the change I tried to make, but it's way harder for my team to review.
 
-In my experience, I need to be in one of two modes: making changes to the make the program work, or making changes to make the code simpler.
+In my experience, I need to be in one of two modes: making changes to make the program work, or making changes to make the code simpler.
 "Simplify when the program works" has been helpful for me in recognizing when I need to switch!
 
 ## Avoiding Perfectionism
