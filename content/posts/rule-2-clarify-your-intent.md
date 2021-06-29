@@ -8,7 +8,7 @@ Last week, we talked about [simplifying when the program works](@/posts/rule-1-s
 
 This week, rule two: **clarify your intent.**
 
-The original four rules prioritize clarity of communication[^1]. For example, Beck's formulation says "states every intention important to the programmer." Fowler tightens that up to "reveals intent", and Rainsberger refines it further to "improve names." But *what* intent are we trying to communicate clearly? Here are a few things you might want to consider:
+The original four rules prioritize clarity of communication[^four-rules-are-about-communication]. For example, Beck's formulation says "states every intention important to the programmer." Fowler tightens that up to "reveals intent", and Rainsberger refines it further to "improve names." But *what* intent are we trying to communicate clearly? Here are a few things you might want to consider:
 
 - What's this thing for?
 - How are these two things related?
@@ -20,7 +20,7 @@ The original four rules prioritize clarity of communication[^1]. For example, Be
 You can communicate these things in a lot of ways, but I want to talk about three: names, comments, and constructors.
 
 ## Names
-Say you have a method called `process_data`[^2]. Both of those words are really vague! What if we made them better? What's `process`? What's `data`?
+Say you have a method called `process_data`[^process-data-inspiration]. Both of those words are really vague! What if we made them better? What's `process`? What's `data`?
 
 Maybe you look at the method body and find out it downloads a CSV of accounts and selects all the ones the sales team has identified as likely to buy a premium license. So in this case, `process` would be incorrect—it's `get` or `download`. And it's not just any old `data`, it's `clients`, specially ones on the threshold of upgrading.
 
@@ -47,6 +47,6 @@ If you don't clarify intent, you'll also miss out on great refactoring opportuni
 ## Conclusion
 In summary, remember that code is read many more times than it's written. Keeping that in mind can go a long way to making things better for your coworkers (or just you, 6 months from now.) There are lot of ways to do this—way more than we can go over here—but you can get a long way by focusing on names, comments, and constructors.
 
-[^1]: In fact, I think the entirety of the four rules is secretly about communication: write tests to communicate, remove duplication to make sure you're not saying the same thing twice, remove any unnecessary distractions, and here where we're being pretty explicit about intention!
+[^four-rules-are-about-communication]: In fact, I think the entirety of the four rules is secretly about communication: write tests to communicate, remove duplication to make sure you're not saying the same thing twice, remove any unnecessary distractions, and here where we're being pretty explicit about intention!
 
-[^2]: Example inspired by Corey Haines' [*Understanding the Four Rules of Simple Design*](https://leanpub.com/4rulesofsimpledesign)
+[^process-data-inspiration]: Example inspired by Corey Haines' [*Understanding the Four Rules of Simple Design*](https://leanpub.com/4rulesofsimpledesign)
