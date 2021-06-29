@@ -231,3 +231,16 @@ hr {
 footer {
     margin-top: 5em;
 }
+
+/* FOOTNOTES */
+
+.footnote-definition {
+    padding-left: 1em;
+    font-size: 0.8em;
+    display: flex;
+    align-items: baseline;
+}
+
+.footnote-definition > sup {
+    margin-right: 1em;
+}
