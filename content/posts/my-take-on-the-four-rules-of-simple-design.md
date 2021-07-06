@@ -52,7 +52,7 @@ Otherwise, you can sign up to be notified about new posts by putting your email 
 
 1. [Simplify When the Program Works](@/posts/rule-1-simplify-when-the-program-works.md) (June 22)
 2. [Clarify Your Intent](@/posts/rule-2-clarify-your-intent.md) (June 29)
-3. Centralize Behavior (July 6)
+3. [Centralize Behavior](@/posts/rule-3-centralize-behavior.md) (July 6)
 4. Code for Now (July 13)
 
 Afterwards, I'll probably publish a conclusion including reader feedback in late July.
