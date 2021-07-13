@@ -1,5 +1,5 @@
 +++
-title = "Rule 3: Code for Now"
+title = "Rule 4: Code for Now"
 date = 2021-07-13
 description = "Stop guessing you'll need stuff later!"
 +++
