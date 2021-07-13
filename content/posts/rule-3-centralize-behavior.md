@@ -21,7 +21,7 @@ Problem is, it's often hard to see this happening—the name change I described 
 One question to ask is "who should be responsible for this behavior?" In the long term, it's nice to answer this by writing behavior attractors.
 
 ## Behavior Attractors
-Behavior attractors (a term coined by Corey Haines in his book [[Understanding the 4 Rules of Simple Design]]) are places in your code where it becomes natural to put related code, like water flowing downhill. This gives you a natural way to centralize behavior to keep your system simple and easy to understand.
+Behavior attractors (a term coined by Corey Haines in his book [Understanding the 4 Rules of Simple Design](https://leanpub.com/4rulesofsimpledesign)) are places in your code where it becomes natural to put related code, like water flowing downhill. This gives you a natural way to centralize behavior to keep your system simple and easy to understand.
 
 Let's look at an example! *Understanding the 4 rules of Simple Design* uses Conway's Game of Life throughout, so let's just steal the example Haines uses to explain this: how do we figure out the neighbors of a cell? When you're implementing the Game of Life, you might end up writing `Cell.neighbors` in the course of answering "is this cell alive or dead in the next cycle?" However, this is not necessarily the best way to implement this, because the concept of a neighbor really depends on the topology of the grid. "Neighbor" means something different for 2- versus 3-dimensional grids, not to mention things like hyperbolic geometry. That suggests that "are these cells neighbors" should be defined by the coordinate system, but you might not come to this realization if you're just passing around 2-dimensional coordinates like `(x, y)`.
 
