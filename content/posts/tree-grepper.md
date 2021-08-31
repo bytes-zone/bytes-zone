@@ -174,7 +174,7 @@ $ tree-grepper --query javascript '(_)' --format pretty-json hello.js
 ```
 
 I've actually had to shorten that significantly because it's so long!
-If you'd like to see some full output, check the ["all_{language}.snap" snapshot test files in the tree-grepper repo](https://github.com/BrianHicks/tree-grepper/tree/main/src/snapshots).
+If you'd like to see some full output, check the [`all_{language}.snap` snapshot test files in the tree-grepper repo](https://github.com/BrianHicks/tree-grepper/tree/main/src/snapshots).
 
 I really enjoyed writing this tool and learning more about tree-sitter, and I hope you find it useful!
 You can also get the source and instructions for contributing at [github.com/BrianHicks/tree-grepper](https://github.com/BrianHicks/tree-grepper).
