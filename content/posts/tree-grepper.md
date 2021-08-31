@@ -15,7 +15,7 @@ It lets you search very quickly across large projects full of diverse filetypes,
 The big benefit here is that it's easy to expand: tree-sitter is getting really popular, what with language servers and [Neovim extensions](https://neovim.io/doc/treesitter/) and everything, so it's pretty likely that someone has already built a parser that we can just add!
 Currently tree-grepper lets you search Elm, Haskell, JavaScript, Ruby, Rust, and TypeScript, but it's pretty easy to add more, and [the README has a step-by-step guide](https://github.com/BrianHicks/tree-grepper#supported-languages).
 
-Tree-grepper is focused only on search: it doesn't do linting (like [semgrep](https://semgrep.dev)) or AST-based refactoring (like many other tools and IDEs.)
+Tree-grepper is focused only on search: it doesn't do linting (like [semgrep](https://semgrep.dev)) or AST-based refactoring (like [comby](https://comby.dev/).)
 You can get structured match data out of it, but any further processing is another tool's responsibility.
 This let me cut down on scope significantly, and optimize for searching alone.
 Hooray for the Unix philosophy!
