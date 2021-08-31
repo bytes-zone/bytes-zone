@@ -29,7 +29,7 @@ We'll use that to query for all the imports in [NoRedInk/noredink-ui](https://gi
 
 ```bash
 $ tree-grepper --query elm '(import_clause)' | head -n 5
-./styleguide-app/Category.elm:18:0:query:import Sort exposing (Sorter)
+./styleguide-app/Category.elm:18:1:query:import Sort exposing (Sorter)
 ./styleguide-app/Main.elm:3:1:query:import Accessibility.Styled as Html exposing (Html, img, text)
 ./styleguide-app/Main.elm:4:1:query:import Browser exposing (Document, UrlRequest(..))
 ./styleguide-app/Main.elm:5:1:query:import Browser.Dom
@@ -79,7 +79,7 @@ We can mix different languages as easily as we mix different queries, but let's 
 
 ```bash
 $ tree-grepper --query javascript '(import_statement (string (string_fragment)@import) .)'
-./lib/TextArea/V4.js:0:31:import:../CustomElement
+./lib/TextArea/V4.js:1:31:import:../CustomElement
 ```
 
 This is the end of a `import * as Foo from "Bar"` clause.
@@ -96,7 +96,7 @@ Finally, let's get `require` calls:
 
 ```bash
 $ tree-grepper --query javascript '(call_expression (identifier)@_fn (arguments . (string (string_fragment)@require) .) (#eq? @_fn require))' | head -n 5
-./styleguide-app/manifest.js:0:8:require:../lib/index.js
+./styleguide-app/manifest.js:1:8:require:../lib/index.js
 ./script/percy-tests.js:1:29:require:@percy/script
 ./script/axe-puppeteer.js:4:27:require:puppeteer
 ./script/axe-puppeteer.js:5:25:require:axe-core
