@@ -24,10 +24,10 @@ We'll use that to query for all the imports in [NoRedInk/noredink-ui](https://gi
 ```bash
 $ tree-grepper --query elm '(import_clause)' | head -n 5
 ./styleguide-app/Category.elm:18:0:query:import Sort exposing (Sorter)
-./styleguide-app/Main.elm:2:0:query:import Accessibility.Styled as Html exposing (Html, img, text)
-./styleguide-app/Main.elm:3:0:query:import Browser exposing (Document, UrlRequest(..))
-./styleguide-app/Main.elm:4:0:query:import Browser.Dom
-./styleguide-app/Main.elm:5:0:query:import Browser.Navigation exposing (Key)
+./styleguide-app/Main.elm:3:1:query:import Accessibility.Styled as Html exposing (Html, img, text)
+./styleguide-app/Main.elm:4:1:query:import Browser exposing (Document, UrlRequest(..))
+./styleguide-app/Main.elm:5:1:query:import Browser.Dom
+./styleguide-app/Main.elm:6:1:query:import Browser.Navigation exposing (Key)
 ```
 
 What we're doing here is asking `tree-grepper` to give us all the `import_clause` nodes it finds in `elm` files (I'll tell you how to find the names of nodes later.)
@@ -38,10 +38,10 @@ We don't want *all that*, though, so let's just try and get the module name:
 ```bash
 $ tree-grepper --query elm '(import_clause (upper_case_qid)@import)' | head -n 5
 ./styleguide-app/Category.elm:18:7:import:Sort
-./styleguide-app/Main.elm:2:7:import:Accessibility.Styled
-./styleguide-app/Main.elm:3:7:import:Browser
-./styleguide-app/Main.elm:4:7:import:Browser.Dom
-./styleguide-app/Main.elm:5:7:import:Browser.Navigation
+./styleguide-app/Main.elm:3:8:import:Accessibility.Styled
+./styleguide-app/Main.elm:4:8:import:Browser
+./styleguide-app/Main.elm:5:8:import:Browser.Dom
+./styleguide-app/Main.elm:6:8:import:Browser.Navigation
 ```
 
 So now we're asking for `upper_case_qid` nodes inside `import_clause`s.
@@ -56,11 +56,11 @@ $ tree-grepper \
     --query elm '(import_clause (upper_case_qid)@import)' \
     --query elm '(module_declaration (upper_case_qid)@module)' \
     | head -n 5
-./styleguide-app/Category.elm:0:7:module:Category
-./styleguide-app/Category.elm:18:7:import:Sort
-./styleguide-app/Main.elm:0:7:module:Main
-./styleguide-app/Main.elm:2:7:import:Accessibility.Styled
-./styleguide-app/Main.elm:3:7:import:Browser
+./styleguide-app/Category.elm:1:8:module:Category
+./styleguide-app/Category.elm:19:8:import:Sort
+./styleguide-app/Main.elm:1:8:module:Main
+./styleguide-app/Main.elm:3:8:import:Accessibility.Styled
+./styleguide-app/Main.elm:4:8:import:Browser
 ```
 
 This follows the same pattern: we want a named child of some random node in the file, and `tree-grepper` manages walking the tree and gives it to us.
@@ -89,10 +89,10 @@ Finally, let's get `require` calls (something we have far more of in this code):
 ```bash
 $ tree-grepper --query javascript '(call_expression (identifier)@_fn (arguments . (string (string_fragment)@require) .) (#eq? @_fn require))' | head -n 5
 ./styleguide-app/manifest.js:0:8:require:../lib/index.js
-./script/percy-tests.js:0:28:require:@percy/script
-./script/axe-puppeteer.js:3:26:require:puppeteer
-./script/axe-puppeteer.js:4:24:require:axe-core
-./script/axe-puppeteer.js:5:36:require:url
+./script/percy-tests.js:1:29:require:@percy/script
+./script/axe-puppeteer.js:4:27:require:puppeteer
+./script/axe-puppeteer.js:5:25:require:axe-core
+./script/axe-puppeteer.js:6:37:require:url
 ```
 
 This is quite the query!
@@ -127,11 +127,11 @@ $ tree-grepper \
     --query javascript '(import_statement (string (string_fragment)@import) .)' \
     --query javascript '(call_expression (identifier)@_fn (arguments . (string (string_fragment)@require) .) (#eq? @_fn require))' \
     | head -n 5
-./styleguide-app/Category.elm:0:7:module:Category
-./styleguide-app/Category.elm:18:7:import:Sort
-./styleguide-app/Main.elm:0:7:module:Main
-./styleguide-app/Main.elm:2:7:import:Accessibility.Styled
-./styleguide-app/Main.elm:3:7:import:Browser
+./styleguide-app/Category.elm:1:8:module:Category
+./styleguide-app/Category.elm:19:8:import:Sort
+./styleguide-app/Main.elm:1:8:module:Main
+./styleguide-app/Main.elm:3:8:import:Accessibility.Styled
+./styleguide-app/Main.elm:4:8:import:Browser
 ```
 
 That works for any amount of queries you'd care to throw at it!
@@ -153,12 +153,12 @@ $ tree-grepper --query javascript '(_)' --format pretty-json hello.js
         "name": "query",
         "text": "console.log(\"Hello, World!\")\n",
         "start": {
-          "row": 0,
-          "column": 0
+          "row": 1,
+          "column": 1
         },
         "end": {
-          "row": 1,
-          "column": 0
+          "row": 2,
+          "column": 1
         }
       },
       ... snip ...
