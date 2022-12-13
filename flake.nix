@@ -14,24 +14,16 @@
         packages.bytes-zone-public = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-public";
           src = builtins.filterSource
-            (path: type: builtins.match ".+png$" path == null)
-            ./.;
+            (path: type: builtins.match ".+(png|css)$" path == null) ./.;
 
           buildInputs = [
             pkgs.zola
             pkgs.nodePackages.html-minifier
-            pkgs.nodePackages.clean-css-cli
             pkgs.nodePackages.uglify-js
             pkgs.pngcrush
           ];
           buildPhase = ''
             zola build
-
-            echo "compressing CSS"
-            find public \
-              -type f -name '*.css' \
-              -exec cleancss -O 1 -o {}.min {} \; \
-              -exec mv {}.min {} \;
 
             echo "compressing JS"
             find public \
@@ -60,6 +52,30 @@
           '';
         };
 
+        packages.bytes-zone-css = pkgs.stdenv.mkDerivation {
+          name = "bytes.zone-css";
+          src = builtins.filterSource (path: type:
+            type == "directory" || builtins.match ".+css$" path != null)
+            ./static;
+
+          buildInputs = [ pkgs.nodePackages.clean-css-cli ];
+
+          buildPhase = ''
+            find . \
+              -type f -name '*.css' \
+              -exec cleancss -O 1 -o {}.min {} \; \
+              -exec mv {}.min {} \;
+          '';
+
+          installPhase = ''
+            mkdir -p $out/share/bytes.zone
+            for file in $(find . -type f); do
+              mkdir -p $out/share/bytes.zone/$(dirname $file)
+              mv $file $out/share/bytes.zone/$file
+            done
+          '';
+        };
+
         packages.bytes-zone-pngs = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-pngs";
           src = builtins.filterSource (path: type:
@@ -72,7 +88,7 @@
 
           installPhase = ''
             mkdir -p $out/share/bytes.zone
-            for file in $(find . -type f -name '*.png'); do
+            for file in $(find . -type f); do
               mkdir -p $out/share/bytes.zone/$(dirname $file)
               mv $file $out/share/bytes.zone/$file
             done
@@ -81,7 +97,11 @@
 
         packages.bytes-zone = pkgs.symlinkJoin {
           name = "bytes.zone";
-          paths = [ packages.bytes-zone-public packages.bytes-zone-pngs ];
+          paths = [
+            packages.bytes-zone-public
+            packages.bytes-zone-pngs
+            packages.bytes-zone-css
+          ];
         };
 
         defaultPackage = packages.bytes-zone;
