@@ -13,7 +13,9 @@
         # `nix build`
         packages.bytes-zone-public = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-public";
-          src = ./.;
+          src = builtins.filterSource
+            (path: type: builtins.match ".+png$" path == null)
+            ./.;
 
           buildInputs = [
             pkgs.zola
