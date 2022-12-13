@@ -98,8 +98,9 @@
             ./static;
 
           buildInputs = [ pkgs.pngcrush ];
-          buildPhase =
-            "find . -type f -name '*.png' | xargs -n 1 pngcrush -ow -brute";
+          buildPhase = ''
+            find . -type f -name '*.png' | xargs -n 1 pngcrush -ow -brute
+          '';
 
           installPhase = ''
             mkdir -p $out/share/bytes.zone
