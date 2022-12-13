@@ -16,20 +16,10 @@
           src = builtins.filterSource
             (path: type: builtins.match ".+(png|css)$" path == null) ./.;
 
-          buildInputs = [
-            pkgs.zola
-            pkgs.nodePackages.html-minifier
-            pkgs.nodePackages.uglify-js
-            pkgs.pngcrush
-          ];
+          buildInputs =
+            [ pkgs.zola pkgs.nodePackages.html-minifier pkgs.pngcrush ];
           buildPhase = ''
             zola build
-
-            echo "compressing JS"
-            find public \
-              -type f -name '*.js' \
-              -exec uglifyjs -o {}.min {} \; \
-              -exec mv {}.min {} \;
 
             echo "compressing HTML"
             html-minifier \
@@ -76,6 +66,30 @@
           '';
         };
 
+        packages.bytes-zone-js = pkgs.stdenv.mkDerivation {
+          name = "bytes.zone-js";
+          src = builtins.filterSource (path: type:
+            type == "directory" || builtins.match ".+js$" path != null)
+            ./static;
+
+          buildInputs = [ pkgs.nodePackages.uglify-js ];
+
+          buildPhase = ''
+            find . \
+              -type f -name '*.js' \
+              -exec uglifyjs -o {}.min {} \; \
+              -exec mv {}.min {} \;
+          '';
+
+          installPhase = ''
+            mkdir -p $out/share/bytes.zone
+            for file in $(find . -type f); do
+              mkdir -p $out/share/bytes.zone/$(dirname $file)
+              mv $file $out/share/bytes.zone/$file
+            done
+          '';
+        };
+
         packages.bytes-zone-pngs = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-pngs";
           src = builtins.filterSource (path: type:
@@ -98,9 +112,10 @@
         packages.bytes-zone = pkgs.symlinkJoin {
           name = "bytes.zone";
           paths = [
-            packages.bytes-zone-public
-            packages.bytes-zone-pngs
             packages.bytes-zone-css
+            packages.bytes-zone-js
+            packages.bytes-zone-pngs
+            packages.bytes-zone-public
           ];
         };
 
