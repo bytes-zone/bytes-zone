@@ -45,7 +45,7 @@ h1, h2, h3, h4 {
     margin: .2em 0 .2em -0.1em;
     padding: 0 .1em;
     line-height: 1.4;
-    background: repeating-linear-gradient(to top, var(--accent), var(--accent) .6em, rgba(255,255,255,0) .6em 1.4em);
+    background: repeating-linear-gradient(to top, var(--accent), var(--accent) .6em, rgba(255,255,255,0) .6em 1.41em);
 }
 
 
