@@ -100,6 +100,12 @@ pre {
     overflow-x: auto;
 }
 
+article > p > img:only-child {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
 blockquote {
     border-left: 2px solid var(--accent);
     margin-left: 0.5em;
