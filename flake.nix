@@ -16,8 +16,7 @@
           src = builtins.filterSource
             (path: type: builtins.match ".+(png|css)$" path == null) ./.;
 
-          buildInputs =
-            [ pkgs.zola pkgs.nodePackages.html-minifier pkgs.pngcrush ];
+          buildInputs = [ pkgs.zola pkgs.nodePackages.html-minifier ];
           buildPhase = ''
             zola build
 
