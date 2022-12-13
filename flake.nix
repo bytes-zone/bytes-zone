@@ -50,10 +50,11 @@
           buildInputs = [ pkgs.nodePackages.clean-css-cli ];
 
           buildPhase = ''
-            find . \
-              -type f -name '*.css' \
-              -exec cleancss -O 1 -o {}.min {} \; \
-              -exec mv {}.min {} \;
+            for file in $(find . -type f -name '*.css'); do
+              cleancss -O 1 -o $file.min $file
+              printf '%s: %db -> %db\n' "$file" "$(wc -c $file | cut -d ' ' -f 1)" "$(wc -c $file.min | cut -d ' ' -f 1)"
+              mv $file.min $file
+            done
           '';
 
           installPhase = ''
@@ -74,10 +75,11 @@
           buildInputs = [ pkgs.nodePackages.uglify-js ];
 
           buildPhase = ''
-            find . \
-              -type f -name '*.js' \
-              -exec uglifyjs -o {}.min {} \; \
-              -exec mv {}.min {} \;
+            for file in $(find . -type f -name '*.js'); do
+              uglifyjs -o $file.min $file
+              printf '%s: %db -> %db\n' "$file" "$(wc -c $file | cut -d ' ' -f 1)" "$(wc -c $file.min | cut -d ' ' -f 1)"
+              mv $file.min $file
+            done
           '';
 
           installPhase = ''
