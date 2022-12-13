@@ -11,8 +11,8 @@
       let pkgs = nixpkgs.legacyPackages.${system};
       in rec {
         # `nix build`
-        packages.bytes-zone = pkgs.stdenv.mkDerivation {
-          name = "bytes.zone";
+        packages.bytes-zone-public = pkgs.stdenv.mkDerivation {
+          name = "bytes.zone-public";
           src = ./.;
 
           buildInputs = [
@@ -50,9 +50,6 @@
               --file-ext html \
               --input-dir public \
               --output-dir public
-
-            echo "compressing images"
-            find public -type f -name '*.png' | xargs -n 1 pngcrush -ow -brute
           '';
 
           installPhase = ''
@@ -60,6 +57,31 @@
             mv public $out/share/bytes.zone
           '';
         };
+
+        packages.bytes-zone-images = pkgs.stdenv.mkDerivation {
+          name = "bytes.zone-images";
+          src = builtins.filterSource (path: type:
+            type == "directory" || builtins.match ".+png$" path != null)
+            ./static;
+
+          buildInputs = [ pkgs.pngcrush ];
+          buildPhase =
+            "find . -type f -name '*.png' | xargs -n 1 pngcrush -ow -brute";
+
+          installPhase = ''
+            mkdir -p $out/share/bytes.zone
+            for file in $(find . -type f -name '*.png'); do
+              mkdir -p $out/share/bytes.zone/$(dirname $file)
+              mv $file $out/share/bytes.zone/$file
+            done
+          '';
+        };
+
+        packages.bytes-zone = pkgs.symlinkJoin {
+          name = "bytes.zone";
+          paths = [ packages.bytes-zone-public packages.bytes-zone-images ];
+        };
+
         defaultPackage = packages.bytes-zone;
         overlay = final: prev: { bytes-zone = packages.bytes-zone; };
 
