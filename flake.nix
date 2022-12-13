@@ -60,8 +60,8 @@
           '';
         };
 
-        packages.bytes-zone-images = pkgs.stdenv.mkDerivation {
-          name = "bytes.zone-images";
+        packages.bytes-zone-pngs = pkgs.stdenv.mkDerivation {
+          name = "bytes.zone-pngs";
           src = builtins.filterSource (path: type:
             type == "directory" || builtins.match ".+png$" path != null)
             ./static;
@@ -81,7 +81,7 @@
 
         packages.bytes-zone = pkgs.symlinkJoin {
           name = "bytes.zone";
-          paths = [ packages.bytes-zone-public packages.bytes-zone-images ];
+          paths = [ packages.bytes-zone-public packages.bytes-zone-pngs ];
         };
 
         defaultPackage = packages.bytes-zone;
