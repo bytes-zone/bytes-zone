@@ -67,6 +67,16 @@ h1 + article, article + article {
     margin-top: 1em;
 }
 
+dt {
+    float: left;
+    text-align: right;
+}
+
+dd {
+    padding-left: 1em;
+    margin-top: 0.4em;
+}
+
 /* LINKS */
 
 a {

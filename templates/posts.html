@@ -4,9 +4,15 @@
 
 {% block content %}
 <h1>{{ section.title }}</h1>
-{% for page in section.pages %}
-<article>
-  <a href="{{page.permalink | safe }}">{{ page.title | markdown(inline=true) | safe }}</a>{% if page.date %}, <em>{{ page.date | date(format="%B %-d, %Y") }}</em>{% endif %}
-</article>
+{% for year, pages in section.pages | group_by(attribute="year") %}
+<dl>
+  <dt>{{ year }}</dt>
+  {% for page in pages %}
+  <dd>
+    <a href="{{page.permalink | safe }}">{{ page.title | markdown(inline=true) | safe }}</a>{% if page.date %}, <em>{{ page.date | date(format="%B %-d, %Y") }}</em>{% endif %}
+  </dd>
+  {% endfor %}
+</dl>
 {% endfor %}
+
 {% endblock %}
