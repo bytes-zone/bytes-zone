@@ -6,7 +6,7 @@
 {% set talks = get_section(path="talks/_index.md") -%}
 
 <h1>👋 Hey There</h1>
-<p>My name is Brian! I'm the lead organizer of elm-conf and the author of Mastering Elm: JSON Decoders and a bunch of Elm packages. You've found my site!</p>
+<p>My name is Brian. You've found my site!</p>
 <p>The latest post I wrote was <strong><a href="{{ posts.pages[0].path | safe }}">{{ posts.pages[0].title | markdown(inline=true) | safe }}</a></strong>, and the latest talk I gave was <strong><a href="{{ talks.pages[0].path | safe }}">{{ talks.pages[0].title | markdown(inline=true) | safe }}</a></strong> at {{ talks.pages[0].extra.event }}.</p>
 <p><small>Made with Love in St. Louis, MO. Have a wonderful day! ❤️</small></p>
 
