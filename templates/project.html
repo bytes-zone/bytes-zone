@@ -20,5 +20,21 @@
   <h1>{{ page.title | markdown(inline=true) | safe }}, {{ page.description }}</h1>
 
   {{ page.content | safe }}
+
+  {% set posts = get_section(path="posts/_index.md") -%}
+  {% set updates = posts.pages | filter(attribute="extra.project", value=page.title) -%}
+  {%- if updates %}
+  <h2>Updates</h2>
+  <dl>
+  {% for year, by_year in updates | group_by(attribute="year") %}
+  <dt>{{ year }}</dt>
+  {% for update in by_year %}
+  <dd>
+    <a href="{{update.permalink | safe }}">{{ update.title | markdown(inline=true) | safe }}</a>{% if update.date %}, <em>{{ update.date | date(format="%B %-d, %Y") }}</em>{% endif %}
+  </dd>
+  {% endfor %}
+  {% endfor %}
+  </dl>
+  {% endif %}
 </article>
 {% endblock %}
