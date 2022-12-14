@@ -22,7 +22,8 @@
   {{ page.content | safe }}
 
   {% set posts = get_section(path="posts/_index.md") -%}
-  {% set updates = posts.pages | filter(attribute="extra.project", value=page.title) -%}
+  {% set talks = get_section(path="talks/_index.md") -%}
+  {% set updates = posts.pages | concat(with=talks.pages) | filter(attribute="extra.project", value=page.title) -%}
   {%- if updates %}
   <h2>Updates</h2>
   <dl>
