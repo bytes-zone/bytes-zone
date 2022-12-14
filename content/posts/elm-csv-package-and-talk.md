@@ -1,6 +1,9 @@
 +++
 title = "elm-csv, package and talk"
 date = 2021-02-15
+
+[extra]
+project = "elm-csv"
 +++
 
 In the beginning of February, I spent a lot of time working on a new library for parsing CSV data in Elm.
