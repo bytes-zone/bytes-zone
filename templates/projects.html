@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+{% for year, pages in section.pages | group_by(attribute="year") %}
+<dl>
+  <dt>{{ year }}</dt>
+  {% for page in pages %}
+  <dd>
+    <a href="{{page.permalink | safe }}">{{ page.title | markdown(inline=true) | safe }}</a>{% if page.description %}, {{ page.description }}{% endif %} ({% if page.date %}{{ page.date | date(format="%B %Y") }}{% else %}???{% endif %}{% if page.updated %} to {{ page.updated | date(format="%B %Y") }}{% endif %})
+  </dd>
+  {% endfor %}
+</dl>
+{% endfor %}
+
+{% endblock %}
