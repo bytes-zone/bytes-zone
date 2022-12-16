@@ -6,9 +6,9 @@ template = "post.html"
 I love hearing from people and talking shop, so like [other](https://www.kalzumeus.com/standing-invitation/) [nice](https://hillelwayne.com/open-invite/) people on the internet, I extend an invitation to you: [email me about whatever](mailto:brian@brianthicks.com)!
 Some things I'd love to talk about, or hear about:
 
-- frontend development, especially Elm stuff.
-- things technologists can do to help with social problems, especially the climate crisis.
-- community organization, especially meetups and (in non-pandemic times) conferences.
+- frontend development
+- things technologists can do to help with big problems, especially the climate crisis.
+- community organization, especially (in non-pandemic times) meetups and conferences.
 - neat papers and essays
 
 I'd also be happy to answer questions about any of that, or anything I've written in general.
