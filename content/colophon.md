@@ -49,7 +49,7 @@ Let's look at the principles:
    Browsers are really good about this now!
    It's *fine*!
 
-3. **Prefer one page over several** 
+3. **Prefer one page over several.** 
    I'm not doing this, but I feel like the pain behind this principle is "it's hard to maintain multiple pages" buuuuut… I'm using a static site generator, most of the content is in markdown, and *all* of it is version-controlled.
    Making a change is trivial, and all the dependencies are versioned with [Nix](https://nixos.org/).
    I've been using this kind of setup for years now, and have had very few issues like he mentions.
