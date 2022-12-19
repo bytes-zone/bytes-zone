@@ -91,6 +91,20 @@ pkgs.stdenv.mkDerivation {
 }
 ```
 
+## Alloy Code Sample
+
+```alloy
+sig Foo {
+  bar: one Bar,
+  baz: some Baz,
+  quux: lone Quux,
+}
+
+check SomeName {
+  all f: Foo | one b: Bar | f.bar = b
+} for 4 but 1 Foo
+```
+
 ## Generic (Overflowing) Code Sample
 
 ```
