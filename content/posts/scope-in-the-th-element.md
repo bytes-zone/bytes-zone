@@ -1,7 +1,6 @@
 +++
 title = "Scope in the TH element"
 description = "Making more accessible tables"
-draft = true
 date = 2022-12-19
 +++
 
