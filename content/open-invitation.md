@@ -7,6 +7,7 @@ I love hearing from people and talking shop, so like [other](https://www.kalzume
 Some things I'd love to talk about, or hear about:
 
 - frontend development
+- lightweight formal methods (e.g. [Alloy](@/posts/alloy.md))
 - things technologists can do to help with big problems, especially the climate crisis.
 - community organization, especially (in non-pandemic times) meetups and conferences.
 - neat papers and essays
