@@ -1,8 +1,10 @@
 <section class="convertkit">
   <p>
-    Was this helpful?
-    Would you like me to email you things like this a couple times a month?
-    Sign up below and I'll do exactly that!
+    And if you just have questions about this, or anything I write, <a href="{{ get_url(path="@/open-invitation.md") }}">please feel free to email me</a>!
+  </p>
+  <p>
+    Otherwise, if you'd like me to email you when I have a new post, sign up below and I'll do exactly that!
+    (You can also get new posts via <a href="{{ get_url(path="/posts/index.xml", trailing_slash=false) }}" target="_blank">RSS</a>.)
   </p>
   <form action="https://app.convertkit.com/forms/2069198/subscriptions" method="post">
     <input class="email" name="email_address" aria-label="Email Address" placeholder="Email Address" required="true" type="email" />
