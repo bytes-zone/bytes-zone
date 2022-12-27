@@ -232,7 +232,7 @@ nav > ul > li > a {
     font-size: 1em;
 }
 
-@media(max-width: 25em) {
+@media(max-width: 30em) {
     .convertkit > form { flex-direction: column; }
     .convertkit > form > input[type=email] { margin-right: 0; margin-bottom: 0.5em; }
     .convertkit > form > button { width: 100%; padding: 0.5em; }
