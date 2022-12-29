@@ -17,7 +17,8 @@
 
 {% block content %}
 <article>
-  <h1>{{ page.title | markdown(inline=true) | safe }}, {{ page.description }}</h1>
+  <h1>{{ page.title | markdown(inline=true) | safe }}</h1>
+  <aside>{{ page.description }}</aside>
 
   {{ page.content | safe }}
 
