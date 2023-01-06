@@ -11,17 +11,14 @@ Formal methods tools like Alloy are not just for proving correctness properties 
 
 I joined the [Inventor Forge Makerspace](https://www.inventorforgemakerspace.org/) recently to get access to some better tools for [home recycling](@/projects/home-recycling.md). There are some cool tools there (Lasers! CNC machines! Plasma cutters!) that need both special training and have high demand among the folks who use the space. Right now, we use a shared Google calendar to schedule time on different machines. Unfortunately, I don't have a personal Google account, so it's harder to schedule than I'd like! There are a couple of other people in this situation too, so I'm in the process of building a tool to track training and scheduling.
 
-We'll start with two `sig`s: a `Member` (someone who can join the makerspace) and a `Tool` (something that we need training and scheduling for.)
-
+We'll start by modeling `Member` (someone who can join the makerspace) and a `Tool` (something that we need training and scheduling for.) We'll use Alloy's basic building block of `sig`s for this. If you haven't been exposed to Alloy before, you can think of `sig`s as sets that can contain values (like rows in a database table.) So you can think of `Member` as the set of all members of the makerspace, which can contain values like `Member0` and `Member1`.
 ```alloy
 sig Member {}
 
 sig Tool {}
 ```
 
-If you haven't been exposed to Alloy before, you can think of `sig`s as sets that can contain values (like rows in a database table.) So you can think of `Member` as the set of all members of the makerspace, which can contain values like `Member0` and `Member1`.
-
-We can ask Alloy to generate examples even for this small model. They won't be super useful at this point—we haven't modeled any interactions between `Member` and `Tool`—but they let us get a sense of what Alloy can provide us. For example, here's an instance with two members and two tools:
+We can ask Alloy to generate examples for this small model. They won't be super useful at this point—we haven't modeled any interactions between `Member` and `Tool`—but they let us get a sense of what Alloy can provide us. For example, here's an instance with two members and two tools:
 
 ![two members and two tools, not conntected in any way](/images/two-members-two-tools.png)
 
