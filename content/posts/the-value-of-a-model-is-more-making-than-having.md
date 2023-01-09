@@ -21,7 +21,7 @@ I've also found it useful to sit down with other people and have a conversation 
 
 > For example, at work we were building a feature with inline commenting (like Google Docs.) We started by modeling Google Docs' comments and it turned out that each comment had something like 32 unique states. We realized this was going to be way too much for our use case, and simplified it down to 4. We probably could have had this realization without using Alloy, but it made the conversation much simpler—the designer and I sat down and looked at the visualizations, then kept saying "but for us, states X and Y would be the same…" until we arrived at a simpler model. It was really nice, and only took about an hour and a half of modeling to come up with a solution that satisfied all our requirements!
 
-This is basically “[lightweight formal methods](https://en.wikipedia.org/wiki/Formal_methods)”—we're not out to solve the Byzantine generals problem or whatever, but just to make sure there aren't any big issues we hadn't thought of or flaws we can't live with.
+This is basically “[lightweight formal methods](https://en.wikipedia.org/wiki/Formal_methods#Lightweight_formal_methods)”—we're not out to solve the Byzantine generals problem or whatever, but just to make sure there aren't any big issues we hadn't thought of or flaws we can't live with.
 
 ## Having / Artifact
 
