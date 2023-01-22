@@ -5,6 +5,7 @@ description = "Making models in Alloy is fun and useful!"
 
 [extra]
 project = "learning Alloy"
+featured = true
 +++
 
 [Alloy](http://alloytools.org/) is a tool for modeling software. It's best at representing things like databases or data structures, but in my experience it does fine with things like UI states or processes as well.

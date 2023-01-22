@@ -5,6 +5,7 @@ description = "chasing out edge cases in a schema"
 
 [extra]
 project = "learning Alloy"
+featured = true
 +++
 
 Formal methods tools like Alloy are not just for proving correctness properties in distributed systems (or whatever) but can be a useful tool for mere mortals like me! [As I mentioned previously](@/posts/alloy.md), I've been using Alloy to help me avoid data modeling mistakes before they're encoded in hard-to-change places, like database schemas. In this post, I'll show my thought process as I use Alloy to model the schema for a project for my makerspace, including some of the mistakes that Alloy helped me avoid.

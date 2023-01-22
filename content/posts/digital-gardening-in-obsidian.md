@@ -2,6 +2,9 @@
 title = "Digital Gardening in Obsidian"
 date = 2022-12-26
 description = "Observing growth in my notes without being overwhelmed."
+
+[extra]
+featured = true
 +++
 
 I have been using [Obsidian](https://obsidian.md) for all my notes for something like 6 months now. That's really *everything*, from temporary measurements to journaling to serious documentation work. I've tried Obsidian a couple of times before and bounced off of it, so I decided to try to do things differently this time. Instead of starting out by figuring out a system for where everything lives in advance, I've just thrown almost everything in the default folder and sorted it out with linking and search.

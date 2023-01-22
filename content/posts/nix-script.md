@@ -1,6 +1,9 @@
 +++
 title = "nix-script"
 date = 2021-02-23
+
+[extra]
+featured = true
 +++
 
 I like writing quick little scripts to avoid having to remember how to do things.

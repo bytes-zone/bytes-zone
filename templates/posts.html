@@ -9,6 +9,7 @@
   <dt>{{ year }}</dt>
   {% for page in pages %}
   <dd>
+    {% if page.extra.featured %}⭐️{% endif %}
     <a href="{{page.permalink | safe }}">{{ page.title | markdown(inline=true) | safe }}</a>{% if page.date %}, <em>{{ page.date | date(format="%B %-d, %Y") }}</em>{% endif %}
   </dd>
   {% endfor %}

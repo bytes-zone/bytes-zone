@@ -2,6 +2,9 @@
 title = "tree-grepper"
 description = "search by AST nodes instead of strings"
 date = 2021-08-31
+
+[extra]
+featured = true
 +++
 
 A while ago I wanted to build an import graph from all the frontend code at NoRedInk to build some developer tools.
