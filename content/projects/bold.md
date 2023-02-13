@@ -2,9 +2,10 @@
 title = "bold"
 description = "a remote-first build system"
 date = 2022-12-14
+updated = 2023-01-15
 
 [extra]
-when = "now"
+when = "past"
 +++
 
 An attempt to get some of the things that interest me about large-scale monorepo build systems like [Bazel](https://bazel.build/) or [Buck](https://buck.build/), but without the learning curve or large footprint.
@@ -22,5 +23,5 @@ This forces some decisions and tradeoffs:
 
 There are more of these yet to come, I'm sure!
 
-Bold is nowhere near ready to show off yet.
-Watch this space!
+Bold was an interesting spike, but my priorities changed in early 2023 due to all the layoffs in the tech industry, so it didn't go much further than this.
+That said, I'm interested in the ideas and I'd love to come back to it some day.
