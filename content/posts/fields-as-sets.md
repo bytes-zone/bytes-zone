@@ -1,6 +1,9 @@
 +++
 title = "fields as sets"
 date = 2023-02-13
+
+[extra]
+project = "learning Alloy"
 +++
 
 Today, let's look at how relationships between `sig`s in [Alloy](@/projects/learning-alloy.md) work.
