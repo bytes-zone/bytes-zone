@@ -19,7 +19,7 @@ When you generate an SSH key (like I did when looking at [signing commits with S
 +----[SHA256]-----+
 ```
 
-That looks nice, and I appreciate art in my terminal, but what is it for? So, let's see… first, I looked in `man ssh-keygen`, because that's context I see these, but it doesn't have any hits for `randomart` or `art`. But on a hunch I tried `man ssh`, and that page has some info! Here's what it says:
+That looks nice, and I appreciate art in my terminal, but what is it for? So, let's see… first, I looked in `man ssh-keygen`, because that's the context in which I see these, but it doesn't have any hits for `randomart` or `art`. But on a hunch I tried `man ssh`, and that page has some info! Here's what it says:
 
 > Because of the difficulty of comparing host keys just by looking at fingerprint strings, there is also support to compare host keys visually, using random art.  By setting the VisualHostKey option to “yes”, a small ASCII graphic gets displayed on every login to a server, no matter if the session itself is interactive or not.  By learning the pattern a known server produces, a user can easily find out that the host key has changed when a completely different pattern is displayed.  Because these patterns are not unambiguous however, a pattern that looks similar to the pattern remembered only gives a good probability that the host key is the same, not guaranteed proof.
 > 
@@ -70,7 +70,7 @@ If I run the command given in the manual page, I get this for GitHub:
 +----[SHA256]-----+
 ```
 
-The manual also mentioned that you can set `VisualHostKey` to `yes` in your SSH config to get that information every time. If I do that, I can see that my SSH client is using the ED25519 key:
+The manual also mentioned that you can set `VisualHostKey` to `yes` in your SSH client config to get that information every time. If I do that, I can see that my SSH client is using the ED25519 key:
 
 ```bash
 $ ssh git@github.com
