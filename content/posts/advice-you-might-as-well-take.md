@@ -2,6 +2,9 @@
 title = "advice you might as well take"
 date = 2023-01-22
 description = "PAGNI, the opposite of YANGI"
+
+[extra]
+featured = true
 +++
 
 I've read some nice articles recently which I can sum up as “advice you might as well take.” This is stuff that's good to consider at the beginning of a project, or when you're about to add a feature to some existing software.

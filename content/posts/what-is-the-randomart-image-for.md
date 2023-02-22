@@ -1,6 +1,9 @@
 +++
 title = "what is the randomart image for?"
 date = 2023-02-20
+
+[extra]
+featured = true
 +++
 
 When you generate an SSH key (like I did when looking at [signing commits with SSH keys](@/posts/signing-commits-with-SSH-keys.md)), you get a “randomart image” from `ssh-keygen`. These things:
