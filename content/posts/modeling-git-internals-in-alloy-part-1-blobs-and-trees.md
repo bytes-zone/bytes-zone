@@ -29,21 +29,21 @@ I based these models off of [the *Git Internals - Git Objects* chapter of the Gi
 
 Let's look at blobs (used for basic content storage) first. We can tell `git` to create one like so:
 
-```console
+```
 $ echo 'Hello, blob!' | git hash-object -w --stdin
 9b4b40c2bca67e781930105fa190b9b90235cfe5
 ```
 
 Git gives us a hash of the content on stdout. To retrieve it again, we just ask:
 
-```console
+```
 $ git cat-file -p 9b4b40c2bca67e781930105fa190b9b90235cfe5
 Hello, blob!
 ```
 
 Like I mentioned above, these blob objects are content-addressed. In practice, that means they can't be duplicated. If you run the command to store `Hello, blob!` twice, Git will give you the hash again but not change anything on disk (since the blob is already stored.) We can get a *new* blob, along with a new hash, by changing the content:
 
-```console
+```
 $ echo 'Hello, Alloy!' | git hash-object -w --stdin
 39528abd81b13b2731d47f86206351a61f1e6484
 ```
@@ -74,7 +74,7 @@ At any rate, no matter how many blobs we have, we still haven't modeled enough t
 
 Trees work basically like directories in a filesystem hierarchy. Their hash is based on the hash of all the content they contain, plus the filenames of that content. We can create one by associating blobs with filenames in the index (kinda like `git add foo.txt` but with the object hash instead of reading from the project source.) It looks like this:
 
-```console
+```
 $ git update-index --add --cacheinfo 100644 \
   9b4b40c2bca67e781930105fa190b9b90235cfe5 hello-blob.txt
 $ git update-index --add --cacheinfo 100644 \
@@ -93,7 +93,7 @@ sig Tree {
 
 But that won't work: trees can also contain trees! We can demonstrate using `git read-tree` (it works like `update-index --add`, but puts the content of the tree under the given prefix.)
 
-```console
+```
 $ git reset --hard # to clear out the staged files
 
 $ git read-tree --prefix=greetings 3ee29075f260c5eebd8b9480b6464a7612668dde
