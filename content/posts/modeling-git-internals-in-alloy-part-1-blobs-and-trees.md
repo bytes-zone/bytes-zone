@@ -138,13 +138,17 @@ This shouldn't be possible, theoretically. Remember that this is a content-addre
 
 I was curious about whether this was actually even possible or if Git would reject it, so I did some digging. [Someone on Reddit](https://www.reddit.com/r/git/comments/6kkb3k/a_tree_that_references_itself/) had the same question and changed the source code to be dramatically more likely to have a collision (by changing the code to only use the first byte of the SHA-1 hash.) They got a segfault, which tells me that this isn't something that the Git authors designed for.
 
-> **Sidebar: what are we modeling, again?**
-> We hit a fork in the road here in practical modeling terms: we can either allow or disallow this case in our model. This happens to me a lot when using Alloy; it's good at bringing up weird cases I hadn't previously considered. In this case, I think you can make a good argument for either direction:
->
-> - If we allow recursion in trees, we're keeping our eyes open to the fact that SHA-1 is not completely collision-free, or that some day it may be broken in a way that makes it trivial to find collisions.
-> - If we disallow recursion in trees, we simplify our conceptual model significantly. We're not nearly done with the data model (we still have commits, refs, tags, etc to add) and allowing every single little edge case will make it harder to understand the system as a whole.
->
-> In this case we're modeling to learn about Git's internals, so I think disallowing this case makes more sense. Git clearly relies on the fact that it's very hard to cause a cycle here. If I was modeling Git objects to (for example) find bugs or potential security issues, I think I'd make the opposite decision.
+<aside>
+
+**Sidebar: what are we modeling, again?**
+
+We hit a fork in the road here in practical modeling terms: we can either allow or disallow this case in our model. This happens to me a lot when using Alloy; it's good at bringing up weird cases I hadn't previously considered. In this case, I think you can make a good argument for either direction:
+
+- If we allow recursion in trees, we're keeping our eyes open to the fact that SHA-1 is not completely collision-free, or that some day it may be broken in a way that makes it trivial to find collisions.
+- If we disallow recursion in trees, we simplify our conceptual model significantly. We're not nearly done with the data model (we still have commits, refs, tags, etc to add) and allowing every single little edge case will make it harder to understand the system as a whole.
+In this case we're modeling to learn about Git's internals, so I think disallowing this case makes more sense. Git clearly relies on the fact that it's very hard to cause a cycle here. If I was modeling Git objects to (for example) find bugs or potential security issues, I think I'd make the opposite decision.
+
+</aside>
 
 We'll use a `fact` to disallow this case. When we declare something as `fact`, Alloy will not allow any instances which would make the fact false. We should use these carefully—as in other kinds of reasoning, more axioms mean making a weaker argument (even though it's hard to not use any at all.)
 
