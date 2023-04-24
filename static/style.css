@@ -116,7 +116,7 @@ article > p > img:only-child {
     margin: 0 auto;
 }
 
-blockquote {
+blockquote, aside {
     border-left: 2px solid var(--accent);
     margin-left: 0.5em;
     padding-left: 0.75em;
