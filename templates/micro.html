@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title | markdown | striptags | trim }}{% endblock %}
+
+{% block description %}{{ page.description }}{% endblock %}
+
+{% block metadata %}
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:url" content="{{ current_url | safe }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta property="twitter:card" content="summary">
+<meta property="twitter:title" content="{{ page.title }}">
+<meta property="twitter:description" content="{{ page.description }}">
+<meta property="og:type" content="website">
+{% endblock %}
+
+{% block content %}
+<article>
+  <h1>{{ page.title | markdown(inline=true) | safe }}</h1>
+  <p><em>Brian Hicks{% if page.date %}, {{ page.date | date(format="%B %-d, %Y") }}{% endif %}</em></p>
+
+  {{ page.content | safe }}
+</article>
+{% endblock %}
