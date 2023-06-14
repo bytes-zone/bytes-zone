@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+{% for year, pages in section.pages | group_by(attribute="year") %}
+<div>
+  <h2>{{ year }}</h2>
+  <p>
+    {% for page in pages %}
+    <a href="{{page.permalink | safe }}">{{ page.title | markdown(inline=true) | safe }}</a>
+    {% endfor %}
+  </p>
+</div>
+{% endfor %}
+
+{% endblock %}
