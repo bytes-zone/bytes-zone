@@ -26,67 +26,67 @@ There's an interactive workbook in this step. Before I do it, the tips are to pr
 
 Copying my answers back here. First question, "List your potential audiences." As many as you can come up with, one per line. Here are mine:
 
-> formal methods people
-> Alloy users
-> TLA+ users
-> Elm programmers
-> Rust programmers
-> Ruby programmers
-> Sorbet users (subset of Ruby programmers)
-> makers
-> 3d printer users
-> laser cutter users
-> parents
-> omnifocus users
-> obsidian note-takers
-> stationery bike owners
-> frontend developers
-> Helix users
-> Vim users
-> Kubernetes folks
-> programmers (generally)
-> command-line shell users
-> TDD practitioners
-> tech leads
-> staff engineers
-> Linear users
-> toolmakers
+- formal methods people
+- Alloy users
+- TLA+ users
+- Elm programmers
+- Rust programmers
+- Ruby programmers
+- Sorbet users (subset of Ruby programmers)
+- makers
+- 3d printer users
+- laser cutter users
+- parents
+- omnifocus users
+- obsidian note-takers
+- stationery bike owners
+- frontend developers
+- Helix users
+- Vim users
+- Kubernetes folks
+- programmers (generally)
+- command-line shell users
+- TDD practitioners
+- tech leads
+- staff engineers
+- Linear users
+- toolmakers
 
 Second question, narrowing those down to "professional" options:
 
-> formal methods people
-> Alloy users
-> TLA+ users
-> Elm programmers
-> Rust programmers
-> Ruby programmers
-> Sorbet users (subset of Ruby programmers)
-> 3d printer users
-> laser cutter users
-> omnifocus users
-> obsidian note-takers
-> frontend developers
-> Helix users
-> Vim users
-> Kubernetes folks
-> programmers (generally)
-> TDD practitioners
-> tech leads
-> staff engineers
-> Linear users
-> toolmakers
+- formal methods people
+- Alloy users
+- TLA+ users
+- Elm programmers
+- Rust programmers
+- Ruby programmers
+- Sorbet users (subset of Ruby programmers)
+- 3d printer users
+- laser cutter users
+- omnifocus users
+- obsidian note-takers
+- frontend developers
+- Helix users
+- Vim users
+- Kubernetes folks
+- programmers (generally)
+- TDD practitioners
+- tech leads
+- staff engineers
+- Linear users
+- toolmakers
 
 Third question, narrowing those down to ones where I have an advantage. In my case, that mostly means "have I used this in the past and would have some advice for someone just getting started." I also removed general programming and toolmaking because I have an advantage but it's too vague!
 
-> Alloy users
-> Elm programmers
-> Rust programmers
-> Ruby programmers
-> Sorbet users (subset of Ruby programmers)
-> frontend developers
-> TDD practitioners
-> tech leads
-> staff engineers
+- Alloy users
+- Elm programmers
+- Rust programmers
+- Ruby programmers
+- Sorbet users (subset of Ruby programmers)
+- frontend developers
+- TDD practitioners
+- tech leads
+- staff engineers
 
 Fourth question is just to pick one to move forward with for launch ftw. This is where I struggle, and the exact question I stopped on the first time I did this challenge (even though they repeatedly say that the only "wrong" answer is to just not pick.)
 
