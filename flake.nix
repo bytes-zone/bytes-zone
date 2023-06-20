@@ -99,7 +99,7 @@
 
           buildInputs = [ pkgs.pngcrush ];
           buildPhase = ''
-            find . -type f -name '*.png' | xargs -n 1 pngcrush -ow -brute
+            find . -type f -name '*.png' | xargs -n 1 pngcrush -ow -rem alla -reduce -m 7
           '';
 
           installPhase = ''
