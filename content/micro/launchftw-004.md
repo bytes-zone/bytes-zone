@@ -11,14 +11,14 @@ I messed around in [Soulver](https://soulver.app/) until my formulas got the sam
 goal = $8,500 + 15% (for tax) = $9,775.00
 
 unit price = $49 = $49.00
-sales  needed = goal / unit price rounded up = 200
+sales needed = goal / unit price rounded up = 200
 or monthly, sales needed / 12 rounded up = 17
 
 selling to subscribers on a mailing list, so…
 sale conversion = 5%
 subscribe conversion = 10%
 
-new subscribers needed = sales  needed / sale conversion = 4,000
+new subscribers needed = sales needed / sale conversion = 4,000
 or monthly, new subscribers needed / 12 rounded up = 334
 or daily, new subscribers needed / 365 = 11
 
