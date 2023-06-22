@@ -38,3 +38,30 @@ That's just two posts, though. Overall, my blog has had 21,198 visits in the per
 So, OK, I think I've convinced myself that 110 visitors a day is a reasonable target. The roadmap mentions making a freebie available to subscribers, which tends to bring the subscribe conversion up (and therefore the needed visitors down.) I don't have data from my older launch to look at sale conversion, but the top of the funnel seems reasonable so I feel OK with proceeding.
 
 Tomorrow I'll proceed with lesson four in the guidebook. This diversion took all the time I had for this project today, but I'm glad I did it!
+
+---
+
+Update later in the day... I forgot about fees!
+
+```
+goal = $8,500 + 15% (for tax) = $9,775.00
+
+unit price = $49 = $49.00
+net profit = unit price − 10% for fees = $44.10
+sales needed = goal / net profit rounded up = 222
+or monthly, sales needed / 12 rounded up = 19
+
+selling to subscribers on a mailing list, so…
+sale conversion = 5%
+subscribe conversion = 10%
+
+new subscribers needed = sales needed / sale conversion = 4,440
+or monthly, new subscribers needed / 12 rounded up = 370
+or daily, new subscribers needed / 365 = 12.2
+
+new visitors needed = new subscribers needed / subscribe conversion = 44,400
+or monthly, new visitors needed / 12 rounded up = 3,700
+or daily, new visitors needed / 365 = 121.64
+```
+
+OK, 122 visits a day needed instead of 110. Doable. And that's assuming I use Gumroad, which has ri-di-cu-lous fees of 10%.
