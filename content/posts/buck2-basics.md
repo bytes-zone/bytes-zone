@@ -51,8 +51,11 @@ genrule(
 
 The new thing here is `$(location ...)`, which interpolates the location of some the output of the named target into the command line.
 
-> [!aside]
-> I had a hard time finding out if there was anything else like `location` that I could use. It turns out that the call there is actually a lookup for the "location" attribute on the target inside Buck's build graph. That means different rules will produce different things! But generally speaking, `location` will work for files in general and `executable` will work for files that you need to run.
+<aside>
+
+I had a hard time finding out if there was anything else like `location` that I could use. It turns out that the call there is actually a lookup for the "location" attribute on the target inside Buck's build graph. That means different rules will produce different things! But generally speaking, `location` will work for files in general and `executable` will work for files that you need to run.
+
+</aside>
 
 Now if you build everything and go look at the output (using `--show-output`), you will get a new file that says "HELLO, WORLD!". If you change the original rule, the new one will get built too.
 
