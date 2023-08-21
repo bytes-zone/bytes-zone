@@ -1,6 +1,6 @@
 +++
 title = "montage"
-date = 2023-08-14
+date = 2023-08-21
 description = "the dystopia I chose"
 +++
 
