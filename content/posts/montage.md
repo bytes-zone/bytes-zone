@@ -4,7 +4,6 @@ date = 2023-08-21
 description = "the dystopia I chose"
 +++
 
-
 I've liked the concept of the [Pomodoro technique](https://francescocirillo.com/products/the-pomodoro-technique) (basically 25 minute work and 5 minutes rest on a loop through the day) for a long time. I get a lot out of it! Problem is, I'd like to use an app for this but nothing I've tried has been "sticky" enough for me to use long-term… they all have some drawback or other I don't want to live with. So like any good software person, I made my own! Long story short, you can get it at [git.bytes.zone/brian/montage](https://git.bytes.zone/brian/montage). Here's what makes it different:
 
 - Other apps I've used assume they can take over for your todo list or daily log. Montage only asks that I label my sessions for status and reporting.
