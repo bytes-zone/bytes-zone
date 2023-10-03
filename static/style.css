@@ -202,13 +202,17 @@ nav > ul > li > a {
     background-color: var(--verydim);
 }
 
-.convertkit > p {
+.convertkit > p:first-child {
     margin-top: 0;
+}
+
+.convertkit > p:last-child {
+    margin-bottom: 0;
 }
 
 .convertkit > form {
     display: flex;
-    margin: 0.5em auto 0 auto;
+    margin: 1em auto;
     max-width: 30em;
 }
 
