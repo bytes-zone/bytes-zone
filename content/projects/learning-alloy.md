@@ -2,7 +2,7 @@
 title = "learning Alloy"
 description = "model all the things!"
 date = 2022-08-01
-updated = 2023-10-02
+updated = 2023-10-09
 
 [extra]
 when = "now"
