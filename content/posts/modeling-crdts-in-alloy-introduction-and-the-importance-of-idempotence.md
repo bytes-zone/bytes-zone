@@ -78,7 +78,7 @@ check MergeIsIdempotent {
 
 Great! Alloy can't find any errors with `OR`.[^4] We expected that, so let's break it in interesting ways. What if the merge function was `XOR(bool, bool)`[^5] instead?
 
-```
+```alloy
 fun merge[a, b: Bool]: Bool {
   a = b implies False else True
 }
@@ -184,7 +184,7 @@ In case you're encountering them for the first time, these diagrams are generate
 
 Alloy can do more than this, too. If we modify our condition to have 3 distinct documents like this:
 
-```
+```alloy
 check SyncIsIdempotent {
   always all disj d1, d2, d3: Document |
     (sync[d1, d2]; sync[d2, d3]) implies value' = value''
