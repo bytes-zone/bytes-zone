@@ -197,7 +197,7 @@ That's it for today. Next time we'll go from booleans-of-dubious-usefulness to c
 
 ---
 
-Big thanks to [Jake Lazaroff](https://jakelazaroff.com/) for his help reviewing this post. If you're interested in this stuff, he also recently published [an interactive intro to CRDTs](https://crdt-post.jakelazaroff.pages.dev/words/an-interactive-intro-to-crdts/) that you may enjoy!
+Big thanks to [Jake Lazaroff](https://jakelazaroff.com/) for his help reviewing this post. If you're interested in this stuff, he also recently published [an interactive intro to CRDTs](https://jakelazaroff.com/words/an-interactive-intro-to-crdts/) that you may enjoy!
 
 [^1]: This is generally true but it's not always true when syncing. There's a further distinction here between operation- and state-based CRDTs. I'm not going to get into it right now, but if I understand correctly, this distinction is about reducing the data you have to transfer by relaxing one of the three requirements while adding strict causal message ordering. For now, we're going to model state-based CRDTs, where this won't come up.
 
