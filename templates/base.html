@@ -14,6 +14,10 @@
     <link rel="canonical" href="{{ current_url | safe }}">
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
     {% block rss -%}
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="index.xml", trailing_slash=false) | safe }}">
     {% endblock -%}

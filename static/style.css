@@ -38,16 +38,17 @@ body {
 
 /* HEADINGS */
 
-h1 { font-size: 2em; }
+h1 { font-size: 3em; }
 
-h2, h1.deemphasized { font-size: 1.5em; }
+h2, h1.deemphasized { font-size: 2.5em; }
 
-h3, h2.deemphasized { font-size: 1.25em; }
+h3, h2.deemphasized { font-size: 2em; }
 
 h1, h2, h3, h4 {
     margin: .2em 0 .2em -0.1em;
     padding: 0 .1em;
     line-height: 1.4;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 
