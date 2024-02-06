@@ -91,6 +91,25 @@
           '';
         };
 
+        packages.bytes-zone-fonts = pkgs.stdenv.mkDerivation {
+          name = "bytes.zone-fonts";
+          src = builtins.filterSource (path: type:
+            type == "directory" || builtins.match ".+woff2$" path != null)
+            ./static;
+
+          buildPhase = ''
+            true
+          '';
+
+          installPhase = ''
+            mkdir -p $out/share/bytes.zone
+            for file in $(find . -type f); do
+              mkdir -p $out/share/bytes.zone/$(dirname $file)
+              mv $file $out/share/bytes.zone/$file
+            done
+          '';
+        };
+
         packages.bytes-zone-pngs = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-pngs";
           src = builtins.filterSource (path: type:
@@ -115,6 +134,7 @@
           name = "bytes.zone";
           paths = [
             packages.bytes-zone-css
+            packages.bytes-zone-fonts
             packages.bytes-zone-js
             packages.bytes-zone-pngs
             packages.bytes-zone-public
