@@ -11,9 +11,9 @@ Hey, welcome back! [Last time, we introduced conflict-free replicated datatypes 
 
 As a quick recap, CRDTs give you eventual consistency, no matter how out of sync the data originally was. This makes them great for local-first or networked multiplayer applications. If you can write a `merge` function for a data structure that is commutative, associative, and idempotent, you might be able to build a CRDT on top of it.
 
-Further, we're modeling all these semantics in [Alloy](https://alloytools.org), a lightweight formal methods tool good for modeling and analyzing data structures. We'll see some cool stuff it can do in a second.
-
 <!-- more -->
+
+Further, we're modeling all these semantics in [Alloy](https://alloytools.org), a lightweight formal methods tool good for modeling and analyzing data structures. We'll see some cool stuff it can do in a second.
 
 ## Counting Birds
 
