@@ -3,15 +3,38 @@
 
 {% block content -%}
 {% set posts = get_section(path="posts/_index.md") -%}
-{% set talks = get_section(path="talks/_index.md") -%}
+{% set micro = get_section(path="micro/_index.md") -%}
 {% set all_projects = get_section(path="projects/_index.md") -%}
-{% set projects = all_projects.pages | group_by(attribute="extra.when") -%}
+{% set projects = all_projects.pages -%}
 
-<h1>👋 Hey There</h1>
-<p>My name is Brian Hicks. You've found my site!</p>
-<p>The latest post I wrote was <strong><a href="{{ posts.pages[0].path | safe }}">{{ posts.pages[0].title | markdown(inline=true) | safe }}</a></strong>, and the latest talk I gave was <strong><a href="{{ talks.pages[0].path | safe }}">{{ talks.pages[0].title | markdown(inline=true) | safe }}</a></strong> at {{ talks.pages[0].extra.event }}.</p>
-<p>{% if projects.now %}Right now I'm working on {% for project in projects.now %}{% if not loop.first %}{% if projects.now | length > 2 and loop.last %}, and {% elif loop.last %} and {% else %}, {% endif %}{% endif %}<a href="{{ project.path | safe }}"><strong>{{ project.title }}</strong></a> ({{ project.description }}{% if loop.last %}.{% endif %}){% endfor %}{% endif %}{% if projects.next %} {% if projects.now %}After that,{% else %}Soon,{% endif %} I'll be working on {% for project in projects.next %}{% if not loop.first %}{% if projects.next | length > 2 and loop.last %}, and {% elif loop.last %} and {% else %}, {% endif %}{% endif %}<a href="{{ project.path | safe }}"><strong>{{ project.title }}</strong></a> ({{ project.description }}{% if loop.last %}.{% endif %}){% endfor %}{% endif %}<p>
-{% if projects.past %}<p>In the past, I've worked on {% for project in projects.past %}{% if not loop.first %}{% if projects.past | length > 2 and loop.last %}, and {% elif loop.last %} and {% else %}, {% endif %}{% endif %}<a href="{{ project.path | safe }}"><strong>{{ project.title }}</strong></a> ({{ project.description }}{% if loop.last %}.{% endif %}){% endfor %}</p>{% endif %}
+<div id="home-grid">
+
+  <div class="greeting">
+    <h1>👋 Hey there!</h1>
+    <p>I'm Brian Hicks, a programmer and author from St. Louis, MO. You've found my site!</p>
+  </div>
+
+  <div class="post">
+    <h2>latest post: <a href="{{ posts.pages[0].path | safe }}">{{ posts.pages[0].title | markdown(inline=true) | safe }}</a></h2>
+    {{ posts.pages[0].summary | safe }}
+    <a href="{{ posts.pages[0].path | safe }}" class="text-button">Keep Reading &rarr;</a>
+  </div>
+
+  <div class="now">
+    <h2 class="deemphasized"><a href="{{ projects.0.path | safe }}">currently: {{ projects.0.title | markdown(inline=true) | safe }}</a></h2>
+    {{ projects.0.content | safe }}
+
+    <a href="/projects" class="text-button">This and {{ projects | length - 1 }} other projects &rarr;</a>
+  </div>
+
+  <div class="micro">
+    <h2 class="deemphasized">latest micropost: <a href="{{ micro.pages[0].path | safe }}">{{ micro.pages[0].title | markdown(inline=true) | safe }}</a></h2>
+    {{ micro.pages[0].summary | safe }}
+
+    <a href="{{ micro.pages[0].path | safe }}" class="text-button">Keep Reading &rarr;</a>
+  </div>
+</div>
+
 <p><small>Made with Love in St. Louis, MO. Have a wonderful day! ❤️</small></p>
 
 {% endblock %}

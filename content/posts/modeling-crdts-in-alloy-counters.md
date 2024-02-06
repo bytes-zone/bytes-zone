@@ -12,6 +12,9 @@ Hey, welcome back! [Last time, we introduced conflict-free replicated datatypes 
 As a quick recap, CRDTs give you eventual consistency, no matter how out of sync the data originally was. This makes them great for local-first or networked multiplayer applications. If you can write a `merge` function for a data structure that is commutative, associative, and idempotent, you might be able to build a CRDT on top of it.
 
 Further, we're modeling all these semantics in [Alloy](https://alloytools.org), a lightweight formal methods tool good for modeling and analyzing data structures. We'll see some cool stuff it can do in a second.
+
+<!-- more -->
+
 ## Counting Birds
 
 Last time our document was a single boolean. That's useful, but we can't build an application on top of it, so let's keep moving. To get much further, we're going to have to figure out how to sync numbers back and forth. Let's use the [the Great Backyard Bird Count](https://www.birdcount.org/) as an example. Say we're counting [red-tailed hawks](https://www.allaboutbirds.org/guide/Red-tailed_Hawk/id):

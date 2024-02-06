@@ -40,26 +40,20 @@ body {
 
 h1 { font-size: 2em; }
 
+h2, h1.deemphasized { font-size: 1.5em; }
+
+h3, h2.deemphasized { font-size: 1.25em; }
+
 h1, h2, h3, h4 {
-    display: inline-block;
     margin: .2em 0 .2em -0.1em;
     padding: 0 .1em;
     line-height: 1.4;
-    background: repeating-linear-gradient(to top, var(--accent), var(--accent) .6em, rgba(255,255,255,0) .6em 1.41em);
 }
 
 
 h1 > a, h2 > a, h3 > a, h4 > a {
     text-decoration: none;
     color: var(--primary);
-}
-
-h1 > a, h2 > a, h3 > a, h4 > a {
-    background: none;
-}
-
-h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover {
-    background: transparent;
 }
 
 /* This happens on the post/talk listing. */
@@ -269,4 +263,49 @@ footer {
 
 .footnote-definition > sup {
     margin-right: 1em;
+}
+
+/* HOMEPAGE */
+
+#home-grid {
+    display: grid;
+
+    grid-template-areas: "greeting now" "post now" "post now" "post micro";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content auto auto auto;
+    border-bottom: 1px dashed var(--accent);
+}
+
+#home-grid .greeting {
+    grid-area: greeting;
+    border-bottom: 1px dashed var(--accent);
+    border-right: 1px dashed var(--accent);
+    padding: 0 1em 1em 0;
+}
+
+#home-grid .now {
+    grid-area: now;
+    border-bottom: 1px dashed var(--accent);
+    padding: 0 0 1em 1em;
+}
+
+#home-grid .post {
+    grid-area: post;
+    border-right: 1px dashed var(--accent);
+    padding: 1em 1em 1em 0;
+}
+
+#home-grid .micro {
+    grid-area: micro;
+    padding: 1em 0 1em 1em;
+}
+
+.text-button {
+    display: inline-block;
+    border: 1px solid var(--accent);
+    border-radius: 0.5em;
+    background: none;
+    padding: 0.25em 0.5em;
+    margin-top: 1em;
+    font-size: 0.8em;
 }
