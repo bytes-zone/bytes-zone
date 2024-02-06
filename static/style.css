@@ -20,6 +20,11 @@
     }
 }
 
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('/fonts/BarlowCondensed-SemiBold.woff2') format('woff2');
+}
+
 body {
     background-color: var(--background);
     color: var(--primary);
