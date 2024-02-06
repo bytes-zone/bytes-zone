@@ -59,9 +59,11 @@ Let's look at the principles:
    Success!
 
 5. **Stick with the 13 web safe fonts +2.**
-   `font: 1.2em/1.62 san-serif`.
+   `font: 1.2em/1.62 san-serif` for the body.
    Looks fine.
    Done.
+   I used to do sans-serif for the headers too, but loading a single WOFF2 gives it a nice designed look without being too heavy.
+   I'm hosting my own fonts; see above about hotlinking.
 
 6. **Obsessively compress your images.**
    The site doesn't use any images for layout.
