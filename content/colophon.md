@@ -74,5 +74,5 @@ Let's look at the principles:
 7. **Eliminate the broken URL risk.**
    This is the only item where I don't feel like I'm at least satisfying the spirit of the rule.
    I don't have an external link checker of any kind.
-   That said, this site is hosted on a VM which also serves as my personal git host ([git.bytes.zone](https://git.bytes.zone)—[email me](mailto:brian@brianthicks.com) if we know each other and you want to use it too) so I'd notice pretty quickly if it went down!
+   That said, this site is hosted on a VM which also serves as my personal git host ([git.bytes.zone](https://git.bytes.zone)) so I'd notice pretty quickly if it went down!
    I also periodically check for 404s in the Nginx access log so I know if I need to add a redirect or improve the missing page stuff.
