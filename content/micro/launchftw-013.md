@@ -3,9 +3,11 @@ title = "launch ftw, part 13"
 date = 2023-08-14
 +++
 
-Time passes (almost a month this time) and I'm back. Enough time has passed that it might make sense to start over from the beginning, but this time I actually have an idea of the product that I want to make: I noticed that in almost every instance where formal methods come up online, there is at least a subtext of "but how do I actually get started in this?" I think I could help there! Basically, I have noticed that there's a sweet spot of formal methods when used as documentation. You don't even have to use software for this; you can write a decision table or decision tree on a whiteboard and instantly have something useful for a team to talk about.
+Time passes (almost a month this time) and I'm back. Enough time has passed that it might make sense to start over from the beginning, but this time I actually have an idea of the product that I want to make: I noticed that in almost every instance where formal methods come up online, there is at least a subtext of "but how do I actually get started in this?" I think I could help there!
 
 <!-- more -->
+
+Basically, I have noticed that there's a sweet spot of formal methods when used as documentation. You don't even have to use software for this; you can write a decision table or decision tree on a whiteboard and instantly have something useful for a team to talk about.
 
 This is pretty off-script from what I decided earlier, so I think I want to find a little justification in the real world. Let's just root around in Hacker News comments for a bit, since that's attracts a pretty wide slice of tech folks.
 
