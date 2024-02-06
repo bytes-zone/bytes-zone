@@ -21,7 +21,7 @@
   </div>
 
   <div class="now">
-    <h2 class="deemphasized"><a href="{{ projects.0.path | safe }}">currently: {{ projects.0.title | markdown(inline=true) | safe }}</a></h2>
+    <h2 class="deemphasized">currently: <a href="{{ projects.0.path | safe }}">{{ projects.0.title | markdown(inline=true) | safe }}</a></h2>
     {{ projects.0.content | safe }}
 
     <a href="/projects" class="text-button">This and {{ projects | length - 1 }} other projects &rarr;</a>
