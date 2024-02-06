@@ -17,7 +17,7 @@
   <div class="post">
     <h2>latest post: <a href="{{ posts.pages[0].path | safe }}">{{ posts.pages[0].title | markdown(inline=true) | safe }}</a></h2>
     {{ posts.pages[0].summary | safe }}
-    <a href="{{ posts.pages[0].path | safe }}" class="text-button">Keep Reading &rarr;</a>
+    <a href="{{ posts.pages[0].path | safe }}" class="text-button">Keep Reading ({{ posts.pages[0].reading_time }} minutes) &rarr;</a>
   </div>
 
   <div class="now">
@@ -31,7 +31,7 @@
     <h2 class="deemphasized">latest micropost: <a href="{{ micro.pages[0].path | safe }}">{{ micro.pages[0].title | markdown(inline=true) | safe }}</a></h2>
     {{ micro.pages[0].summary | safe }}
 
-    <a href="{{ micro.pages[0].path | safe }}" class="text-button">Keep Reading &rarr;</a>
+    <a href="{{ micro.pages[0].path | safe }}" class="text-button">Keep Reading ({{ micro.pages[0].reading_time }} minutes) &rarr;</a>
   </div>
 </div>
 
