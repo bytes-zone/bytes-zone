@@ -267,37 +267,46 @@ footer {
 
 /* HOMEPAGE */
 
-#home-grid {
-    display: grid;
+@media screen and (width > 800px) {
+    #home-grid {
+        display: grid;
 
-    grid-template-areas: "greeting now" "post now" "post now" "post micro";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content auto auto auto;
-    border-bottom: 1px dashed var(--accent);
+        grid-template-areas: "greeting now" "post now" "post now" "post micro";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content auto auto auto;
+        border-bottom: 1px dashed var(--accent);
+    }
+
+    #home-grid .greeting {
+        grid-area: greeting;
+        border-bottom: 1px dashed var(--accent);
+        border-right: 1px dashed var(--accent);
+        padding: 0 1em 1em 0;
+    }
+
+    #home-grid .now {
+        grid-area: now;
+        border-bottom: 1px dashed var(--accent);
+        padding: 0 0 1em 1em;
+    }
+
+    #home-grid .post {
+        grid-area: post;
+        border-right: 1px dashed var(--accent);
+        padding: 1em 1em 1em 0;
+    }
+
+    #home-grid .micro {
+        grid-area: micro;
+        padding: 1em 0 1em 1em;
+    }
 }
 
-#home-grid .greeting {
-    grid-area: greeting;
-    border-bottom: 1px dashed var(--accent);
-    border-right: 1px dashed var(--accent);
-    padding: 0 1em 1em 0;
-}
-
-#home-grid .now {
-    grid-area: now;
-    border-bottom: 1px dashed var(--accent);
-    padding: 0 0 1em 1em;
-}
-
-#home-grid .post {
-    grid-area: post;
-    border-right: 1px dashed var(--accent);
-    padding: 1em 1em 1em 0;
-}
-
-#home-grid .micro {
-    grid-area: micro;
-    padding: 1em 0 1em 1em;
+@media screen and (width <= 800px) {
+    #home-grid > * {
+        padding: 1em 0;
+        border-bottom: 1px dashed var(--accent);
+    }
 }
 
 .text-button {
