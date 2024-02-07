@@ -24,7 +24,8 @@
 
   {% set posts = get_section(path="posts/_index.md") -%}
   {% set talks = get_section(path="talks/_index.md") -%}
-  {% set updates = posts.pages | concat(with=talks.pages) | filter(attribute="extra.project", value=page.title) -%}
+  {% set micros = get_section(path="micro/_index.md") -%}
+  {% set updates = posts.pages | concat(with=talks.pages) | concat(with=micros.pages) | filter(attribute="extra.project", value=page.title) -%}
   {%- if updates %}
   <h2>Updates</h2>
   <dl>
