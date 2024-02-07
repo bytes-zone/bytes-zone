@@ -12,7 +12,7 @@ So in 2024 (or at least the early part of it) I'll be trying to make a thing a m
 
 The rules are pretty simple:
 
-1. It has to be a thing you can buy or download.
+1. It has to be a "real" thing. Something you can buy, download, subscribe to, etc.
 2. It has to be ready in a month.
 
 If I decide I want one of the "things" to be improvements to an earlier things, that's fine.
