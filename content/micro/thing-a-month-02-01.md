@@ -1,6 +1,6 @@
 +++
 title = "kicking off thing-a-month"
-date = 2024-02-06T18:12:00-06:00
+date = 2024-02-06T00:01:00-06:00
 
 [extra]
 project = "thing-a-month"

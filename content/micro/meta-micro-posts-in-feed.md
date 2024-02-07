@@ -1,6 +1,6 @@
 +++
 title = "meta: micro posts are in the feed now"
-date = 2024-02-06T12:00:00-06:00
+date = 2024-02-06T00:00:00-06:00
 +++
 
 Hi out there to any folks subscribing via RSS! You probably got a bunch of posts in your feed reader just now that had to do with an exploration of starting a business I did in August of last year. And with the next post in your feed, you're going to start getting more like that.
