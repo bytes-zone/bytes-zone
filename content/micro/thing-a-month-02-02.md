@@ -1,7 +1,7 @@
 +++
 title = "shopping for a scheduler"
 description = "evaluating tradeoffs between Kubernetes and Nomad"
-date = 2024-02-07T07:07:00-06:00
+date = 2024-02-07
 +++
 
 The first thing on my "meta" list is to get my house in order with how I deploy things. Right now I have a single VM in DigitalOcean that runs my blog, git.bytes.zone, and a couple other smaller static sites. (See [clown computing](@/posts/clown-computing.md).)
