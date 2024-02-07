@@ -20,7 +20,6 @@
 	<updated>{{ last_updated | date(format="%+") }}</updated>
 	<id>{{ feed_url | safe }}</id>
 	{%- for page in pages %}
-	{%- if page.components[0] != "micro" %}
 	<entry xml:lang="{{ page.lang }}">
 		<title>{{ page.title | markdown | striptags | trim }}</title>
 		<published>{{ page.date | date(format="%+") }}</published>
@@ -29,6 +28,5 @@
 		<id>{{ page.permalink | safe }}</id>
 		<content type="html">{{ page.content }}</content>
 	</entry>
-	{%- endif -%}
 	{%- endfor %}
 </feed>
