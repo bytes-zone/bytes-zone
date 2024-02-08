@@ -1,9 +1,9 @@
 @media(prefers-color-scheme: light) {
     :root {
-        --primary: #16171F;
-        --deemphasized: #6E7189;
-        --verydim: #EEEEF0;
-        --dim: #E2E2E7;
+        --primary: #161F17;
+        --deemphasized: #6E8971;
+        --verydim: #EEF0EE;
+        --dim: #E2E7E2;
         --accent: #78E2A0;
         --background: #FDFFFD;
     }
@@ -11,10 +11,10 @@
 
 @media(prefers-color-scheme: dark) {
     :root {
-        --primary: #F0F0F3;
-        --deemphasized: #8F8FA6;
-        --verydim: #232731;
-        --dim: #2B303B;
+        --primary: #F0F3F0;
+        --deemphasized: #8FA68F;
+        --verydim: #233127;
+        --dim: #2B3B30;
         --accent: #2d5c3f;
         --background: #121A12;
     }
