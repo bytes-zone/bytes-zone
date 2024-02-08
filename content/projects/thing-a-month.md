@@ -1,7 +1,7 @@
 +++
 title = "thing-a-month"
 description = "making cool stuff in a time-constrained way"
-date = 2024-02-06
+date = 2024-02-06T12:00:00-06:00
 
 [extra]
 when = "now"

@@ -1,6 +1,9 @@
 +++
 title = "a Kubernetes shopping list"
 date = 2024-02-08T06:12:53-06:00
+
+[extra]
+project = "thing-a-month (meta)"
 +++
 
 I talked to a few people yesterday—it sounds like Kubernetes is where it's at. I really enjoyed Nomad back in the day, but it looks like I'd have to do a lot of roll-your-own, which kind of negates the benefit of operational simplicity for me.
