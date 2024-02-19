@@ -9,6 +9,8 @@ project = "thing-a-month (meta)"
 
 If I’m going to be shipping apps by the end of the month, I’d better get CI set up. I’ve been looking around at different options and found:
 
+<!-- more -->
+
 - Argo Workflows. Probably a taste that goes great with Argo CD, but I’d like to source CI steps from the repos and this seems difficult.
 - Tekton: similar.
 - Woodpecker: an offshoot of Drone, looks nice, seems to do what I want, but I can’t get the Helm chart working.
