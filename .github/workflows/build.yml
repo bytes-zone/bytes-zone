@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: build and test
-    runs-on: "${{ matrix.os }}"
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v24
