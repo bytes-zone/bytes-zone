@@ -14,7 +14,7 @@
         packages.bytes-zone-public = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-public";
           src = builtins.filterSource
-            (path: type: builtins.match ".+(png|css|js|woff2)$" path == null) ./.;
+            (path: type: builtins.match ".+(png|css|js|woff2|nix)$" path == null) ./.;
 
           buildInputs = [ pkgs.zola pkgs.nodePackages.html-minifier ];
           buildPhase = ''
