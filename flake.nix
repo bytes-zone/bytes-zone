@@ -10,6 +10,9 @@
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
       in rec {
+        # `nix fmt`
+        formatter = pkgs.nixpkgs-fmt;
+
         # `nix build`
         packages.bytes-zone-public = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-public";
