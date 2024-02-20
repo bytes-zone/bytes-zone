@@ -46,8 +46,9 @@
 
         packages.bytes-zone-css = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-css";
-          src = builtins.filterSource (path: type:
-            type == "directory" || builtins.match ".+css$" path != null)
+          src = builtins.filterSource
+            (path: type:
+              type == "directory" || builtins.match ".+css$" path != null)
             ./static;
 
           buildInputs = [ pkgs.nodePackages.clean-css-cli ];
@@ -71,8 +72,9 @@
 
         packages.bytes-zone-js = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-js";
-          src = builtins.filterSource (path: type:
-            type == "directory" || builtins.match ".+js$" path != null)
+          src = builtins.filterSource
+            (path: type:
+              type == "directory" || builtins.match ".+js$" path != null)
             ./static;
 
           buildInputs = [ pkgs.nodePackages.uglify-js ];
@@ -96,8 +98,9 @@
 
         packages.bytes-zone-fonts = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-fonts";
-          src = builtins.filterSource (path: type:
-            type == "directory" || builtins.match ".+woff2$" path != null)
+          src = builtins.filterSource
+            (path: type:
+              type == "directory" || builtins.match ".+woff2$" path != null)
             ./static;
 
           buildPhase = ''
@@ -115,8 +118,9 @@
 
         packages.bytes-zone-pngs = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-pngs";
-          src = builtins.filterSource (path: type:
-            type == "directory" || builtins.match ".+png$" path != null)
+          src = builtins.filterSource
+            (path: type:
+              type == "directory" || builtins.match ".+png$" path != null)
             ./static;
 
           buildInputs = [ pkgs.pngcrush ];
