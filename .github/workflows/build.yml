@@ -46,7 +46,7 @@ jobs:
 
       - name: run container
         run: |
-          IMAGE="$(docker images --format "{{.Repository}}:{{.Tag}}" | head -n 1"
+          IMAGE="$(docker images --format "{{.Repository}}:{{.Tag}}" | head -n 1)"
           docker run --detach --publish 8080:80 --name bytes-zone "$IMAGE"
           curl localhost:80
           docker rm -f bytes-zone
