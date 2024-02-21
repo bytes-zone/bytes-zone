@@ -210,10 +210,17 @@
         # packages.container = pkgs.dockerTools.streamLayeredImage {
         packages.container = pkgs.dockerTools.buildLayeredImage {
           name = "bytes.zone";
+
+          # make /var/log/nginx so Nginx doesn't fail trying to open it (which
+          # it does no matter what you say in log settings, apparently.
+          extraCommands = ''
+            mkdir -p /var/log/nginx
+          '';
+
           config = {
             "ExposedPorts"."80/tcp" = { };
             Entrypoint = "${pkgs.nginx}/bin/nginx";
-            Command = [ "-c" "${packages.nginx-conf}/nginx.conf" ];
+            Command = [ "-c" packages.nginx-conf ];
           };
         };
 
