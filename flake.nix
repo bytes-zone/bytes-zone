@@ -164,6 +164,55 @@
           ];
         };
 
+        packages.nginx-conf = pkgs.writeText "nginx.conf" ''
+          error_log stderr;
+          daemon off;
+
+          http {
+            include ${pkgs.nginx}/etc/nginx/mime.types;
+            types_hash_max_size 4096;
+
+            # optimization
+            sendfile on;
+            tcp_nopush on;
+            tcp_nodelay on;
+            keepalive_timeout 65;
+
+            gzip on;
+            gzip_static on;
+            gzip_vary on;
+            gzip_comp_level 5;
+            gzip_min_length 256;
+            gzip_types application/atom+xml application/geo+json application/javascript application/json application/ld+json application/manifest+json application/rdf+xml application/vnd.ms-fontobject application/wasm application/x-rss+xml application/x-web-app-manifest+json application/xhtml+xml application/xliff+xml application/xml font/collection font/otf font/ttf image/bmp image/svg+xml image/vnd.microsoft.icon text/cache-manifest text/calendar text/css text/csv text/javascript text/markdown text/plain text/vcard text/vnd.rim.location.xloc text/vtt text/x-component text/xml;
+
+            access_log /dev/stdout;
+
+            server {
+              listen 0.0.0.0:80;
+              listen [::0]:80;
+              http2 on;
+
+              server_name bytes.zone;
+              root ${packages.bytes-zone}/share/bytes.zone;
+
+              add_header Strict-Transport-Security max-age=15768000 always;
+              add_header Content-Security-Policy "default-src 'none'; child-src https:; script-src 'self' https://stats.bytes.zone; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stats.bytes.zone/count; manifest-src 'self'; font-src 'self'" always;
+              add_header X-Frame-Options "SAMEORIGIN" always;
+              add_header X-Content-Type-Options "nosniff" always;
+              add_header X-XSS-Protection "1; mode=block" always;
+            }
+          }
+        '';
+
+        packages.container = pkgs.dockerTools.streamLayeredImage {
+          name = "bytes.zone";
+          config = {
+            "ExposedPorts"."80/tcp" = { };
+            Entrypoint = "${pkgs.nginx}/bin/nginx";
+            Command = [ "-c" "${packages.nginx-conf}/nginx.conf" ];
+          };
+        };
+
         defaultPackage = packages.bytes-zone;
         overlay = final: prev: { bytes-zone = packages.bytes-zone; };
 
