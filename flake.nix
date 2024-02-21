@@ -221,7 +221,8 @@
 
           config = {
             "ExposedPorts"."80/tcp" = { };
-            Command = [ "${pkgs.nginx}/bin/nginx" "-c" packages.nginx-conf ];
+            Entrypoint = "${pkgs.nginx}/bin/nginx";
+            Command = [ "-c" packages.nginx-conf ];
           };
         };
 
