@@ -175,7 +175,7 @@
             events {}
 
             http {
-              include ${pkgs.nginx}/etc/nginx/mime.types;
+              include ${pkgs.nginx}/conf/mime.types;
               types_hash_max_size 4096;
 
               # optimization
