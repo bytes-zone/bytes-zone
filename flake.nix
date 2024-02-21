@@ -16,8 +16,24 @@
         # `nix build`
         packages.bytes-zone-public = pkgs.stdenv.mkDerivation {
           name = "bytes.zone-public";
-          src = builtins.filterSource
-            (path: type: builtins.match ".+(png|css|js|woff2|nix)$" path == null) ./.;
+          srcs = [
+            ./content
+            ./syntaxes
+            ./templates
+            ./config.toml
+          ];
+
+          unpackPhase = ''
+            for src in $srcs; do
+              tgt=$(stripHash $src)
+
+              if test -d $src; then
+                cp -r $src $tgt
+              elif test -f $src; then
+                cp $src $tgt
+              fi
+            done
+          '';
 
           buildInputs = [ pkgs.zola pkgs.nodePackages.html-minifier ];
           buildPhase = ''
