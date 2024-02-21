@@ -165,7 +165,6 @@
         };
 
         packages.nginx-conf = pkgs.writeText "nginx.conf" ''
-          user nobody nobody;
           daemon off;
           error_log /dev/stdout info;
           pid /dev/null;
