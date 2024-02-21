@@ -26,3 +26,13 @@ jobs:
             --max-jobs 2 \
             --eval-store auto \
             --store ssh-ng://eu.nixbuild.net
+
+      - name: build container
+        run: |
+          nix build \
+            --print-build-logs \
+            --builders "" \
+            --max-jobs 2 \
+            --eval-store auto \
+            --store ssh-ng://eu.nixbuild.net \
+            .#container
