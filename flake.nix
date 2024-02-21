@@ -194,7 +194,7 @@
               access_log /dev/stdout;
 
               server {
-                listen 0.0.0.0:80;
+                listen 0.0.0.0:80 default_server;
                 listen [::0]:80;
                 http2 on;
 
