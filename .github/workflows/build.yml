@@ -41,5 +41,5 @@ jobs:
               .#container | \
               jq -r '.[0].outputs.out'
           )"
-          nix copy --from ssh-ng://eu.nixbuild.net "$STORE_PATH"
+          nix-copy-closure --use-substitutes --from eu.nixbuild.net "$STORE_PATH"
           docker load < "$STORE_PATH"
