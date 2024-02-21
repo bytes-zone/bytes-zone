@@ -36,4 +36,5 @@ jobs:
             --max-jobs 2 \
             --eval-store auto \
             --store ssh-ng://eu.nixbuild.net \
+            --system x86_64-linux \
             .#container
