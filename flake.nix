@@ -204,7 +204,8 @@
           }
         '';
 
-        packages.container = pkgs.dockerTools.streamLayeredImage {
+        # packages.container = pkgs.dockerTools.streamLayeredImage {
+        packages.container = pkgs.dockerTools.buildLayeredImage {
           name = "bytes.zone";
           config = {
             "ExposedPorts"."80/tcp" = { };
