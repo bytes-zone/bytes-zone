@@ -198,7 +198,6 @@
                 listen [::0]:80;
                 http2 on;
 
-                server_name bytes.zone;
                 root ${packages.bytes-zone}/share/bytes.zone;
 
                 add_header Strict-Transport-Security max-age=15768000 always;
