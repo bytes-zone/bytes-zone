@@ -42,4 +42,4 @@ jobs:
               jq -r '.[0].outputs.out'
           )"
           nix-copy-closure --use-substitutes --from eu.nixbuild.net "$STORE_PATH"
-          docker load < "$STORE_PATH"
+          "$STORE_PATH" | docker load
