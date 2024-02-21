@@ -214,7 +214,7 @@
           # make /var/log/nginx so Nginx doesn't fail trying to open it (which
           # it does no matter what you say in log settings, apparently.
           extraCommands = ''
-            mkdir -p /var/log/nginx
+            mkdir -p var/log/nginx
           '';
 
           config = {
