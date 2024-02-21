@@ -218,15 +218,28 @@
           # make /var/log/nginx so Nginx doesn't fail trying to open it (which
           # it does no matter what you say in log settings, apparently.
           extraCommands = ''
+            mkdir -p tmp/nginx_client_body
             mkdir -p var/log/nginx
           '';
 
-          contents = [ pkgs.fakeNss ];
+          contents = [
+            pkgs.fakeNss
+            pkgs.nginxMainline
+            packages.bytes-zone
+            packages.nginx-conf
+
+            # for debugging, if needed
+            # pkgs.dockerTools.binSh
+            # pkgs.coreutils
+          ];
 
           config = {
             "ExposedPorts"."80/tcp" = { };
-            Entrypoint = "${pkgs.nginx}/bin/nginx";
-            Command = [ "-c" packages.nginx-conf ];
+            Entrypoint = "nginx";
+            Cmd = [ "-c" "/etc/nginx/nginx.conf" ];
+
+            # for debugging, if needed
+            # Entrypoint = "/bin/sh";
           };
         };
 
