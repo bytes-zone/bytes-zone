@@ -30,6 +30,7 @@ jobs:
       - name: build container
         run: |
           nix build \
+            --json \
             --print-build-logs \
             --builders "" \
             --max-jobs 2 \
