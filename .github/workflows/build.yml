@@ -48,5 +48,5 @@ jobs:
         run: |
           IMAGE="$(docker images --format "{{.Repository}}:{{.Tag}}" | head -n 1)"
           docker run --detach --publish 8080:80 --name bytes-zone "$IMAGE"
-          curl localhost:80
+          curl -v http://localhost:8080
           docker rm -f bytes-zone
