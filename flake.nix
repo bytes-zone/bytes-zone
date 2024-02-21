@@ -165,6 +165,7 @@
         };
 
         packages.nginx-conf = pkgs.writeText "nginx.conf" ''
+          user nobody nobody;
           daemon off;
           error_log /dev/stdout info;
           pid /dev/null;
@@ -216,10 +217,11 @@
             mkdir -p var/log/nginx
           '';
 
+          contents = [ pkgs.fakeNss ];
+
           config = {
             "ExposedPorts"."80/tcp" = { };
-            Entrypoint = "${pkgs.nginx}/bin/nginx";
-            Command = [ "-c" packages.nginx-conf ];
+            Command = [ "${pkgs.nginx}/bin/nginx" "-c" packages.nginx-conf ];
           };
         };
 
