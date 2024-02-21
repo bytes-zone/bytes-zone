@@ -165,8 +165,11 @@
         };
 
         packages.nginx-conf = pkgs.writeText "nginx.conf" ''
-          error_log stderr;
+          user nobody nobody;
           daemon off;
+          error_log /dev/stdout info;
+          pid /dev/null;
+          events {}
 
           http {
             include ${pkgs.nginx}/etc/nginx/mime.types;
