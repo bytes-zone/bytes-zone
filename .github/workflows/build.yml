@@ -41,12 +41,8 @@ jobs:
               .#container | \
               jq -r '.[0].outputs.out'
           )"
-          nix-copy-closure --use-substitutes --from eu.nixbuild.net "$STORE_PATH"
-          "$STORE_PATH" | docker load
 
-      - name: run container
-        run: |
-          IMAGE="$(docker images --format "{{.Repository}}:{{.Tag}}" | head -n 1)"
-          docker run --detach --publish 8080:80 --name bytes-zone "$IMAGE"
-          curl -v http://localhost:8080
-          docker rm -f bytes-zone
+          nix copy \
+            --from ssh-ng://eu.nixbuild.net \
+            --substitute \
+            "$STORE_PATH"
