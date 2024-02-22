@@ -44,4 +44,9 @@ jobs:
               jq -r '.[0].outputs.out'
           )"
 
-          nix run --store ssh-ng://eu.nixbuild.net "$STORE_PATH"
+          nix copy \
+            --from ssh-ng://eu.nixbuild.net \
+            --substitute \
+            "$STORE_PATH"
+
+          "$STORE_PATH/push-container"
