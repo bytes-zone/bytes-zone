@@ -45,4 +45,4 @@ jobs:
             --substitute \
             "$STORE_PATH"
 
-          "$STORE_PATH/push-container"
+          "$STORE_PATH/bin/push-container"
