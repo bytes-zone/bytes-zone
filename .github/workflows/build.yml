@@ -26,6 +26,10 @@ jobs:
       #       --store ssh-ng://eu.nixbuild.net
 
       - name: build and push container
+        env:
+          DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           STORE_PATH="$(
             nix build \
