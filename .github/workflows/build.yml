@@ -15,6 +15,7 @@ jobs:
           nix_on_tmpfs: true
           nix_conf: |
             experimental-features = nix-command flakes
+      - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: nixbuild/nixbuild-action@v19
         with:
           nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
