@@ -250,10 +250,9 @@
             ${packages.container} | gzip --fast > container.tar.gz
 
             CONTAINER="docker-archive:container.tar.gz"
-            skopeo login "$DOCKER_REGISTRY" --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
             TAG="$(skopeo list-tags "$CONTAINER" | jq -r '.Tags[0]')"
             DEST="docker://$DOCKER_REGISTRY/$TAG"
-            skopeo copy "$CONTAINER" "$DEST"
+            skopeo copy --dest-creds "$DOCKER_USERNAME:$DOCKER_PASSWORD" "$CONTAINER" "$DEST"
 
             echo "$TAG"
           '';
