@@ -253,6 +253,7 @@
             TAG="$(skopeo list-tags "$CONTAINER" | jq -r '.Tags[0]')"
             DEST="docker://$DOCKER_REGISTRY/$TAG"
             skopeo copy \
+              --debug \
               --dest-creds "$DOCKER_USERNAME:$DOCKER_PASSWORD" \
               "$CONTAINER" "$DEST"
 
