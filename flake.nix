@@ -243,24 +243,6 @@
           };
         };
 
-        packages.pushContainer = pkgs.writeShellApplication {
-          name = "push-container";
-          runtimeInputs = [ pkgs.skopeo pkgs.jq pkgs.gzip ];
-          text = ''
-            ${packages.container} | gzip --fast > container.tar.gz
-
-            CONTAINER="docker-archive:container.tar.gz"
-            TAG="$(skopeo list-tags "$CONTAINER" | jq -r '.Tags[0]')"
-            DEST="docker://$DOCKER_REGISTRY/$TAG"
-            skopeo copy \
-              --format=v2s2 \
-              --dest-creds "$DOCKER_USERNAME:$DOCKER_PASSWORD" \
-              "$CONTAINER" "$DEST"
-
-            echo "$TAG"
-          '';
-        };
-
         defaultPackage = packages.bytes-zone;
         overlay = final: prev: { bytes-zone = packages.bytes-zone; };
 
