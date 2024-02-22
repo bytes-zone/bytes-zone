@@ -27,7 +27,7 @@ jobs:
       #       --eval-store auto \
       #       --store ssh-ng://eu.nixbuild.net
 
-      - name: build container
+      - name: upload container
         run: |
           STORE_PATH="$(
             nix build \
