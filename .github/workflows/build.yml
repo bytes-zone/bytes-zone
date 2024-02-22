@@ -10,11 +10,7 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v4
-      - uses: nixbuild/nix-quick-install-action@v24
-        with:
-          nix_on_tmpfs: true
-          nix_conf: |
-            experimental-features = nix-command flakes
+      - uses: DeterminateSystems/nix-installer-action@v9
       - uses: DeterminateSystems/magic-nix-cache-action@v3
       - uses: nixbuild/nixbuild-action@v19
         with:
