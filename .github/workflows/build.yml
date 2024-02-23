@@ -40,7 +40,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: build and push container
+      - name: build and load container
         run: |
           STORE_PATH="$(
             nix build \
@@ -62,6 +62,8 @@ jobs:
 
           "$STORE_PATH" | docker load
 
+      - name: push container
+        run: |
           REPO="$(docker images --format json | grep bytes.zone | jq -r ".Repository" | head -n 1)"
           TAG="$(docker images --format json | grep bytes.zone | jq -r ".Tag" | head -n 1)"
 
