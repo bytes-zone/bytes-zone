@@ -88,7 +88,9 @@ jobs:
       - name: update manifest
         run: |
           nix-shell -p kustomize --run 'cd manifests/apps/bytes-zone && kustomize edit set image ${{ needs.push.outputs.image }}'
-          git diff
-          git add manifests/apps/bytes-zone
-          git commit -m "update bytes-zone to ${{ needs.push.outputs.image }}"
-          git push
+          DIFF="$(git diff | tee /dev/stderr)"
+          if test -n "$DIFF"; then
+            git add manifests/apps/bytes-zone
+            git commit -m "update bytes-zone to ${{ needs.push.outputs.image }}"
+            git push
+          fi
