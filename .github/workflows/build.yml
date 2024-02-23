@@ -62,14 +62,12 @@ jobs:
 
           "$STORE_PATH" | docker load
 
-          # debug
-          docker images
+          REPO="$(docker images --format json | grep bytes.zone | jq -r ".Repository" | head -n 1)"
+          TAG="$(docker images --format json | grep bytes.zone | jq -r ".Tag" | head -n 1)"
 
-          REPO="$(docker images --format "{{.Repository}}" | head -n 1)"
-          TAG="$(docker images --format "{{.Tag}}" | head -n 1)"
-
+          SOURCE_NAME="$REPO:$TAG"
           FINAL_NAME="$REGISTRY/$IMAGE_NAME:$TAG"
-          echo "$FINAL_NAME"
+          echo "$SOURCE_NAME -> $FINAL_NAME"
 
-          docker tag "$REPO:$TAG" "$FINAL_NAME"
+          docker tag "$SOURCE_NAME" "$FINAL_NAME"
           docker push "$FINAL_NAME"
