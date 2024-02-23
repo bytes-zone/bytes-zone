@@ -21,6 +21,10 @@ jobs:
         with:
           nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
           generate_summary_for: 'workflow'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install -g @lhci/cli@0.13.x
 
       - name: build and load container
         run: |
@@ -53,3 +57,6 @@ jobs:
           )"
 
           docker run -d -p 8080:80 --name bytes-zone "$IMAGE"
+
+      - name: run LHCI
+        run: lhci autorun
