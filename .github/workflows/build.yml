@@ -40,7 +40,7 @@ jobs:
               --eval-store auto \
               --store ssh-ng://eu.nixbuild.net \
               --system x86_64-linux \
-              .#pushContainer | \
+              .#container | \
               jq -r '.[0].outputs.out'
           )"
 
@@ -49,4 +49,4 @@ jobs:
             --substitute \
             "$STORE_PATH"
 
-          "$STORE_PATH/bin/push-container"
+          "$STORE_PATH" | docker load
