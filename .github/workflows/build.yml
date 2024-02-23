@@ -65,5 +65,8 @@ jobs:
           REPO="$(docker images --format "{{.Repository}}" | head -n 1)"
           TAG="$(docker images --format "{{.Tag}}" | head -n 1)"
 
-          docker tag "$REPO:$TAG" "$IMAGE_NAME:$TAG"
-          docker push "$IMAGE_NAME:$TAG"
+          FINAL_NAME="$REGISTRY/$IMAGE_NAME:$TAG"
+          echo "$FINAL_NAME"
+
+          docker tag "$REPO:$TAG" "$FINAL_NAME"
+          docker push "$FINAL_NAME"
