@@ -48,7 +48,7 @@ jobs:
 
       - name: run LHCI
         run: |
-          IMAGE="$(
+          export IMAGE="$(
             docker images --format '{{.Repository}}:{{.Tag}}' | \
               grep bytes.zone | \
               head -n 1
