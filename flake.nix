@@ -235,7 +235,7 @@
 
           config = {
             "ExposedPorts"."80/tcp" = { };
-            Entrypoint = "nginx";
+            Entrypoint = [ "nginx" ];
             Cmd = [ "-c" "/etc/nginx/nginx.conf" ];
 
             # for debugging, if needed

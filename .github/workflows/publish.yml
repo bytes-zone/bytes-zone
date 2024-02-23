@@ -10,8 +10,8 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  publish:
-    name: publish container
+  push:
+    name: push container
     runs-on: ubuntu-latest
 
     permissions:
@@ -67,3 +67,20 @@ jobs:
 
           docker tag "$SOURCE_NAME" "$FINAL_NAME"
           docker push "$FINAL_NAME"
+
+          echo "image=$FINAL_NAME" >> "$GITHUB_OUTPUT"
+
+  publish:
+    environment: production
+    needs: push
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: git@github.com:bytes-zone/infrastructure.v2
+          ssh_key: ${{ secrets.DEPLOY_KEY }}
+
+      - name: update manifest
+        run: |
+          nix-shell -p kustomize --run 'cd manifests/apps/bytes-zone && kustomize edit set image ${{ needs.push.outputs.image }}'
+          git push
