@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  publish:
+    name: publish container
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@v9
+      - uses: DeterminateSystems/magic-nix-cache-action@v3
+      - uses: nixbuild/nixbuild-action@v19
+        with:
+          nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
+          generate_summary_for: 'workflow'
+
+      - name: Log into the container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: build and load container
+        run: |
+          STORE_PATH="$(
+            nix build \
+              --json \
+              --print-build-logs \
+              --builders "" \
+              --max-jobs 2 \
+              --eval-store auto \
+              --store ssh-ng://eu.nixbuild.net \
+              --system x86_64-linux \
+              .#container | \
+              jq -r '.[0].outputs.out'
+          )"
+
+          nix copy \
+            --from ssh-ng://eu.nixbuild.net \
+            --substitute \
+            "$STORE_PATH"
+
+          "$STORE_PATH" | docker load
+
+      - name: push container
+        run: |
+          REPO="$(docker images --format json | grep bytes.zone | jq -r ".Repository" | head -n 1)"
+          TAG="$(docker images --format json | grep bytes.zone | jq -r ".Tag" | head -n 1)"
+
+          SOURCE_NAME="$REPO:$TAG"
+          FINAL_NAME="$REGISTRY/$IMAGE_NAME:$TAG"
+          echo "$SOURCE_NAME -> $FINAL_NAME"
+
+          docker tag "$SOURCE_NAME" "$FINAL_NAME"
+          docker push "$FINAL_NAME"
