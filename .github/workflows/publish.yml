@@ -100,6 +100,8 @@ jobs:
           DIFF="$(git diff | tee /dev/stderr)"
           if test -n "$DIFF"; then
             git add manifests/apps/bytes-zone
-            git commit -m "update bytes-zone to ${{ needs.push.outputs.image }}"
+            git commit \
+              --message "update bytes-zone to ${{ needs.push.outputs.image }}" \
+              --author "GitHub Actions <noreply@github.com>"
             git push
           fi
