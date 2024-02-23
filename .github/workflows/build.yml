@@ -46,7 +46,7 @@ jobs:
 
           "$STORE_PATH" | docker load
 
-      - name: run container
+      - name: run LHCI
         run: |
           IMAGE="$(
             docker images --format '{{.Repository}}:{{.Tag}}' | \
@@ -54,7 +54,4 @@ jobs:
               head -n 1
           )"
 
-          docker run -d -p 8080:80 --name bytes-zone "$IMAGE"
-
-      - name: run LHCI
-        run: lhci autorun
+          lhci autorun
