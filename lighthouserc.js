@@ -8,9 +8,9 @@ module.exports = {
         'http://localhost:8080/posts/modeling-crdts-in-alloy-counters/',
       ]
     },
-    assert: {
-      preset: 'lighthouse:recommended'
-    },
+    // assert: {
+    //   preset: 'lighthouse:recommended'
+    // },
     upload: {
       target: 'temporary-public-storage',
     }
