@@ -2,6 +2,7 @@ module.exports = {
   ci: {
     collect: {
       startServerCommand: `docker run -p 8080:80 ${process.env.IMAGE}`,
+      startServerReadyPattern: "start worker processes",
       url: [
         'http://localhost:8080/',
         'http://localhost:8080/posts/',
