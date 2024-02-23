@@ -56,6 +56,13 @@ jobs:
 
           docker run -p 8080:80 -d --name bytes-zone "$IMAGE"
 
+          for i in $(seq 1 10); do
+            if docker log | grep -q 'start worker processes'; then
+              break
+            fi
+            sleep 1
+          done
+
           curl --fail-with-body localhost:8080
 
       # - name: run LHCI
