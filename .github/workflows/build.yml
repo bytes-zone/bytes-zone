@@ -57,7 +57,7 @@ jobs:
           docker run -p 8080:80 -d --name bytes-zone "$IMAGE"
 
           for i in $(seq 1 10); do
-            if docker log | grep -q 'start worker processes'; then
+            if docker logs bytes-zone | grep 'start worker processes'; then
               break
             fi
             sleep 1
