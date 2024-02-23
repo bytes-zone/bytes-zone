@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build:
+    name: build site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@v9
+      - uses: DeterminateSystems/magic-nix-cache-action@v3
+      - uses: nixbuild/nixbuild-action@v19
+        with:
+          nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
+          generate_summary_for: 'workflow'
+
+      - name: build and load container
+        run: |
+          STORE_PATH="$(
+            nix build \
+              --json \
+              --print-build-logs \
+              --builders "" \
+              --max-jobs 2 \
+              --eval-store auto \
+              --store ssh-ng://eu.nixbuild.net \
+              --system x86_64-linux \
+              .#container | \
+              jq -r '.[0].outputs.out'
+          )"
+
+          nix copy \
+            --from ssh-ng://eu.nixbuild.net \
+            --substitute \
+            "$STORE_PATH"
+
+          "$STORE_PATH" | docker load
+
+      - name: run and test
+        run: |
+          IMAGE="$(
+            docker images --format '{{.Repository}}:{{.Tag}}' | \
+              grep bytes.zone | \
+              head -n 1
+          )"
+
+          docker run -d -p 8080:80 --name bytes-zone "$IMAGE"
+
+          docker ps
+          sleep 1
+          docker ps
+          sleep 1
+          docker ps
+          sleep 1
+          docker logs bytes-zone
+          curl localhost:8080
