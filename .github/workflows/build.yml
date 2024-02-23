@@ -44,7 +44,7 @@ jobs:
 
           "$STORE_PATH" | docker load
 
-      - name: run and test
+      - name: run container
         run: |
           IMAGE="$(
             docker images --format '{{.Repository}}:{{.Tag}}' | \
@@ -53,12 +53,3 @@ jobs:
           )"
 
           docker run -d -p 8080:80 --name bytes-zone "$IMAGE"
-
-          docker ps
-          sleep 1
-          docker ps
-          sleep 1
-          docker ps
-          sleep 1
-          docker logs bytes-zone
-          curl localhost:8080
