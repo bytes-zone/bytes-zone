@@ -79,7 +79,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: git@github.com:bytes-zone/infrastructure.v2
+          repository: bytes-zone/infrastructure.v2
           ssh-key: ${{ secrets.DEPLOY_KEY }}
 
       - name: update manifest
