@@ -62,6 +62,9 @@ jobs:
 
           "$STORE_PATH" | docker load
 
+          # debug
+          docker images
+
           REPO="$(docker images --format "{{.Repository}}" | head -n 1)"
           TAG="$(docker images --format "{{.Tag}}" | head -n 1)"
 
