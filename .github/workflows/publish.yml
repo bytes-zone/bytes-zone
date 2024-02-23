@@ -18,6 +18,9 @@ jobs:
       contents: read
       packages: write
 
+    outputs:
+      image: ${{ steps.push.outputs.image }}
+
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@v9
@@ -57,6 +60,7 @@ jobs:
           "$STORE_PATH" | docker load
 
       - name: push container
+        id: push
         run: |
           REPO="$(docker images --format json | grep bytes.zone | jq -r ".Repository" | head -n 1)"
           TAG="$(docker images --format json | grep bytes.zone | jq -r ".Tag" | head -n 1)"
