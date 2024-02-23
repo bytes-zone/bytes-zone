@@ -82,6 +82,8 @@ jobs:
           repository: bytes-zone/infrastructure.v2
           ref: main
           ssh-key: ${{ secrets.DEPLOY_KEY }}
+      - uses: DeterminateSystems/nix-installer-action@v9
+      - uses: DeterminateSystems/magic-nix-cache-action@v3
 
       - name: update manifest
         run: |
