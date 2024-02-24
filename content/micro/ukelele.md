@@ -18,9 +18,4 @@ So instead, I'm going to try the ukulele:
 2. small and cute
 3. all the stuff I have found about ukulele is like "yeah, we're all here to have fun." Really chill, which I appreciate.
 
-And as a nice couple of bonuses:
-
-1. I really like the sound of the ones I bought. I got two because:
-2. My son wants to learn with me!
-
-I'm really looking forward to messing around here and making some music!
+And as a nice bonus I really like the sound of the ones I bought. I got two because my son wants to learn with me! I'm really looking forward to messing around and making some music!
