@@ -154,7 +154,7 @@
         };
 
         packages.bytes-zone = pkgs.symlinkJoin {
-          name = "ghcr.io/bytes-zone/bytes-zone";
+          name = "bytes.zone";
           paths = [
             packages.bytes-zone-css
             packages.bytes-zone-fonts
@@ -213,7 +213,7 @@
         # for debugging, if needed
         # packages.container = pkgs.dockerTools.buildLayeredImage {
         packages.container = pkgs.dockerTools.streamLayeredImage {
-          name = "bytes.zone";
+          name = "ghcr.io/bytes-zone/bytes-zone";
 
           # make /var/log/nginx so Nginx doesn't fail trying to open it (which
           # it does no matter what you say in log settings, apparently.
