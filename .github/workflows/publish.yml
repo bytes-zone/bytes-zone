@@ -62,14 +62,10 @@ jobs:
       - name: push container
         id: push
         run: |
-          REPO="$(docker images --format json | grep bytes.zone | jq -r ".Repository" | head -n 1)"
-          TAG="$(docker images --format json | grep bytes.zone | jq -r ".Tag" | head -n 1)"
+          REPO="ghcr.io/bytes-zone/bytes-zone"
+          TAG="$(docker images "$REPO" --format "{{.Tag}}")"
 
-          SOURCE_NAME="$REPO:$TAG"
-          FINAL_NAME="$REGISTRY/$IMAGE_NAME:$TAG"
-          echo "$SOURCE_NAME -> $FINAL_NAME"
-
-          docker tag "$SOURCE_NAME" "$FINAL_NAME"
+          FINAL_NAME="$REPO:$TAG"
           docker push "$FINAL_NAME"
 
           echo "image=$FINAL_NAME" >> "$GITHUB_OUTPUT"

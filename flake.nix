@@ -154,7 +154,7 @@
         };
 
         packages.bytes-zone = pkgs.symlinkJoin {
-          name = "bytes.zone";
+          name = "ghcr.io/bytes-zone/bytes-zone";
           paths = [
             packages.bytes-zone-css
             packages.bytes-zone-fonts
