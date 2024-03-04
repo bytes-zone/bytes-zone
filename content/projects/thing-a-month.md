@@ -17,3 +17,7 @@ The rules are pretty simple:
 
 If I decide I want one of the "things" to be improvements to an earlier things, that's fine.
 Point is: they can't be huge years-long projects.
+
+Thing-a-month projects:
+
+- February 2024 (month 0): [setting the stage for the rest of the project with infra improvements](@/projects/thing-a-month-meta.md)
