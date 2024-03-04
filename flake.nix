@@ -201,7 +201,7 @@
                 root ${packages.bytes-zone}/share/bytes.zone;
 
                 add_header Strict-Transport-Security max-age=15768000 always;
-                add_header Content-Security-Policy "default-src 'none'; child-src https:; script-src 'self' https://stats.bytes.zone; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stats.bytes.zone/count; manifest-src 'self'; font-src 'self'" always;
+                add_header Content-Security-Policy "default-src 'none'; child-src https:; script-src 'self' https://stats.bytes.zone; connect-src 'self' https://stats.bytes.zone; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stats.bytes.zone/count; manifest-src 'self'; font-src 'self'" always;
                 add_header X-Frame-Options "SAMEORIGIN" always;
                 add_header X-Content-Type-Options "nosniff" always;
                 add_header X-XSS-Protection "1; mode=block" always;
