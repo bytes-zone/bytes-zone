@@ -4,7 +4,7 @@ description = "setting the stage for the rest of the project"
 date = 2024-02-06T00:00:00-06:00
 
 [extra]
-when = "now"
+when = "past"
 +++
 
 The first project in [thing-a-month](@/projects/thing-a-month.md) will be laying the foundation for the rest of the work. (Here's [the intro post where I talk about this](@/micro/thing-a-month-02-01.md).)

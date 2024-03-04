@@ -2,6 +2,7 @@
 title = "thing-a-month"
 description = "making cool stuff in a time-constrained way"
 date = 2024-02-06T12:00:00-06:00
+updated = 2024-03-04
 
 [extra]
 when = "now"
@@ -17,3 +18,7 @@ The rules are pretty simple:
 
 If I decide I want one of the "things" to be improvements to an earlier things, that's fine.
 Point is: they can't be huge years-long projects.
+
+Thing-a-month projects:
+
+- February 2024 (month 0): [setting the stage for the rest of the project with infra improvements](@/projects/thing-a-month-meta.md)
