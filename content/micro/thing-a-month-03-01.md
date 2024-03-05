@@ -1,6 +1,6 @@
 +++
 title = "messing around with statistics"
-date = 2024-03-05
+date = 2024-03-05T07:00:00-06:00
 
 [extra]
 project = "thing-a-month (awareness)"
