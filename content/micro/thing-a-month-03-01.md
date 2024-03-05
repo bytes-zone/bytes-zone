@@ -27,6 +27,7 @@ I'm going to try this out and see how it works, just to test my understanding of
 | Work | 2:36pm | 5:00pm |
 | Commute | 5:00pm | 5:30pm |
 | Evening Activities | 5:30pm | 10:00pm |
+
 Some points of interest:
 
 - Lots of the schedule doesn't fall exactly on hour boundaries.
@@ -187,6 +188,7 @@ These are reasonably accurate! For any 7-day period, here's how the "actual" tim
 | commute | 7h | ✅ 10 ± 3.06 | ✅ 6 ± 2.41 |
 | lunch | 7h | ✅ 9 ± 2.91 |  ✅ 7 ± 2.60 |
 | coffee | 0.7h | ❌ did not capture | ✅ 2 ± 1.41 |
+
 I put a ✅ when the range covers the actual value and an ❌ when it doesn't. As you can see, these samples get in the ballpark but the ranges don't always cover the actual values. However, these would definitely be good enough to get a sense of how you're spending your life as a whole, so maybe it's OK!
 
 I wonder, though, if it gets more accurate if you sample more frequently. An average of a half hour seems like it'd get annoying (because of the exponential distribution, some pings would be very close together) but I wonder about 45 minutes. Let's try. That's a λ of 1⅓. Here's the results:
@@ -200,6 +202,7 @@ I wonder, though, if it gets more accurate if you sample more frequently. An ave
 | commute | 7h | ✅ 6.75 ± 2.55 | ✅ 8.25 ±  2.8 |
 | lunch | 7h | ✅ 9 ±  2.92 | ✅ 6.75 ±  2.54 |
 | coffee | 0.7h | ✅ 1.5 ± 1.22 | ❌ did not capture |
+
 That seems about the same. The ranges don't feel like they're that much smaller to me. Maybe half an hour really would be better?
 
 | Tag | Actual | Sample 1 | Sample 2 |
@@ -211,6 +214,7 @@ That seems about the same. The ranges don't feel like they're that much smaller 
 | commute | 7h | ✅ 7 ±  2.59 | ✅ 7 ± 2.59 |
 | lunch | 7h | ✅ 8 ±  2.76 | ✅ 7 ±  2.59 |
 | coffee | 0.7h | ✅ 1.5 ± 1.22 | ✅ 1 ± 1 |
+
 Those two samples happen to be all green, but some of them *barely* squeaked in. I still think a λ of 30 minutes would be far too annoying, so I'm going to leave it out.
 
 Next I'm going to go and see if this is the same stuff that the Perl version of TagTime *actually* uses, and then maybe repeat this analysis!
