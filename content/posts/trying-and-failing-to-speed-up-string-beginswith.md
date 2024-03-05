@@ -171,5 +171,5 @@ Calling `String.slice 0 (String.length haystack) === needle` has some overhead i
 Just make sure to actually measure it!
 Optimizations at this level can be helpful, but they're more often dwarfed by DOM stuff in the runtime.
 
-As for me: at this point, I'm not going to make a PR to `elm/core` with this improvement, even I intended to when I set out.
+As for me: at this point, I'm not going to make a PR to `elm/core` with this improvement, even though I intended to when I set out.
 However, I found it interesting to look into these things, and I learned a lot about how strings are optimized in various browsers, so I'm gonna call it a win overall.
