@@ -14,6 +14,8 @@ I've been wanting to try out indoor hydroponic gardening for a long time now bec
 
 Luckily for me, growing at home in my basement is a way around this:
 
+<!-- more -->
+
 1. I won't get listeria cross-contamination from pig farms or whatever—there are no pigs in my basement!
 2. Growing indoors means I have precise control over the environment the plants are growing in. There is no need for pesticide or herbicide. (And I have lots of choice in what nutrients I use.)
 3. I can walk downstairs to harvest lettuce which avoids all the waste and carbon emissions from transportation, plus the produce could literally not be fresher.
