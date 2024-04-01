@@ -153,12 +153,37 @@
           '';
         };
 
+        packages.bytes-zone-jpegs = pkgs.stdenv.mkDerivation {
+          name = "bytes.zone-jpegs";
+          src = builtins.filterSource
+            (path: type:
+              type == "directory" || builtins.match ".+jpe?g$" path != null)
+            ./static;
+
+          buildInputs = [ pkgs.imagemagick pkgs.jpegoptim ];
+          buildPhase = ''
+            for file in $(find . -type f); do
+              mogrify -resize "2048x>" "$file"
+              jpegoptim --max=90 --strip-all --all-progressive --overwrite "$file"
+            done
+          '';
+
+          installPhase = ''
+            mkdir -p $out/share/bytes.zone
+            for file in $(find . -type f); do
+              mkdir -p $out/share/bytes.zone/$(dirname $file)
+              mv $file $out/share/bytes.zone/$file
+            done
+          '';
+        };
+
         packages.bytes-zone = pkgs.symlinkJoin {
           name = "bytes.zone";
           paths = [
             packages.bytes-zone-css
             packages.bytes-zone-fonts
             packages.bytes-zone-js
+            packages.bytes-zone-jpegs
             packages.bytes-zone-pngs
             packages.bytes-zone-public
           ];
