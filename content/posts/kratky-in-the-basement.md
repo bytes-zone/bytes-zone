@@ -6,13 +6,13 @@ date = 2024-04-01
 
 *Hello hello! Today is [April Cools](https://www.aprilcools.club/), which is like April Fools but for posting stuff outside what you normally write about instead of unfunny jokes. Hope you enjoy!*
 
-I've been wanting to try out indoor hydroponic gardening for a long time now because I want to eat more salads, but:
+I want to eat more salads, but:
 
 1. Viral and bacterial outbreaks come up pretty regularly in the US food system. I don't feel super paranoid about produce where you can wash or avoid eating the skin, but I feel worse in cases where usually you eat the whole plant.
 2. Large-scale farming techniques sometimes seem pretty dubious, even in products labeled as organic.
 3. Because of how our food system is set up, produce is regularly transported hundreds of miles before being consumed.
 
-Luckily for me, growing at home in my basement is a way around this:
+Luckily for me, doung hydroponic gardening at home in my basement is a way around this:
 
 <!-- more -->
 
