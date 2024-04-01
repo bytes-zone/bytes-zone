@@ -10,9 +10,9 @@ Let's talk about tinyping. The thing-a-month project is meant to be a thing a mo
 
 But I really think it's a good idea, and not such a big one. It's also pretty close to being usable! So this month I'm going to double down on it, breaking my own rules about the "things" only taking a month.
 
-<!-- more -->
-
 So here's a quick status report, and where I hope to get to in April:
+
+<!-- more -->
 
 - Ping caculation can be distributed among multiple clients in a reliable way, which should keep the right distribution from the two posts in early March ([1](@./thing-a-month-03-01.md), [2](@./thing-a-month-03-02.md))
 - Style is... really not there yet.
