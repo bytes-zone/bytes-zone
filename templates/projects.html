@@ -7,8 +7,6 @@
 
 {% set projects = section.pages | group_by(attribute="extra.when") %}
 
-<h2>Current Projects</h2>
-
 {% for project in projects["now"] %}
 <h3><a href="{{ project.permalink | safe }}">{{ project.title | markdown(inline=true) | safe }}</a></h3>
 <p>({{ project.date | date(format="%B %Y") }}{% if project.updated %}, last updated {{ project.updated | date(format="%B %Y") }}{% endif %})</p>
