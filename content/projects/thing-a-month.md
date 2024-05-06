@@ -23,5 +23,6 @@ Here are the projects I did:
 
 - February 2024 (month 0): [setting the stage for the rest of the project with infra improvements](@/projects/thing-a-month-meta.md)
 - March+April 2024 (months 1 and 2): [awareness through random time tracking](@/projects/thing-a-month-awareness.md)
+- April (as part of a yak shave): [elm-duet](@/projects/elm-duet.md)
 
 I ended up having to stop doing thing-a-month because the time constraint was infeasible for the things I was interested in building. I wrote about that at [stopping thing-a-month](@/micro/stopping-thing-a-month.md).
