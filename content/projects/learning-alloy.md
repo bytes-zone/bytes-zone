@@ -5,7 +5,7 @@ date = 2022-08-01
 updated = 2023-10-09
 
 [extra]
-when = "now"
+when = "past"
 +++
 
 I've been an on-and-off user of [Alloy](https://alloytools.org/) for several years now, but after switching teams at [NoRedInk](https://noredink.com) I decided to start modeling all our new projects in it and teaching my colleagues how to as well.

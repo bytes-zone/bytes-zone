@@ -4,7 +4,7 @@ description = "stop throwing away plastic"
 date = 2022-07-01
 
 [extra]
-when = "now"
+when = "past"
 +++
 
 I've been interested both in environmentalism and in making things for a long time, but hadn't realized until the summer of 2021 that I could combine those into something interesting!
