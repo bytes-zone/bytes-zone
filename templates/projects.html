@@ -4,12 +4,25 @@
 
 {% block content %}
 <h1>{{ section.title }}</h1>
-{% for year, pages in section.pages | group_by(attribute="year") %}
+
+{% set projects = section.pages | group_by(attribute="extra.when") %}
+
+<h2>Current Projects</h2>
+
+{% for project in projects["now"] %}
+<h3><a href="{{ project.permalink | safe }}">{{ project.title | markdown(inline=true) | safe }}</a></h3>
+<p>({{ project.date | date(format="%B %Y") }}{% if project.updated %}, last updated {{ project.updated | date(format="%B %Y") }}{% endif %})</p>
+{{ project.content | safe }}
+{% endfor %}
+
+<h2>Past Projects</h2>
+
+{% for year, pages in projects["past"] | group_by(attribute="year") %}
 <dl>
   <dt>{{ year }}</dt>
   {% for page in pages %}
   <dd>
-    <a href="{{page.permalink | safe }}">{{ page.title | markdown(inline=true) | safe }}</a>{% if page.description %}, {{ page.description }}{% endif %} ({% if page.date %}{{ page.date | date(format="%B %Y") }}{% else %}???{% endif %}{% if page.updated %}{% if page.extra.when == "now" %}, last updated {% else %} to{% endif %} {{ page.updated | date(format="%B %Y") }}{% endif %})
+    <a href="{{page.permalink | safe }}">{{ page.title | markdown(inline=true) | safe }}</a>{% if page.description %}, {{ page.description }}{% endif %} ({% if page.date %}{{ page.date | date(format="%B %Y") }}{% else %}???{% endif %}{% if page.updated %} to {{ page.updated | date(format="%B %Y") }}{% endif %})
   </dd>
   {% endfor %}
 </dl>
