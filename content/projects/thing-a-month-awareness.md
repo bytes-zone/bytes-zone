@@ -22,4 +22,4 @@ There are two big challenges here for me:
 
 I started this in March and [continued into April](@/micro/thing-a-month-04-01.md) with the goal of getting something usable by the end of the month.
 That didn't quite happen, and I dropped thing-a-month at the end of that month.
-Tinyping lives on in some capacity, but not as a thing-a-month project.
+Tinyping [lives on](@/projects/tinyping.md), but not as a thing-a-month project.

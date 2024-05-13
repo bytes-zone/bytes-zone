@@ -12,7 +12,7 @@ I want to eat more salads, but:
 2. Large-scale farming techniques sometimes seem pretty dubious, even in products labeled as organic.
 3. Because of how our food system is set up, produce is regularly transported hundreds of miles before being consumed.
 
-Luckily for me, doung hydroponic gardening at home in my basement is a way around this:
+Luckily for me, doing hydroponic gardening at home in my basement is a way around this:
 
 <!-- more -->
 
