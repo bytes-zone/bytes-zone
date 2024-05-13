@@ -1,8 +1,7 @@
 +++
 title = "tinyping"
 description = "figure out how you're spending your life"
-date = 2024-03-04
-updated = 2024-05-06
+date = 2024-05-13
 
 [extra]
 when = "now"
