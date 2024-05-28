@@ -23,8 +23,6 @@
   {{ page.content | safe }}
 </article>
 
-{% if "project" in page.extra and "thing-a-month" in page.extra["project"] -%}
-{% include "convertkit-thing-a-month.html" %}
-{%- endif %}
+{% include "convertkit.html" %}
 
 {% endblock %}
