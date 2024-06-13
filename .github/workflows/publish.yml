@@ -82,14 +82,10 @@ jobs:
           repository: bytes-zone/infrastructure.v2
           ref: main
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-      - uses: DeterminateSystems/nix-installer-action@v9
-      - uses: DeterminateSystems/magic-nix-cache-action@v3
 
       - name: update manifest
         run: |
-          nix-shell \
-            -p kustomize \
-            --run 'cd manifests/apps/bytes-zone && kustomize edit set image ${{ needs.push.outputs.image }}'
+          ./update-job-image bytes-zone ${{ needs.push.outputs.image }}
 
       - name: commit and push changes
         run: |
