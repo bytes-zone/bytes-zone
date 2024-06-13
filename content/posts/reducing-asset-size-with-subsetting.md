@@ -36,7 +36,7 @@ Tons of people speaking all kinds of languages can use this font to communicateâ
 
 Fortunately, this is a known problem, and we can solve it with something called [subsetting](https://en.wikipedia.org/wiki/Subsetting).
 Subsetting, in general, is where you retrieve only the parts you need from a large data set.
-In fonts, this means removing all the glpyhs you don't need from a font before you serve it.
+In fonts, this means removing all the glyphs you don't need from a font before you serve it.
 Sounds like a plan!
 But how?
 
@@ -82,10 +82,10 @@ First we start the browser and load a page:
   const puppeteer = require("puppeteer");
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  
+
   for (file of process.argv.slice(2)) {
     await page.goto("file://" + file);
-    
+
     // the rest of our script (next code block)
   }
 })();
@@ -109,18 +109,18 @@ const fileOut = await page.evaluate(function() {
     out.sort();
     return out.join("");
   }
-  
+
   // we're going to accumulate information about each text node in this object.
   // see the next code snippet for how we actually use it.
   let out = {};
-  
+
   // todo is a stack of nodes we have left to visit. We start with the top node
   // of the document and work our way down from there.
   let todo = [window.document];
-  
+
   while (todo.length !== 0) {
     let node = todo.shift()
-    
+
     // `childNodes` is not an array, but you can still access its children by
     // index. We are descending into the node so we just push all the children
     // onto the stack. It doesn't matter much for this application whether we
@@ -129,12 +129,12 @@ const fileOut = await page.evaluate(function() {
     for (var i = 0; i < node.childNodes.length; i++) {
       todo.push(node.childNodes[i]);
     }
-    
+
     if (node.nodeName === "#text") {
       // the rest of our script (next code block)
     }
   }
-  
+
   return out;
 });
 ```
@@ -154,14 +154,14 @@ if (styles.display === "none") {
 for (let face of styles.fontFamily.split(", ")) {
   // fonts with spaces in the name get quoted, so we need to remove those.
   face = face.replace(/"/g, "", -1);
-  
+
   let info = {
     face: face,
     weight: styles.fontWeight,
     style: styles.fontStyle
   };
   let key = JSON.stringify(info);
-  
+
   if (out[key]) {
     out[key].chars = uniqChars(out[key].chars + node.textContent);
   } else {

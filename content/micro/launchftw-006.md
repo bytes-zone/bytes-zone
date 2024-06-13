@@ -15,7 +15,7 @@ Ten threads. Let's go.
 	- pain: docs say I need an `/rbi` folder, BUT WHERE?
 	- answer: literally just in the root of the project. A single file is fine. Sorbet is happy.
 	- secondary pain: neither the OP nor the answerer found the docs very clear in this case
-- [How to confgure Sorbet with rspec?](https://stackoverflow.com/questions/74842832/how-to-configure-sorbet-with-rspec)
+- [How to configure Sorbet with rspec?](https://stackoverflow.com/questions/74842832/how-to-configure-sorbet-with-rspec)
 	- pain: Sorbet doesn't know how to figure out the core rspec DSL, so it's complaining that `describe` isn't a valid method.
 	- solution: binding `self` to `T.untyped` so Sorbet lets you do whatever. (I'm not certain that the OP knows that they've just turned off typechecking for all instances of this receiver?)
 

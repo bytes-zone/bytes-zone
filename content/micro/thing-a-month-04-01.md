@@ -14,7 +14,7 @@ So here's a quick status report, and where I hope to get to in April:
 
 <!-- more -->
 
-- Ping caculation can be distributed among multiple clients in a reliable way, which should keep the right distribution from the two posts in early March ([1](@./thing-a-month-03-01.md), [2](@./thing-a-month-03-02.md))
+- Ping calculation can be distributed among multiple clients in a reliable way, which should keep the right distribution from the two posts in early March ([1](@./thing-a-month-03-01.md), [2](@./thing-a-month-03-02.md))
 - Style is... really not there yet.
 - Neither is reporting.
 - You also can't sync data anywhere, which is especially bad on mobile (and *especially* on mobile Safari, which will delete stuff in IndexedDB after only 7 days of inactivity if you don't pin the app to the home screen.)

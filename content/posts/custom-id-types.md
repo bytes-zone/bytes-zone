@@ -66,7 +66,7 @@ This means we cannot construct any records or structures that depend on `CatId` 
 No `Cat`, no `Model` containing `Cat`s, etc.
 
 I've seen some test code provide hand-rolled JSON values to a `Decoder Cat` to get around this, but I'm not sure that's such a good idea.
-It raises complexity in tests and ties them to the `decoder` instead of only the implemenation we're trying to verify.
+It raises complexity in tests and ties them to the `decoder` instead of only the implementation we're trying to verify.
 
 Instead, I usually end up writing some constructor function like `catIdForTestOnly : String -> CatId`.
 It has the same effect as exposing the constructor, but labels your intent clearly.

@@ -9,7 +9,7 @@ when = "past"
 +++
 
 In January of 2020, I attended one of the last in-person batches of [the Recurse Center](https://www.recurse.com/) in Brooklyn, New York.
-I worked on an implemenation of the [Wave Function Collapse algorithm](https://github.com/mxgmn/WaveFunctionCollapse) (the game thing, not the quantum thing) in [Elm](https://elm-lang.org/).
+I worked on an implementation of the [Wave Function Collapse algorithm](https://github.com/mxgmn/WaveFunctionCollapse) (the game thing, not the quantum thing) in [Elm](https://elm-lang.org/).
 
 I'd recommend attending the Recurse Center to anyone!
 The facilitators have built a really great community around [some well-thought-out shared values](https://www.recurse.com/social-rules).

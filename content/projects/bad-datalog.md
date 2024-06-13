@@ -8,7 +8,7 @@ updated = 2022-06-14
 when = "past"
 +++
 
-In 2020, I got really interested in Datalog implemenations after reading Pete Vilter's [Codebase as Database: Turning the IDE Inside Out with Datalog](https://petevilter.me/post/datalog-typechecking/).
+In 2020, I got really interested in Datalog implementation after reading Pete Vilter's [Codebase as Database: Turning the IDE Inside Out with Datalog](https://petevilter.me/post/datalog-typechecking/).
 I did a bunch of reading about different ways to make a Datalog.
 
 Eventually [Jamie Brandon](https://www.scattered-thoughts.net/) advised me to make a miniature relational database and lower (raise?) the datalog layer to it.

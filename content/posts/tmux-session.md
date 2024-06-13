@@ -83,7 +83,7 @@ tmux_jump() {
     BASE="$HOME/code"
     # ... look for directories exactly two levels deep (`~/code/owner/project`)
     # and match them with fzf. In this case we break ties by favoring matches
-    # on the project name instead of the owner name (implementaion means
+    # on the project name instead of the owner name (implementation means
     # favoring matches closer to the end of the string.) This is simplified a
     # little bit with the `--select-1 --query="$1"` line: if there's only one
     # match for the argument passed in as the first argument to this function,
