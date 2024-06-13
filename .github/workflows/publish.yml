@@ -85,7 +85,7 @@ jobs:
 
       - name: update manifest
         run: |
-          ./update-job-image bytes-zone ${{ needs.push.outputs.image }}
+          ./update-job-image.sh bytes-zone ${{ needs.push.outputs.image }}
 
       - name: commit and push changes
         run: |
