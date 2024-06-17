@@ -40,8 +40,8 @@ jobs:
           )"
 
           nix copy \
+            --substitute-on-destination \
             --from ssh-ng://eu.nixbuild.net \
-            --substitute \
             "$STORE_PATH"
 
           "$STORE_PATH" | docker load
