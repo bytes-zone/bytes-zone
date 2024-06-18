@@ -7,7 +7,7 @@ Ten threads. Let's go.
 
 - [Rails - How to work with serialize attributes and Sorbet](https://stackoverflow.com/questions/75935405/rails-how-to-work-with-serialize-attributes-and-sorbet)
 	- pain: how do I get types on a `serialize :related_pages, Array` call?
-	- comment: DoN't ViOlAtE FiRsT nOrMaL FoRm
+	- comment: don't violate first normal form
 	- OP: I just want this to be typed! This table has 10 million rows! My life is hard enough without you telling me to refactor my database!
 	- This question didn't have an answer. I answered it because, like, I've been there man.
 	- I forgot how annoying and pedantic SO commenters can be.
