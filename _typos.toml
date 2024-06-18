@@ -1,9 +1,9 @@
 [default.extend-words]
-Welp = "Welp"
 Hashi = "Hashi" # as in HashiCorp
+iterm = "iterm" # as in "iterm2.com"
 OT = "OT"
 PN = "PN" # as in PNCounter
-iterm = "iterm" # as in "iterm2.com"
+Welp = "Welp"
 
 [files]
 extend-exclude = [
