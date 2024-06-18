@@ -2,6 +2,7 @@
 Welp = "Welp"
 Hashi = "Hashi" # as in HashiCorp
 OT = "OT"
+PN = "PN" # as in PNCounter
 iterm = "iterm" # as in "iterm2.com"
 
 [files]
