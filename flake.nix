@@ -22,6 +22,7 @@
             ./templates
             ./config.toml
             ./_typos.toml
+            ./.prettierignore
           ];
 
           unpackPhase = ''
@@ -36,7 +37,7 @@
             done
           '';
 
-          buildInputs = [ pkgs.zola pkgs.nodePackages.html-minifier pkgs.typos ];
+          buildInputs = [ pkgs.zola pkgs.nodePackages.html-minifier pkgs.typos pkgs.nodePackages.prettier ];
           buildPhase = ''
             zola build
 
@@ -63,6 +64,7 @@
           doCheck = true;
           checkPhase = ''
             typos
+            prettier --check .
           '';
         };
 
