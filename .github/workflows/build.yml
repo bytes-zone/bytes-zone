@@ -29,6 +29,8 @@ jobs:
 
       - name: check formatting
         uses: actionsx/prettier@v2
+        with:
+          args: --check .
 
       - name: build and load container
         run: |
