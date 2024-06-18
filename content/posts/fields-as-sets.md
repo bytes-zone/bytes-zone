@@ -44,7 +44,7 @@ This looks suspiciously like a table in a database, right? Well, good news: it b
 
 What `.` does under the hood is essentially equivalent to a SQL join: it selects rows matching a pattern on the left and gives you access to the equivalent rows on the right.
 
-The cool thing about `.` is that it can do this with a set in either position. Even though it *looks like* you're using a single value with `p.favoriteIceCream`, `p` is actually a subset of people—it just happens to be one with only one member.
+The cool thing about `.` is that it can do this with a set in either position. Even though it _looks like_ you're using a single value with `p.favoriteIceCream`, `p` is actually a subset of people—it just happens to be one with only one member.
 
 So what other sets can you do this to? Well, if we add a `children` field like this:
 

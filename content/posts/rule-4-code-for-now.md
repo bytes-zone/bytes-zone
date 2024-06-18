@@ -30,7 +30,7 @@ That.
 ## But Where Do I Put Code?
 
 Removing unnecessary structure can cause some confusion when you want to add some functionality but there's no obvious place for it.
-In that case: add structure, because you need it *now*.
+In that case: add structure, because you need it _now_.
 The point of the rule is to avoid guessing about what you'll need in the future, not to avoid all kinds of structure.
 This rule is also the catch-all at the end of the four rules.
 You shouldn't need to invoke it often.

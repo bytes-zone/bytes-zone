@@ -60,7 +60,6 @@ Here's an example for an app that stores a [jwt](https://jwt.io/) in `localStora
     }
   }
 }
-
 ```
 
 You can generate code from this by calling `elm-duet path/to/your/schema.json`:
@@ -79,7 +78,7 @@ declare module Elm {
   namespace Main {
     type Flags = {
       currentJwt: string | null;
-    }
+    };
 
     type Ports = {
       logout: {
@@ -88,12 +87,9 @@ declare module Elm {
       newJwt: {
         subscribe: (callback: (value: string) => void) => void;
       };
-    }
+    };
 
-    function init(config: {
-      flags: Flags;
-      node: HTMLElement;
-    }): void
+    function init(config: { flags: Flags; node: HTMLElement }): void;
   }
 }
 ```

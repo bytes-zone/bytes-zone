@@ -5,6 +5,7 @@ draft = true
 +++
 
 (TODO: this title is not great. Figure out a better one.)
+
 - Trading Specificity for Coverage (?)
 
 When I think of "testing" as a whole, unit tests always show up first in my mind.
@@ -25,7 +26,7 @@ That's way harder to do if you can't express yourself with this kind of specific
 
 But example-based testing has drawbacks too: that amazing level of control means that you have to specify 100% of the cases that you want to be tested.
 If you forget one, it's just not verified.
-And that's before even thinking about the fact that to test all the edge cases in your integrations between different things (classes, data structures, whatever) you've got to *multiply* the number of edge case tests in each!
+And that's before even thinking about the fact that to test all the edge cases in your integrations between different things (classes, data structures, whatever) you've got to _multiply_ the number of edge case tests in each!
 That's a lot of examples!
 
 This is where a lot of people learn about generative tests, usually through property tests.

@@ -65,7 +65,7 @@ Of course, this improvement still doesn't come for free.
 
 You also lose some of the assurance that you're not constructing or matching on `Id` in places where you shouldn't be.
 To put it another way, you can make a bad ID pretty easily: just call `Id "a hot dog is a salad"`.
-Because the type is not used in the constructor, that's a valid *whatever*... `Id Cat`, `Id Dog`, it's all the same to the constructor.
+Because the type is not used in the constructor, that's a valid _whatever_... `Id Cat`, `Id Dog`, it's all the same to the constructor.
 
 You also can't embed the ID of a record in the record itself (doing so would be a recursive definition.)
 I managed to get around needing this in my alphabet game (records do not need to refer to themselves because whenever they're displayed there's another piece of data containing the ID.)

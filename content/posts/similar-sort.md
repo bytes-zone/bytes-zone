@@ -13,7 +13,7 @@ It has something like 8,000 checked-in files and 170,000 untracked files (bundle
 To add to that, `fzf`'s default configuration favors short matches near the beginning of the string.
 When I'm deep in the project hierarchy, I want long matches with my term near the end first!
 
-In short: my fuzzy matches became both *slow* and *irrelevant*.
+In short: my fuzzy matches became both _slow_ and _irrelevant_.
 Not a good combination for a tool meant to save me time!
 
 <!-- more -->

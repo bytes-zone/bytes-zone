@@ -72,7 +72,7 @@ fi
 I like to be able to jump between project directories quickly by just typing a couple letters of their name.
 [`fzf`](https://github.com/junegunn/fzf) helps a lot here!
 
-Here's the commented ZSH source (but I *think* this would work in bash as well!)
+Here's the commented ZSH source (but I _think_ this would work in bash as well!)
 
 Note that this assumes my own checkout pattern (I check out all repos like `~/code/owner/project` and have some git aliases to manage that for me.)
 You could just as easily adapt it to your own checkout patterns, or just a commonly used projects list that you keep as a file (just pipe that into fzf!)

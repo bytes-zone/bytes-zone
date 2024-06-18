@@ -24,8 +24,8 @@ When you generate an SSH key (like I did when looking at [signing commits with S
 
 That looks nice, and I appreciate art in my terminal, but what is it for? So, let's see… first, I looked in `man ssh-keygen`, because that's the context in which I see these, but it doesn't have any hits for `randomart` or `art`. But on a hunch I tried `man ssh`, and that page has some info! Here's what it says:
 
-> Because of the difficulty of comparing host keys just by looking at fingerprint strings, there is also support to compare host keys visually, using random art.  By setting the VisualHostKey option to “yes”, a small ASCII graphic gets displayed on every login to a server, no matter if the session itself is interactive or not.  By learning the pattern a known server produces, a user can easily find out that the host key has changed when a completely different pattern is displayed.  Because these patterns are not unambiguous however, a pattern that looks similar to the pattern remembered only gives a good probability that the host key is the same, not guaranteed proof.
-> 
+> Because of the difficulty of comparing host keys just by looking at fingerprint strings, there is also support to compare host keys visually, using random art. By setting the VisualHostKey option to “yes”, a small ASCII graphic gets displayed on every login to a server, no matter if the session itself is interactive or not. By learning the pattern a known server produces, a user can easily find out that the host key has changed when a completely different pattern is displayed. Because these patterns are not unambiguous however, a pattern that looks similar to the pattern remembered only gives a good probability that the host key is the same, not guaranteed proof.
+>
 > To get a listing of the fingerprints along with their random art for all known hosts, the following command line can be used:
 >
 >     $ ssh-keygen -lv -f ~/.ssh/known_hosts

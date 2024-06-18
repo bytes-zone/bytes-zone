@@ -7,7 +7,6 @@ date = 2024-02-14
 project = "thing-a-month (meta)"
 +++
 
-
 Over the past few days I've been working on getting Kubernetes serving apps. As of this morning I have a sample web app (the [Kubernetes guestbook example](https://github.com/kubernetes/examples/tree/master/guestbook), minus Redis) running on my cluster, frontend by a load balancer, and with a certificate provisioned by Let's Encrypt to communicate with CloudFlare, who terminate SSL from the browser with their own cert.
 
 <!-- more -->

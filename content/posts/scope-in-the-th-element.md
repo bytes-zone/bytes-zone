@@ -12,8 +12,8 @@ The `<th>` (table head) element in HTML accepts a `scope` attribute. [According 
 `<th scope="row">` can be really useful for accessibility. Say you have a table like this:
 
 | Name             | Text-to-speech enabled | Edit student |
-|:---------------- |:----------------------:|:------------:|
-| Valencia Flowers | yes                    | `<button>`   |
-| Romeo Harrison   | no                     | `<button>`   |
+| :--------------- | :--------------------: | :----------: |
+| Valencia Flowers |          yes           |  `<button>`  |
+| Romeo Harrison   |           no           |  `<button>`  |
 
 If the "name" cells are `<th scope="row">`, screen readers can contextualize "yes" or "no" and the edit button when navigating between rows in a non-name column. For example, one might say something like "text-to-speech enabled, Valencia Flowers, row, yes."

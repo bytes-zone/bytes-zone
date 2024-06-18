@@ -27,7 +27,7 @@ or monthly, new visitors needed / 12 rounded up = 3,334
 or daily, new visitors needed / 365 = 109.59
 ```
 
-My first change was that I am shooting for a slightly different goal because my personal money target is $8,500 (which is very specific, yes, and also a long and annoying story.) In addition, I'd like to *actually* make that much instead of that much minus a self-employment tax haircut.
+My first change was that I am shooting for a slightly different goal because my personal money target is $8,500 (which is very specific, yes, and also a long and annoying story.) In addition, I'd like to _actually_ make that much instead of that much minus a self-employment tax haircut.
 
 So despite having a slightly smaller goal, the end numbers there (daily subscribers/visitors needed) are higher because their formula used a 10% sale conversion (that is, mailing list to buying) and a 20% subscribe conversion (that is, hitting a blog post to subscribing.) I used 5%/10% instead because while I think their goals are stretchy but doable, I want to know the numbers I'd need if my efforts produce something half as good. I'm still a beginner at this!
 

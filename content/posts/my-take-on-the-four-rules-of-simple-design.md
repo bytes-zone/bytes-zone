@@ -13,9 +13,9 @@ The original formulation goes like this: a piece of code can be said to be simpl
 > 3. States every intention important to the programmer.
 > 4. Has the fewest possible classes and methods.
 >
-> — [Kent Beck, *Extreme Programming Explained: Embrace Change*](https://www.google.com/books/edition/Extreme_Programming_Explained/G8EL4H4vf7UC?hl=en&gbpv=1&pg=PA57&printsec=frontcover)
+> — [Kent Beck, _Extreme Programming Explained: Embrace Change_](https://www.google.com/books/edition/Extreme_Programming_Explained/G8EL4H4vf7UC?hl=en&gbpv=1&pg=PA57&printsec=frontcover)
 
-In practice, I really like that while the intention may have been to make an objective metric for simplicity, people tend to treat these rules as *imperfect but useful*.
+In practice, I really like that while the intention may have been to make an objective metric for simplicity, people tend to treat these rules as _imperfect but useful_.
 That is, they give us a way to judge if a piece of code is better or worse than another one.
 This turns out to be a helpful way of judging internal quality of a piece of software&mdash;and improving that is why we write tests and refactor code in the first place!
 
@@ -25,7 +25,7 @@ The most controversial topic, in fact, seems to be which order to apply rules 2 
 In reading about this, I collected a bunch of interpretations of the four rules from various authors:
 
 | Rule | [Kent Beck][kb]                                     | [Martin Fowler][mf] | [J.B. Rainsberger][jbr] | [Corey Haines][ch]   |
-|------|:----------------------------------------------------|:--------------------|:------------------------|:---------------------|
+| ---- | :-------------------------------------------------- | :------------------ | :---------------------- | :------------------- |
 | 1.   | Runs all the tests.                                 | Passes the tests    | Passes its tests        | Tests Pass           |
 | 2.   | Has no duplicated logic. [&hellip;]                 | No duplication      | Minimizes Duplication   | No Duplication (DRY) |
 | 3.   | States every intention important to the programmer. | Reveals intention   | Maximizes clarity       | Expresses Intent     |
@@ -34,10 +34,8 @@ In reading about this, I collected a bunch of interpretations of the four rules 
 [kb]: https://www.google.com/books/edition/Extreme_Programming_Explained/G8EL4H4vf7UC?hl=en&gbpv=1&pg=PA57&printsec=frontcover
 [mf]: https://www.martinfowler.com/bliki/BeckDesignRules.html
 [jbr]: https://blog.jbrains.ca/permalink/the-four-elements-of-simple-design
-[ch]: https://leanpub.com/4rulesofsimpledesign
-
-(n.b. I switched rules 2 and 3 in Fowler's and Haines' formulations for reading consistency.
-Based on these author's writings, I think it's fine in this context.)
+[ch]: https://leanpub.com/4rulesofsimpledesign "n.b. I switched rules 2 and 3 in Fowler's and Haines' formulations for reading consistency.
+Based on these author's writings, I think it's fine in this context."
 
 I have enjoyed applying these rules to my own code, but in the spirit of "what I cannot create, I do not understand," I thought it'd be fun to try and make my own formulation.
 In doing this, I'd like to avoid simply paraphrasing the four rules&mdash;I want to be able to explain what makes code simple to someone who has never heard of this concept.

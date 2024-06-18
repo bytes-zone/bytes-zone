@@ -120,7 +120,7 @@ Let's break it up over multiple lines to talk about it:
 However, without anchors or specifying the arguments we're not saying anything about the contents, just that it's a call.
 In this case, we care that the arguments are only a single string, so we specify that as `(arguments . (string (string_fragment)@require) .)`.
 
-Finally, we don't want *just any* function with a single string argument; we only want `require` statements.
+Finally, we don't want _just any_ function with a single string argument; we only want `require` statements.
 Tree-sitter exposes a couple of matcher functions (`#eq?` for string equality and `#match?` for regular expressions) to select the things we want here.
 To use them, we name the node we care about (here `@_fn` with a leading underscore to tell tree-grepper to drop it from the output,) then give the match to `#eq?` along with a bare word (`require`) to check for equality.
 Now we only match nodes that look like `require('axe-core')`, but only pull out the inner `axe-core` string that we care about!

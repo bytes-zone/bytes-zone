@@ -30,7 +30,7 @@ To find out what happens after an event you just find the **input** and **curren
 For our vending machine, it might look like this:
 
 | Input          | Current State           | Next State              | Side Effect |
-|----------------|-------------------------|-------------------------|-------------|
+| -------------- | ----------------------- | ----------------------- | ----------- |
 | Insert Quarter | No Money, Some Drinks   | Some Money, Some Drinks | -           |
 | Hit Button     | Some Money, Some Drinks | No Money, Some Drinks   | Vend Drink  |
 
@@ -44,7 +44,7 @@ To read this table, match the **current state** along the vertical axis with the
 Our **next state** and **side effects** live in the intersections (I've separated them with a `/`):
 
 | ↓ Current State / Input → | Insert Quarter                    | Hit Button                         |
-|---------------------------|-----------------------------------|------------------------------------|
+| ------------------------- | --------------------------------- | ---------------------------------- |
 | No Money, Some Drinks     | Some Money, Some Drinks / Nothing |                                    |
 | Some Money, Some Drinks   |                                   | No Money, Some Drinks / Vend Drink |
 | No Money, No Drinks       |                                   |                                    |
@@ -57,12 +57,12 @@ Writing things down in an orderly way revealed that we haven't specified all of 
 Let's fill the rest out.
 To make things easier, when the state stays the same or there's no side effect I've marked `-`:
 
-| ↓ Current State / Input → | Insert Quarter                    | Hit Button                         |
-|---------------------------|-----------------------------------|------------------------------------|
-| No Money, Some Drinks     | Some Money, Some Drinks / -       | - / Beep                           |
-| Some Money, Some Drinks   | - / Refund Quarter                | No Money, Some Drinks / Vend Drink |
-| No Money, No Drinks       | - / Refund Quarter                | - / Beep                           |
-| Some Money, No Drinks     | **???**                           | **???**                            |
+| ↓ Current State / Input → | Insert Quarter              | Hit Button                         |
+| ------------------------- | --------------------------- | ---------------------------------- |
+| No Money, Some Drinks     | Some Money, Some Drinks / - | - / Beep                           |
+| Some Money, Some Drinks   | - / Refund Quarter          | No Money, Some Drinks / Vend Drink |
+| No Money, No Drinks       | - / Refund Quarter          | - / Beep                           |
+| Some Money, No Drinks     | **???**                     | **???**                            |
 
 But when we fill things out, we can see that we have a potentially weird situation: what if we somehow have some money, but no drinks?
 The state machine should prevent that, since there's no new state field that could create this situation.

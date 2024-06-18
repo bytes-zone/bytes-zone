@@ -33,7 +33,7 @@ However, the model currently implicitly allows this that we don't want to includ
 
 ![an Alloy diagram showing a file containing to other files](/images/filesystem-parenting-files.png)
 
-That doesn't work: a directory can have children, but a file needs to have contents instead (e.g., images, text, etc.) So let's disallow that! We'll do that by adding a new fact like “files shouldn't have any children.” We *could* do that by saying this:
+That doesn't work: a directory can have children, but a file needs to have contents instead (e.g., images, text, etc.) So let's disallow that! We'll do that by adding a new fact like “files shouldn't have any children.” We _could_ do that by saying this:
 
 ```alloy
 fact "files shouldn't have any children" {

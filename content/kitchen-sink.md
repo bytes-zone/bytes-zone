@@ -13,14 +13,18 @@ It's really not meant to be used by anyone but me!
 ---
 
 ## heading level two
+
 ### heading level three
+
 #### heading level four
+
 ##### heading level five
+
 ###### heading level six
 
 ## this is a really long second level header, intended to break onto several lines to see how well the underline background works
 
-This is a paragraph with some *emphasized text*, **strongly emphasized text**, <del>struck-through text</del>, and `inline code`.
+This is a paragraph with some _emphasized text_, **strongly emphasized text**, <del>struck-through text</del>, and `inline code`.
 Oh, and [here's a link to the homepage](/).
 
 Now for an unordered list:
@@ -33,14 +37,14 @@ Great, and an ordered one:
 
 1. ordered
 1. list
-2. items
+1. items
 
 Cool.
 How about some inspiration?
 
->> You miss 100% of the shots you don't take
->>
->> — Wayne Gretzky
+> > You miss 100% of the shots you don't take
+> >
+> > — Wayne Gretzky
 >
 > — Michael Scott
 
@@ -82,7 +86,7 @@ data Cat =
 pkgs.stdenv.mkDerivation {
   name = "cats";
   src = ./.;
-  
+
   buildPhase = "true";
   installPhase = ''
     mkdir $out/share/cats

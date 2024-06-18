@@ -26,7 +26,7 @@ I can see those pieces individually—page traffic, location, and referrer—but
 
 I also keep a couple months of Nginx access logs for various sysadmin purposes—mostly detecting broken links by looking for 404 response codes.
 Those have IP addresses in them so I can see and block bad actors (there are actually kind of a lot of things running on this server, see [clown computing](@/posts/clown-computing.md).)
-I *suppose* I could be sneaky and try to track individuals from the information there, but I don't see any benefit to my doing that, so I don't.
+I _suppose_ I could be sneaky and try to track individuals from the information there, but I don't see any benefit to my doing that, so I don't.
 
 If you have questions or comments on any of the above, please [email me](mailto:brian@brianthicks.com).
 
@@ -47,10 +47,10 @@ Let's look at the principles:
    Sorry, I guess?
    Open the dev tools in your browser and everything will get automatically prettified.
    Browsers are really good about this now!
-   It's *fine*!
+   It's _fine_!
 
-3. **Prefer one page over several.** 
-   I'm not doing this, but I feel like the pain behind this principle is "it's hard to maintain multiple pages" buuuuut… I'm using a static site generator, most of the content is in markdown, and *all* of it is version-controlled.
+3. **Prefer one page over several.**
+   I'm not doing this, but I feel like the pain behind this principle is "it's hard to maintain multiple pages" buuuuut… I'm using a static site generator, most of the content is in markdown, and _all_ of it is version-controlled.
    Making a change is trivial, and all the dependencies are versioned with [Nix](https://nixos.org/).
    I've been using this kind of setup for years now, and have had very few issues like he mentions.
 

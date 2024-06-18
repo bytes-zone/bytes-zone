@@ -29,7 +29,7 @@ Unit tests are just one way of looking at this, although certainly an attractive
 What happens if you start simplifying the code before the program works?
 
 Well, when I've ignored this advice, I notice I tend to start ripping out useful code or changing things in ways that don't make sense.
-I end up totally muddling my code with unrelated changes, and despite all the effort the program *still* doesn't work right.
+I end up totally muddling my code with unrelated changes, and despite all the effort the program _still_ doesn't work right.
 Eventually, I've maybe made something kinda-sorta like the change I tried to make, but it's way harder for my team to review.
 
 In my experience, I need to be in one of two modes: making changes to make the program work, or making changes to make the code simpler.
@@ -39,11 +39,11 @@ In my experience, I need to be in one of two modes: making changes to make the p
 
 But what happens if the vagueness in this rule works against you?
 For example, you can pile so many things on to "works" that it becomes "perfect."
-Setting an unattainable standard means never shipping, and we'd like to at least ship *some day*, so let's try to avoid perfectionism, right?
+Setting an unattainable standard means never shipping, and we'd like to at least ship _some day_, so let's try to avoid perfectionism, right?
 
 One way around this is to change your relationship to your standards, at least temporarily.
-Something doesn't have to be *perfect* to be *working*.
-For example, maybe messy code is fine *for now*, or maybe it's OK for some tests to fail&mdash;just for a bit&mdash;while you work on accessibility in the UI.
+Something doesn't have to be _perfect_ to be _working_.
+For example, maybe messy code is fine _for now_, or maybe it's OK for some tests to fail&mdash;just for a bit&mdash;while you work on accessibility in the UI.
 
 Said differently, we can take on tech debt to avoid perfectionism.
 
@@ -51,13 +51,13 @@ We usually want to avoid that, and you might have some "yuck!" reaction to readi
 I think [Yvonne Lam](https://twitter.com/yvonnezlam) really nailed it with [her concept of tech debt as housework](https://twitter.com/yvonnezlam/status/1376631868972433408), specifically:
 
 > The thing with tech debt is that in order to have a useful discussion, you need to be able to talk about \*who\* is affected and how -- who is going to be woken up, be pulled off other work, be unable to perform some critical function, etc. You can't hide risk and have that talk.
-> 
+>
 > &mdash; [Yvonne Lam on Twitter](https://twitter.com/yvonnezlam/status/1376631868972433408)
 
 Let's apply that: who is going to be affected by changing your standards, and how?
 This will be different in different settings, so asking these questions with your team makes a lot of sense.
 
-As an example, I care a lot about accessibility. 
+As an example, I care a lot about accessibility.
 I don't want to ship software that prevents people from using assistive technology like screen readers.
 In my company's case, our users are kids learning to write better.
 I really care about not messing that up!
@@ -75,7 +75,7 @@ Every project, team, and person has a different set of values, so trying to nail
 
 Another way to apply this rule is to "make the change easy, then make the easy change."
 ([Coincidentally, another Kent Beck-ism](https://twitter.com/kentbeck/status/250733358307500032).)
-In other words, when you go to your code to make a change, consider refactoring towards simpler code *first* instead of waiting until after you're done.
+In other words, when you go to your code to make a change, consider refactoring towards simpler code _first_ instead of waiting until after you're done.
 
 It might seem like this is incompatible with the rule&mdash;after all, if you're planning to make a change you already know the program doesn't work according to the specification&mdash;but we often have to do some cleanup in order to make the change possible!
 For the purposes of this rule, "works" can also mean "is amenable to change!"

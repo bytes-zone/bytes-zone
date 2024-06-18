@@ -9,7 +9,7 @@ featured = true
 
 Part of my job as a team lead is dealing with a big list of work that my team is responsible for, but which we're not going to do immediately.
 Hypothetically, this is work we should be doing all the time, but we're a small team with a lot of responsibility, so our list tends to grow.
-We *should* work on the most impactful tasks first... but in a list of 40 or 50 little things, it's hard to know what's most important.
+We _should_ work on the most impactful tasks first... but in a list of 40 or 50 little things, it's hard to know what's most important.
 This makes the job much harder!
 
 After a recent quarter where we didn't accomplish any ownership work at all (screaming face emoji), something had to change.
@@ -30,7 +30,7 @@ But even with the time allocated, we can't make progress if we don't know what t
 
 To start, whatever selection method needs to give me a rough order pretty quickly.
 I can't choose the most important thing among 50 items; there are just too many things to keep in my head and I'll have to guess.
-But it *is* possible if I'm picking from 10, or better yet 5, so getting even a rough order helps a lot!
+But it _is_ possible if I'm picking from 10, or better yet 5, so getting even a rough order helps a lot!
 
 Items get added to the list over time, too, so the selection method needs to handle that gracefully.
 I don't want to make a bajillion comparisons for every new item to figure out exactly where it goes.
@@ -45,7 +45,7 @@ Fortunately for us, there's something that solves for these constraints well alr
 It defines a way to get a rough ranking of a big list as well as a way to adjust the ranks quickly when an item is over- or underrated.
 It's been used to rank chess players forever, too, so I'm not starting from scratch on a novel algorithm!
 
-To order a list of items (let's call them players to match the original use), you start with everyone at a given rating and start playing matches. 
+To order a list of items (let's call them players to match the original use), you start with everyone at a given rating and start playing matches.
 When a player wins, they take a portion of the losing player's rating proportional to the difference between the two ratings.
 Then to get rankings, you simply sort players from the highest rating to lowest.
 
@@ -80,10 +80,9 @@ Some features:
 - You can load and save rankings to persist items over time.
 
 I've been super happy to use this to sort our task list, and now our ownership work is consistently being accomplished!
-A nice benefit that I hadn't anticipated: when I go through the list with my team's PM, we can have a productive conversation about the relative importance of *this* versus *that*, which has revealed new information about differences in our priorities!
-Using this rating system has lead to a couple of good conversations about what the team *should* be working on, which I've been really happy about.
+A nice benefit that I hadn't anticipated: when I go through the list with my team's PM, we can have a productive conversation about the relative importance of _this_ versus _that_, which has revealed new information about differences in our priorities!
+Using this rating system has lead to a couple of good conversations about what the team _should_ be working on, which I've been really happy about.
 
 Anyway, that's a wrap.
 Let me know if you end up using elo-anything.
 It's fairly polished at this point but I'm sure there are still weird edge cases we could find and fix!
-

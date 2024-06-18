@@ -10,23 +10,23 @@ Here's my list (I've italicized new things and crossed out ones that I've made m
 - Elm
 - Rust
 - Ruby
-- *Haskell*
+- _Haskell_
 - ~~frontend developers~~
-- *CSS*
-- *JavaScript*
-- *TypeScript*
+- _CSS_
+- _JavaScript_
+- _TypeScript_
 - ~~TDD practitioners~~
 - unit testing
 - integration testing
 - property-based testing
 - tech/team leadership
 - staff engineering
-- *Vim/Neovim*
+- _Vim/Neovim_
 
 And again, let's put this into [ELO anything](https://elo.bytes.zone)…
 
 | Rank | Item                 | Rating | Difference from Last |
-| ----:| -------------------- | ------:| --------------------:|
+| ---: | -------------------- | -----: | -------------------: |
 |    1 | property testing     |   1401 |                      |
 |    2 | Rust                 |   1369 |                   32 |
 |    3 | tech/team leadership |   1359 |                   10 |

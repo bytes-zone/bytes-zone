@@ -4,7 +4,7 @@ description = "Growing lettuce indoors with the power of hydroponics!"
 date = 2024-04-01
 +++
 
-*Hello hello! Today is [April Cools](https://www.aprilcools.club/), which is like April Fools but for posting stuff outside what you normally write about instead of unfunny jokes. Hope you enjoy!*
+_Hello hello! Today is [April Cools](https://www.aprilcools.club/), which is like April Fools but for posting stuff outside what you normally write about instead of unfunny jokes. Hope you enjoy!_
 
 I want to eat more salads, but:
 
@@ -25,6 +25,7 @@ Plus I think hydroponics are cool,[^1] which is another helpful motivation!
 Problem is, I've always overcomplicated things… for example, I've drawn up plans to turn the entire house into a hydroponic garden, feed the whole neighborhood, start a local plastic recycling and hydroponic produce market, etc. You get the idea.
 
 So earlier this year, I decided to commit to doing something as small as I could: get at least one salad on a plate before the end of March. And I did it! Here's how.
+
 ## Hydroponics Crash Course
 
 I'm still a beginner and I'll get some of this wrong for sure, but before I can explain how my setup works I need to share a little theory. Plants need like 4 things[^2] to thrive:
@@ -38,8 +39,8 @@ First up, water and nutrients are taken together in hydroponics. Mixing the righ
 
 - Nutrient formulations are marked with three-number value like 10-10-10 or 8-15-36. Those values are nitrogen-phosphorous-potassium, or NPK. As I understand it, they're percentages: a 10-10-10 mix has 10% of each. That's a good starter mix for lettuce, but I've read that 8-15-36 will also work.
 - You measure pH and electrical conductivity in the nutrient solution.
-	- You need to care about pH because if it's too high or low then plants can't actually absorb the nutrients from the water.
-	- You need to care about electrical conductivity because it's a good proxy for how much total nutrient is in the solution (since saltier water is more electrically conductive.) Too much and you'll get "nutrient burn" where the edges of leaves turn brown. Too little and the plant just won't grow correctly.
+  - You need to care about pH because if it's too high or low then plants can't actually absorb the nutrients from the water.
+  - You need to care about electrical conductivity because it's a good proxy for how much total nutrient is in the solution (since saltier water is more electrically conductive.) Too much and you'll get "nutrient burn" where the edges of leaves turn brown. Too little and the plant just won't grow correctly.
 
 Light is usually a cost/value tradeoff. Good grow lights are expensive, and smaller ones usually have a price premium due to home marijuana growers in the US market.[^3] I bought mine from [spider-farmer.com](http://spider-farmer.com/) (got a pair of SF300s for $99 on sale, $135 normal price.) There is not a lot to think about if you're willing to accept this as the biggest cost of the initial setup, but the most important thing is that you have to have a full-spectrum light: plants grow best in reds and blues, basically (which makes sense if you think about it; leaves are green because they're reflecting those wavelengths instead of absorbing them for photosynthesis.)
 
@@ -91,7 +92,5 @@ I want to make some improvements already, though:
 So that's where I'm at on hydroponics! I'm really excited to improve on this, but I'm already pretty happy with where things are right now.
 
 [^1]: If you don't think hydroponics are cool, that's fine. But if the other stuff in this list resonates with you, consider looking up local farmers markets or produce co-ops, which address some of these problems in similar ways.
-
 [^2]: Ok, so there's actually a bunch more here. Plants need the right temperature, humidity, protection from insects or animals, a place to put down roots, etc. But you need to solve for these four to even get started.
-
 [^3]: I call it the "weed tax", although I can't recall if I read that or came up with it.

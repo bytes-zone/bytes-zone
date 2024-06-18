@@ -17,17 +17,17 @@ So here's a quick status report, and where I hope to get to in April:
 - Ping calculation can be distributed among multiple clients in a reliable way, which should keep the right distribution from the two posts in early March ([1](@./thing-a-month-03-01.md), [2](@./thing-a-month-03-02.md))
 - Style is... really not there yet.
 - Neither is reporting.
-- You also can't sync data anywhere, which is especially bad on mobile (and *especially* on mobile Safari, which will delete stuff in IndexedDB after only 7 days of inactivity if you don't pin the app to the home screen.)
+- You also can't sync data anywhere, which is especially bad on mobile (and _especially_ on mobile Safari, which will delete stuff in IndexedDB after only 7 days of inactivity if you don't pin the app to the home screen.)
 - Nothing is deployed anywhere.
 
 So here are the goals for April:
 
 1. Get reporting working. This is a core thing—there's not much point entering the data if we can't get the results.
 2. Get notifications on new pings. This is almost done, and just needs a little push to get it over the line.
-3. Get some semblance of style. It's *really* rough right now, and nothing I'd want to show someone else.
+3. Get some semblance of style. It's _really_ rough right now, and nothing I'd want to show someone else.
 4. Get syncing to a server, at least for backup. I might have to drop encryption to get this done in April; that's OK.
 
-And the things I'm *not* going to do (unless I miraculously get the above done):
+And the things I'm _not_ going to do (unless I miraculously get the above done):
 
 - Multiple tags per ping
 - Bulk editing

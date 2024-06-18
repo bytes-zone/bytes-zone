@@ -9,7 +9,7 @@ To start with, [here are some GitHub docs](https://docs.github.com/en/authentica
 
 I'm gonna run some experiments to figure that out. To start with, I use two git forges: GitHub and [Gitea](https://gitea.io/en-us/) (although I plan to migrate to [Forgejo](https://forgejo.org/) once it's in a stable version of nixpkgs.) I want to make sure that I can get verified commits on both.
 
-I'm *most* interested in what happens when I revoke keys. Generally speaking, I generate one SSH key per machine I use for development. That way, no key ever has to leave the machine it was generated on. So what happens if I retire a machine, along with its key? Will all my commits turn into unsigned commits? GitHub's documentation implies that it might be fine, but I don't know.
+I'm _most_ interested in what happens when I revoke keys. Generally speaking, I generate one SSH key per machine I use for development. That way, no key ever has to leave the machine it was generated on. So what happens if I retire a machine, along with its key? Will all my commits turn into unsigned commits? GitHub's documentation implies that it might be fine, but I don't know.
 
 ## Testing Stuff Out
 
@@ -114,7 +114,7 @@ Cool. Now let's test how forges deal with rotating these keys.
 
 ## GitHub
 
-GitHub says that SSH key signing is less involved but lacks features, namely that an SSH signing key can't be revoked. Fair enough; there's no mechanism for that. They *don't* say what happens when you roll keys, though, so let's try it.
+GitHub says that SSH key signing is less involved but lacks features, namely that an SSH signing key can't be revoked. Fair enough; there's no mechanism for that. They _don't_ say what happens when you roll keys, though, so let's try it.
 
 First, I'll push my test repo to GitHub:
 

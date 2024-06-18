@@ -15,7 +15,7 @@ I wrote this post for people who are meeting Alloy for the first time. If that's
 
 Alloy helps you think through problems by showing you both what's possible and implied in the models you give it. It can model whatever you care to express in its language, although some things lend themselves to modeling better than others. Some things I've had good luck with: data structures, database schemas, and UI states.
 
-Alloy can exhaustively check conditions in models *under a certain size*. This gives us a tradeoff: you don't get a full proof that your condition holds (although you can get close enough for most purposes) but it can execute your specs much faster than other tools in the formal methods space. This is almost always fine. Just be cautious about saying things like "I *proved* this using Alloy"—it's not that kind of tool.
+Alloy can exhaustively check conditions in models _under a certain size_. This gives us a tradeoff: you don't get a full proof that your condition holds (although you can get close enough for most purposes) but it can execute your specs much faster than other tools in the formal methods space. This is almost always fine. Just be cautious about saying things like "I _proved_ this using Alloy"—it's not that kind of tool.
 
 You can download Alloy at [alloytools.org](https://alloytools.org). If you're interested in learning more after reading this, I've also written [modeling database tables in Alloy](@/posts/modeling-database-tables-in-alloy.md) as well as a [few](@/posts/alloy.md) [other](@/posts/the-value-of-a-model-is-more-making-than-having.md) [posts](@/posts/fields-as-sets.md).
 
@@ -23,7 +23,7 @@ You can download Alloy at [alloytools.org](https://alloytools.org). If you're in
 
 Now, to Git. Git stores all the code and commits in your repo in a content-addressable store. That means that if you know the hash of something, you can retrieve it from the store. This allows Git to do cool things like syncing and deduplication, but it's also the source of some of the weirder parts of Git's behavior from a beginner's perspective. Once I learned about the internals, I found it a lot easier to reason about what it was doing. If you're learning about them for the first time now, I hope you have a similar experience!
 
-I based these models off of [the *Git Internals - Git Objects* chapter of the Git book](https://book.git-scm.com/book/en/v2/Git-Internals-Git-Objects). I won't go into nearly as much detail about how Git works as they do there; this post will be more about modeling. If learning both the modeling tool and the domain at once is too much, go read that chapter and come back.
+I based these models off of [the _Git Internals - Git Objects_ chapter of the Git book](https://book.git-scm.com/book/en/v2/Git-Internals-Git-Objects). I won't go into nearly as much detail about how Git works as they do there; this post will be more about modeling. If learning both the modeling tool and the domain at once is too much, go read that chapter and come back.
 
 ## Blobs
 
@@ -41,7 +41,7 @@ $ git cat-file -p 9b4b40c2bca67e781930105fa190b9b90235cfe5
 Hello, blob!
 ```
 
-Like I mentioned above, these blob objects are content-addressed. In practice, that means they can't be duplicated. If you run the command to store `Hello, blob!` twice, Git will give you the hash again but not change anything on disk (since the blob is already stored.) We can get a *new* blob, along with a new hash, by changing the content:
+Like I mentioned above, these blob objects are content-addressed. In practice, that means they can't be duplicated. If you run the command to store `Hello, blob!` twice, Git will give you the hash again but not change anything on disk (since the blob is already stored.) We can get a _new_ blob, along with a new hash, by changing the content:
 
 ```
 $ echo 'Hello, Alloy!' | git hash-object -w --stdin
@@ -83,7 +83,7 @@ $ git write-tree
 3ee29075f260c5eebd8b9480b6464a7612668dde
 ```
 
-This gives us a tree object containing the hashes we wrote before. We *might* try and model trees like this in Alloy:
+This gives us a tree object containing the hashes we wrote before. We _might_ try and model trees like this in Alloy:
 
 ```alloy
 sig Tree {
@@ -116,9 +116,9 @@ sig Tree extends Object {
 }
 ```
 
-A `sig` being `abstract` means that there aren't ever going to be any things that are *only* `Object`, but that `Object` can serve as a superset for anything extending it (you can think of it like an abstract class in an object-oriented language.)
+A `sig` being `abstract` means that there aren't ever going to be any things that are _only_ `Object`, but that `Object` can serve as a superset for anything extending it (you can think of it like an abstract class in an object-oriented language.)
 
-`Blob` and `Tree` are now defined as *extending* `Object`. This means that they are non-overlapping subsets of `Object`. In other words, nothing is both a `Blob` and a `Tree`.
+`Blob` and `Tree` are now defined as _extending_ `Object`. This means that they are non-overlapping subsets of `Object`. In other words, nothing is both a `Blob` and a `Tree`.
 
 Finally, we give `Tree` some `children`. Defining it with `set` means that we could have zero, one, or many children (which is possible in `git`; I checked on an empty repo.) If we want one or more, we could say `some`. There's also `one` (which is what it sounds like) and `lone` (which is zero or one exactly.) These are all called "multiplicity operators." You don't have to specify one, although I always do because I forget what the default is and it's nicer to be explicit anyway.
 
@@ -146,7 +146,7 @@ We hit a fork in the road here in practical modeling terms: we can either allow 
 
 - If we allow recursion in trees, we're keeping our eyes open to the fact that SHA-1 is not completely collision-free, or that some day it may be broken in a way that makes it trivial to find collisions.
 - If we disallow recursion in trees, we simplify our conceptual model significantly. We're not nearly done with the data model (we still have commits, refs, tags, etc to add) and allowing every single little edge case will make it harder to understand the system as a whole.
-In this case we're modeling to learn about Git's internals, so I think disallowing this case makes more sense. Git clearly relies on the fact that it's very hard to cause a cycle here. If I was modeling Git objects to (for example) find bugs or potential security issues, I think I'd make the opposite decision.
+  In this case we're modeling to learn about Git's internals, so I think disallowing this case makes more sense. Git clearly relies on the fact that it's very hard to cause a cycle here. If I was modeling Git objects to (for example) find bugs or potential security issues, I think I'd make the opposite decision.
 
 </aside>
 
@@ -162,7 +162,7 @@ The `^` operator is new to us—it follows the "children" relationship one or mo
 
 Once we do this, Alloy cannot find any more instances where trees refer to themselves, but it can still find plenty where trees contain other trees or blobs. Success!
 
-We *can*, however, still get two trees pointing to the same blob. If we assume that these two trees are using the same filename for the blob, this shouldn't be possible, because they'd have the same hash.
+We _can_, however, still get two trees pointing to the same blob. If we assume that these two trees are using the same filename for the blob, this shouldn't be possible, because they'd have the same hash.
 
 ![an Alloy instance showing two trees containing the same child blob.](/images/two-trees-pointing-to-the-same-blob.png)
 
@@ -171,7 +171,7 @@ So we find ourselves at another fork in the road: we could either model naming f
 - If we add names, we'll be sticking closer to the way the actual system works. Trees exist as the equivalent of a directory in a filesystem, so it's a little weird to ignore names totally.
 - If we don't add names, we'll keep the model simpler. However, we can assume that any time we see two trees with the same contents, at least child has a different name. Since a directory entry is a string, and there are effectively an infinite amount of strings, this seems like a safe assumption.
 
-Again, I have to ask *what we're modeling*. If, right now, we were modeling the way that `git checkout` turns a tree into files and directories in the filesystem, we might want to add names. But since we're trying to understand Git's internal structure, it probably makes sense to leave them out (it makes our `fact` above much nicer, for one.) I usually add a comment documenting this, though, and I will in our final model.
+Again, I have to ask _what we're modeling_. If, right now, we were modeling the way that `git checkout` turns a tree into files and directories in the filesystem, we might want to add names. But since we're trying to understand Git's internal structure, it probably makes sense to leave them out (it makes our `fact` above much nicer, for one.) I usually add a comment documenting this, though, and I will in our final model.
 
 ## That's all… for now
 

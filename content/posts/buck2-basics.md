@@ -6,7 +6,7 @@ date = 2023-08-07
 
 I just finished an experiment with [Buck 2](https://buck2.build) at work. We didn't end up using it, but it was more for organizational reasons than technical ones. I'll be watching the project to see if it would make sense to use in the future!
 
-One thing that held me back during the early part of the experiment was not having enough learning material around the basics. That makes sense: it's a pretty new project (at least in this iteration) and there are a *lot* of concepts to learn.
+One thing that held me back during the early part of the experiment was not having enough learning material around the basics. That makes sense: it's a pretty new project (at least in this iteration) and there are a _lot_ of concepts to learn.
 
 So instead of teaching things from first principles, I want to run head-first into getting something simple set up. We won't have any more functionality than we could get with some simple `make` rules, but since [the person who does the work does the learning](https://bytes.zone/posts/learning-requires-effort/) I hope this will be helpful! That said, keep in mind that I'm no expert—just some person who learned enough to get stuff done!
 
