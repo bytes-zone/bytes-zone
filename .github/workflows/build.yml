@@ -27,6 +27,9 @@ jobs:
       - name: check for typos
         uses: crate-ci/typos@v1.22.7
 
+      - name: check formatting
+        uses: actionsx/prettier@v2
+
       - name: build and load container
         run: |
           STORE_PATH="$(
