@@ -38,7 +38,7 @@ But, of course, we have to model what happens when we do things that are not on 
 Unfortunately, the one-dimensional version of the table doesn't give us a great view of that!
 
 To figure out where we have holes, we need to add more dimensions.
-Let's reorganize our states along the vertical axis and inputs along the horizontal axis to get a two-dimentional state-transition table.
+Let's reorganize our states along the vertical axis and inputs along the horizontal axis to get a two-dimensional state-transition table.
 
 To read this table, match the **current state** along the vertical axis with the **input** along the horizontal.
 Our **next state** and **side effects** live in the intersections (I've separated them with a `/`):

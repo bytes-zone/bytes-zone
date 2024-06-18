@@ -1,7 +1,7 @@
 +++
 title = "give aliases when inverting relations"
 date = 2023-02-27
-description = "using Alloy's fucntions to clarify intent"
+description = "using Alloy's functions to clarify intent"
 
 [extra]
 project = "learning Alloy"
