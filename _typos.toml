@@ -8,5 +8,6 @@ Welp = "Welp"
 [files]
 extend-exclude = [
   "content/posts/crunch-str.md", # lots of intentionally-misspelled words
-  "syntaxes/*"
+  "syntaxes/*",
+  "public/*",
 ]

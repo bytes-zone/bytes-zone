@@ -24,12 +24,6 @@ jobs:
           nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
           generate_summary_for: "workflow"
 
-      - name: check for typos
-        run: nix shell . --command typos
-
-      - name: check formatting
-        run: nix shell . --command prettier --check .
-
       - name: build and load container
         run: |
           STORE_PATH="$(

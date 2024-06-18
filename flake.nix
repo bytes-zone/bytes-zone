@@ -21,6 +21,7 @@
             ./syntaxes
             ./templates
             ./config.toml
+            ./_typos.toml
           ];
 
           unpackPhase = ''
@@ -35,7 +36,7 @@
             done
           '';
 
-          buildInputs = [ pkgs.zola pkgs.nodePackages.html-minifier ];
+          buildInputs = [ pkgs.zola pkgs.nodePackages.html-minifier pkgs.typos ];
           buildPhase = ''
             zola build
 
@@ -57,6 +58,11 @@
           installPhase = ''
             mkdir -p $out/share
             mv public $out/share/bytes.zone
+          '';
+
+          doCheck = true;
+          checkPhase = ''
+            typos
           '';
         };
 
