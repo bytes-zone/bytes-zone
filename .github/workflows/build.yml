@@ -24,6 +24,9 @@ jobs:
           nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
           generate_summary_for: 'workflow'
 
+      - name: check for typos
+        uses: crate-ci/typos@v1.22.7
+
       - name: build and load container
         run: |
           STORE_PATH="$(
