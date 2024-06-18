@@ -15,6 +15,6 @@ always (p implies always p)
 
 This is true because `always` means "in all states starting from this one." So, the outer "always" means that the condition is always true starting from the initial time. Once `p` is true, the `implies` says that it will always remain true.
 
-If you did just `p implies always p` without the wrapper, that would be saying "if `p` is true *at the initial time* then `p` will always be true."
+If you did just `p implies always p` without the wrapper, that would be saying "if `p` is true _at the initial time_ then `p` will always be true."
 
 Source: [Alcino Cunha's answer to my question about this on the Alloy discourse instance](https://alloytools.discourse.group/t/how-do-you-say-once-this-is-true-its-always-true/294)

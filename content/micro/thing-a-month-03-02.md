@@ -12,38 +12,38 @@ I got to thinking about how pings work in this system ([last post](@/micro/thing
 
 Say you have these pings with these tags:
 
-| Time | Tag |
-| ---- | ---- |
-| 8:00 | work |
-| 9:00 | work |
-| 9:30 | coffee |
-| 10:30 | work |
+| Time  | Tag    |
+| ----- | ------ |
+| 8:00  | work   |
+| 9:00  | work   |
+| 9:30  | coffee |
+| 10:30 | work   |
 
 Assuming we're comfortable with this small sample as being representative of what you actually did, you can say with confidence that between 8:00 and 9:00 you were working. But sometime (vaguely) between 9:00 and 9:30 you transitioned to making coffee, and sometime (vaguely) between 9:30 and 10:30 you transitioned back to working.
 
 If we treat every ping as equal, assuming λ is 1 hour, this will be reported as 3 hours (± 0.85 hours) working and one hour (± 0.85 hours) getting coffee. That's pretty good—or at least enough to get a sense of how you're spending your time.
 
-But what if we take advantage of the fact that pings *aren't* exactly hourly? We'd have to take care of the vagueness of when you transitioned. In the absence of other data, we might just take the time halfway between two pings as the transition time. So that means that our times look like this:
+But what if we take advantage of the fact that pings _aren't_ exactly hourly? We'd have to take care of the vagueness of when you transitioned. In the absence of other data, we might just take the time halfway between two pings as the transition time. So that means that our times look like this:
 
-| Time | Tag | Duration |
-| ---- | ---- | ---- |
-| 8:00 | work | 0:30 (halfway to 9) |
-| 9:00 | work | 0:45 (halfway back to 8 plus halfway to 9:30) |
-| 9:30 | coffee | 0:45 (halfway back to 9:30 plus halfway to 10:30) |
-| 10:30 | work | 0:30 (halfway back to 9:30) |
+| Time  | Tag    | Duration                                          |
+| ----- | ------ | ------------------------------------------------- |
+| 8:00  | work   | 0:30 (halfway to 9)                               |
+| 9:00  | work   | 0:45 (halfway back to 8 plus halfway to 9:30)     |
+| 9:30  | coffee | 0:45 (halfway back to 9:30 plus halfway to 10:30) |
+| 10:30 | work   | 0:30 (halfway back to 9:30)                       |
 
 This makes it look like we have less time, though: we now have 2.5 hours tracked instead of 4. This is probably not a problem in real life: we can take pings continuously and tag any that aren't answered as "afk." If we really need to, it's probably safe to double the duration of the first and last ping, giving us a total of 3.5 hours in this sample.
 
 But does it give us better insight into our life? Let's see. Doing this by hand:
 
-| Tag | Ping as hour | Ping as halfway between |
-| ---- | ---- | ---- |
-| work | 3h ± 0.85h | 2.75h ± 0.82h |
-| coffee | 1h ± 0.85h | 0.75h ± 0.82h |
+| Tag    | Ping as hour | Ping as halfway between |
+| ------ | ------------ | ----------------------- |
+| work   | 3h ± 0.85h   | 2.75h ± 0.82h           |
+| coffee | 1h ± 0.85h   | 0.75h ± 0.82h           |
 
-It feels weird to me that the error bar goes below zero for coffee now. I definitely didn't spend *no* time on it, much less negative time. But let's pretend that getting coffee took 15 minutes and the remainder of the 4 hours was spent working: both of these systems produce a perfectly acceptable answer to the question of "where did my day go?"
+It feels weird to me that the error bar goes below zero for coffee now. I definitely didn't spend _no_ time on it, much less negative time. But let's pretend that getting coffee took 15 minutes and the remainder of the 4 hours was spent working: both of these systems produce a perfectly acceptable answer to the question of "where did my day go?"
 
-Given that, I think the first version of this system should assume that pings are `1 hour / λ` or similar instead of trying to get fancy. The transformation is not *that* hard (I'll attach a Python script below that can evaluate [the same data I generated in the last post](@/micro/thing-a-month-03-01.md)) so it would hypothetically be feasible to change if it looked like there was a big advantage to doing so. Although I want to be careful to avoid giving precise-but-fuzzy numbers, though: sticking with a rougher-grained unit as a base unit probably makes a ton of sense for setting expectations… you wouldn't want to bill a client on data from this system, for example!
+Given that, I think the first version of this system should assume that pings are `1 hour / λ` or similar instead of trying to get fancy. The transformation is not _that_ hard (I'll attach a Python script below that can evaluate [the same data I generated in the last post](@/micro/thing-a-month-03-01.md)) so it would hypothetically be feasible to change if it looked like there was a big advantage to doing so. Although I want to be careful to avoid giving precise-but-fuzzy numbers, though: sticking with a rougher-grained unit as a base unit probably makes a ton of sense for setting expectations… you wouldn't want to bill a client on data from this system, for example!
 
 All this talk of coffee has made me want some. brb.
 

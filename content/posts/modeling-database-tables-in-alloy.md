@@ -13,6 +13,7 @@ Formal methods tools like Alloy are not just for proving correctness properties 
 I joined the [Inventor Forge Makerspace](https://www.inventorforgemakerspace.org/) recently to get access to some better tools for [home recycling](@/projects/home-recycling.md). There are some cool tools there (Lasers! CNC machines! Plasma cutters!) that need both special training and have high demand among the folks who use the space. Right now, we use a shared Google calendar to schedule time on different machines. Unfortunately, I don't have a personal Google account, so it's harder to schedule than I'd like! There are a couple of other people in this situation too, so I'm in the process of building a tool to track training and scheduling.
 
 We'll start by modeling `Member` (someone who can join the makerspace) and a `Tool` (something that we need training and scheduling for.) We'll use Alloy's basic building block of `sig`s for this. If you haven't been exposed to Alloy before, you can think of `sig`s as sets that can contain values (like rows in a database table.) So you can think of `Member` as the set of all members of the makerspace, which can contain values like `Member0` and `Member1`.
+
 ```alloy
 sig Member {}
 
@@ -54,7 +55,7 @@ fact "a unique index on champions prevents duplicate member+tool combinations" {
 }
 ```
 
-In English, this is saying "for every combination of `Tool` and `Member`, there's at most one `Champion` that connects them." (The mnemonic for `lone` is "less than or equal to one". In this case, you can think of it as "if there's one, there's *only* one.")
+In English, this is saying "for every combination of `Tool` and `Member`, there's at most one `Champion` that connects them." (The mnemonic for `lone` is "less than or equal to one". In this case, you can think of it as "if there's one, there's _only_ one.")
 
 Just to emphasize, Alloy will take our word that this fact is always true in our system instead of checking it for us! Because of this, I like to include some justification in the description for how this is true in the system I'm modeling. In this case, that means explaining the mechanism for how we're going to make sure this property holds: the unique index.
 
@@ -105,7 +106,7 @@ But Alloy also gives us this, in which the same member is trained multiple times
 
 ![two training instances for the same member. The champion and tool are the same for both.](/images/training-twice.png)
 
-Thinking through our domain, this *might* be ok. Because the training is for safety, it's not uncommon for someone to request to have a refresher on a tool if it's been a while since they've used it. This is especially common with the woodworking tools, where there are a lot of sharp things near your hands. However, is it OK in our database schema, or would we rather disallow duplicates and (for example) update the date of the training if someone re-trains? I'll have to talk to the person in charge of our current record-keeping system to find out!
+Thinking through our domain, this _might_ be ok. Because the training is for safety, it's not uncommon for someone to request to have a refresher on a tool if it's been a while since they've used it. This is especially common with the woodworking tools, where there are a lot of sharp things near your hands. However, is it OK in our database schema, or would we rather disallow duplicates and (for example) update the date of the training if someone re-trains? I'll have to talk to the person in charge of our current record-keeping system to find out!
 
 ## Reservations
 
@@ -122,7 +123,7 @@ sig Reservation {
 }
 ```
 
- We'll use `Int`s to specify the start and end times of the reservation and specify that they have to be ordered. One weird corner I'm noting about this design is that since I've used `Training` as the authorization (just to say that you can't get time on a tool you haven't been trained on) you have to access the tool in a roundabout way:  given a `Reservation` named `r`, it's `r.auth.trainer.tool`. Could be worse, but that's gonna be a lot of joins in the database. There are a couple of alternatives here:
+We'll use `Int`s to specify the start and end times of the reservation and specify that they have to be ordered. One weird corner I'm noting about this design is that since I've used `Training` as the authorization (just to say that you can't get time on a tool you haven't been trained on) you have to access the tool in a roundabout way: given a `Reservation` named `r`, it's `r.auth.trainer.tool`. Could be worse, but that's gonna be a lot of joins in the database. There are a couple of alternatives here:
 
 1. we could reference `Tool` directly from `Reservation`, but then we could then construct a `Reservation` for a tool that a member hasn't been trained on using a `Training` for another tool. We'd have to enforce that in the app, and I'd prefer not to—the database should take care of data integrity, where possible.
 2. we could embed a `Tool` in `Training` as part of the foreign key to `Champion`, then do the same in `Reservation`. This would be a bunch of coordination work, but might be nicer: it'd mean that we couldn't change `Champion.tool` without figuring out how to update `Training` and `Reservation` at the same time. It'd take more coordination, but it'd give our data model some nice additional robustness.
@@ -173,7 +174,7 @@ Anyway, Alloy now says that it can't find any counterexamples, which is what we 
 
 ## Browsing Instances Again
 
-I *think* we're done now, but I'm just going to browse a couple more examples to make sure. (I do this a lot.) First, we get a completely normal reservation:
+I _think_ we're done now, but I'm just going to browse a couple more examples to make sure. (I do this a lot.) First, we get a completely normal reservation:
 
 ![a complete reservation from time 5 to time 6 using a single training, non-champion member, champion, and tool](/images/normal-reservation.png)
 

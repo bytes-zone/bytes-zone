@@ -24,6 +24,7 @@ Let's take a simple example: an image pull secret.
 I have the secret stored in 1Password under a specific vault.
 If I run `op item get --vault k8s "image pull secret"`, I'll get something like the following:
 
+<!-- prettier-ignore -->
 ```yaml
 ID:          y63hsk7qy5osug5n2qupwhtz3e
 Title:       image pull secret
@@ -131,7 +132,7 @@ op item get --vault k8s "image pull secret" --format json | \
     kubectl apply -n whatever-namespace -f -
 ```
 
-Like everything, this has some tradeoffs: the secrets are stored securely and never hit the disk, which is *great*!
+Like everything, this has some tradeoffs: the secrets are stored securely and never hit the disk, which is _great_!
 But in exchange, I have to run a command manually if I want to update the secrets.
 This means that if I'm creating a new app, it'll probably fail at least once.
 Same if I have to move my cluster ([which I already did once](@/micro/thing-a-month-02-05.md)) and have to apply all the manifests from scratch.

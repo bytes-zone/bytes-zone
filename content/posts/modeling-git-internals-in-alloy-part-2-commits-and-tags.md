@@ -31,7 +31,7 @@ Today, we're going to add commits and tags to this model!
 
 ## Commits
 
-Going back to [the *Git Internals - Git Objects* chapter of the Git book](https://book.git-scm.com/book/en/v2/Git-Internals-Git-Objects), we can take a tree hash we produced in the last post and make a commit with `git commit-tree`:
+Going back to [the _Git Internals - Git Objects_ chapter of the Git book](https://book.git-scm.com/book/en/v2/Git-Internals-Git-Objects), we can take a tree hash we produced in the last post and make a commit with `git commit-tree`:
 
 ```
 $ git commit-tree 3ee29075 -m 'Commit message'
@@ -124,7 +124,7 @@ That's not all the weirdness taken care of, though: we also get commits which ar
 
 ![An Alloy instance showing a commit which has itself as a parent.](/images/commits-who-are-their-own-parents.png)
 
-Like last time, this is *technically* possible: if you can find just the right content for the commit messages and trees, you could conceivably get a commit to refer to itself. Like before, though, this is likely to break git in some awful ways (segfaults!) If we were modeling Git to try to find bugs or security vulnerabilities, I'd say we should allow this. But, as before, we're trying to learn how this is *supposed* to work, so let's disallow it in the same way we disallowed trees being their own parent:
+Like last time, this is _technically_ possible: if you can find just the right content for the commit messages and trees, you could conceivably get a commit to refer to itself. Like before, though, this is likely to break git in some awful ways (segfaults!) If we were modeling Git to try to find bugs or security vulnerabilities, I'd say we should allow this. But, as before, we're trying to learn how this is _supposed_ to work, so let's disallow it in the same way we disallowed trees being their own parent:
 
 ```alloy
 fact "commits can't be their own parent" {
@@ -142,7 +142,7 @@ sig Tag extends Object {
 }
 ```
 
-Running the model like this shows that we've implicitly allowed trees to contain tags (because now `Object - Commit` includes `Tag`) which we didn't mean. We *could* say `Object - Commit - Tag`, but at this point I think it'd be better to rephrase `Tree.children` to contain only what we want:
+Running the model like this shows that we've implicitly allowed trees to contain tags (because now `Object - Commit` includes `Tag`) which we didn't mean. We _could_ say `Object - Commit - Tag`, but at this point I think it'd be better to rephrase `Tree.children` to contain only what we want:
 
 ```alloy
 sig Tree extends Object {

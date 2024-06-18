@@ -5,7 +5,7 @@ description = "getting back to the root of a project quickly"
 +++
 
 I sometimes find myself in a situation where I've `cd`'d several levels into a project and don't remember exactly where I am, but I want to get back to the project root for my next command.
-This doesn't come up for me *alllll* the time, but the last time it did I decided to do something about it.
+This doesn't come up for me _alllll_ the time, but the last time it did I decided to do something about it.
 
 <!-- more -->
 

@@ -35,7 +35,7 @@ Where we had “New” before to get a new instance, we now click “New Init”
 
 ## Adding Processes
 
-This model isn't super useful yet, since we don't actually say *how* blobs can change over time. Let's add some structure so we can define that!
+This model isn't super useful yet, since we don't actually say _how_ blobs can change over time. Let's add some structure so we can define that!
 
 To start with, we need to define an initial state. Seems fine to start with the same thing Git does: an empty repo with no objects.
 
@@ -115,7 +115,7 @@ pred traces {
 
 Just to reiterate what this means, we're now saying “`init` is true at the start. Forever after, either `stutter` or `hashObject` is true.”
 
-If it helps, you can kind of think of this as saying “`init` is true at the start; afterward, either `stutter` or `hashObject` *can happen*.” However, this is not strictly accurate: Alloy has no concept of events happening, only conditions which happen to be true at any given time.
+If it helps, you can kind of think of this as saying “`init` is true at the start; afterward, either `stutter` or `hashObject` _can happen_.” However, this is not strictly accurate: Alloy has no concept of events happening, only conditions which happen to be true at any given time.
 
 If you execute this spec, you can now see blobs coming into existence between time steps (you may need to click “New Fork” to get this to happen.)
 
@@ -166,7 +166,7 @@ Before we can add any events on these, we'll need to define what they look like 
 +  no Tree
 +  no children
  }
- 
+
  pred stutter {
    Blob' = Blob
 +  Tree' = Tree
@@ -209,7 +209,7 @@ Our action here is saying “the next version of `stage` is the old version plus
 
 <aside>
 
-If you want a firmer technical term, `->` gives you the *Cartesian product* of the two sides. That means `{a, b}->{1, 2}` would be `{a->1, a->2, b->1, b->2}`
+If you want a firmer technical term, `->` gives you the _Cartesian product_ of the two sides. That means `{a, b}->{1, 2}` would be `{a->1, a->2, b->1, b->2}`
 
 </aside>
 
@@ -231,7 +231,7 @@ pred writeTree {
 A couple of details here:
 
 - We're dancing around a little by saying “I want one tree in `Tree'` that doesn't exist in `Tree`, and then that `Tree'` is only changed by that new tree.” I feel this is a little awkward but it's the best way I can find to get exactly one new thing. If you're an Alloy expert reading this and know a better way to do this, I'd really appreciate it if you could let me know!
-- Since `->` maps *all* of the left- and right-hand sides, this time we're saying “our new tree has all the things currently in the index.”
+- Since `->` maps _all_ of the left- and right-hand sides, this time we're saying “our new tree has all the things currently in the index.”
 
 With that taken care of, we need to unstage the items afterward. One final action:
 
@@ -419,7 +419,7 @@ pred init {
   no Tree
   no children
 }
- 
+
 pred stutter {
   Blob' = Blob
   Tree' = Tree

@@ -7,7 +7,7 @@ description = "Observing growth in my notes without being overwhelmed."
 featured = true
 +++
 
-I have been using [Obsidian](https://obsidian.md) for all my notes for something like 6 months now. That's really *everything*, from temporary measurements to journaling to serious documentation work. I've tried Obsidian a couple of times before and bounced off of it, so I decided to try to do things differently this time. Instead of starting out by figuring out a system for where everything lives in advance, I've just thrown almost everything in the default folder and sorted it out with linking and search.
+I have been using [Obsidian](https://obsidian.md) for all my notes for something like 6 months now. That's really _everything_, from temporary measurements to journaling to serious documentation work. I've tried Obsidian a couple of times before and bounced off of it, so I decided to try to do things differently this time. Instead of starting out by figuring out a system for where everything lives in advance, I've just thrown almost everything in the default folder and sorted it out with linking and search.
 
 Some structure has emerged over time, which I'm fairly happy with, but it's more to do with practices than things that would make it easier for someone else to read my vault. These practices basically boil down to "digital gardening"—they allow me to keep things neat and tidy and observe growth without being overwhelmed by it. Here's some of what I do!
 
@@ -19,9 +19,9 @@ Every Monday I summarize these daily notes into a weekly digest. These have more
 
 If the particular Monday I'm doing this on also starts a new month, I'll also do a summary of the weeks in the previous month following the same basic pattern. Same for the last 3 months of monthly notes, if it happens to be the first Monday of April, July, October, or January. I haven't been doing this long enough to do a yearly rollup yet, but I may do a 2022 yearly rollup note in January.
 
-I've been really happy with this! The big benefit so far I've seen is being able to see back in time with more clarity. There have been times this year where I've felt stuck—like I'm not making progress and haven't for a long time—but looking back in my notes I can see that I actually have done some pretty major things in the past year. This has had a nice side benefit that my end-of-year review at work was really easy to write: I just looked back at my quarterly reviews, as well as a few monthly ones, and pulled out some good stuff. It doesn't completely get rid of recency bias, but it does mean that I'm not *only* focusing on stuff that happened in the last month or two.
+I've been really happy with this! The big benefit so far I've seen is being able to see back in time with more clarity. There have been times this year where I've felt stuck—like I'm not making progress and haven't for a long time—but looking back in my notes I can see that I actually have done some pretty major things in the past year. This has had a nice side benefit that my end-of-year review at work was really easy to write: I just looked back at my quarterly reviews, as well as a few monthly ones, and pulled out some good stuff. It doesn't completely get rid of recency bias, but it does mean that I'm not _only_ focusing on stuff that happened in the last month or two.
 
-I don't know if "rollup journaling" is the best name for this, but it's one that's stuck with me for some reason. I got the idea for doing this a couple years (and tries at Obsidian) ago based on [Britney Braxton's talk at JuneteenthConf 2020, *Journaling as a Dev*](https://www.youtube.com/watch?v=AzrEDnIye14).
+I don't know if "rollup journaling" is the best name for this, but it's one that's stuck with me for some reason. I got the idea for doing this a couple years (and tries at Obsidian) ago based on [Britney Braxton's talk at JuneteenthConf 2020, _Journaling as a Dev_](https://www.youtube.com/watch?v=AzrEDnIye14).
 
 ## Spaced Repetition
 
@@ -44,23 +44,31 @@ I'm fairly happy with this approach. It's a bit easier than looking for greyed-o
 In case it's useful to someone else, here's the dataview script I embed for this. There's probably a better way to get this information, but it's been working well as-is. This version filters out daily notes and doesn't consider media files, but you may want to remove those lines if being prompted to create daily notes far in the past or future sounds useful to you:
 
 ```javascript
-let phantoms =
-  dv.pages()
-    .flatMap(p => p.file.outlinks.map(link => [link, p.file]))
-    .groupBy(p => p[0])
-    .filter(g => g.rows.length > 1)
-    .filter(g => !g.key.path.endsWith(".png") && !g.key.path.endsWith(".jpeg") && !g.key.path.endsWith(".jpg") && !g.key.path.endsWith(".mov") && !g.key.path.match(/^\d\d\d\d-Q\d$/) && !g.key.path.match(/^\d\d\d\d-\d\d-\d\d$/) && !g.key.path.match(/^\d\d\d\d-\d\d$/))
-    .map(g => { return { key: g.key, rows: g.rows.map(r => r[1]) }})
-    .filter(g => dv.page(g.key) === undefined)
-    .sort(g => g.rows.length, "desc")
+let phantoms = dv
+  .pages()
+  .flatMap((p) => p.file.outlinks.map((link) => [link, p.file]))
+  .groupBy((p) => p[0])
+  .filter((g) => g.rows.length > 1)
+  .filter(
+    (g) =>
+      !g.key.path.endsWith(".png") &&
+      !g.key.path.endsWith(".jpeg") &&
+      !g.key.path.endsWith(".jpg") &&
+      !g.key.path.endsWith(".mov") &&
+      !g.key.path.match(/^\d\d\d\d-Q\d$/) &&
+      !g.key.path.match(/^\d\d\d\d-\d\d-\d\d$/) &&
+      !g.key.path.match(/^\d\d\d\d-\d\d$/),
+  )
+  .map((g) => {
+    return { key: g.key, rows: g.rows.map((r) => r[1]) };
+  })
+  .filter((g) => dv.page(g.key) === undefined)
+  .sort((g) => g.rows.length, "desc");
 
 dv.table(
   ["Page to Create", "Linked From"],
-  phantoms.map(g => [
-    g.key,
-    g.rows.map(p => p.link),
-  ])
-)
+  phantoms.map((g) => [g.key, g.rows.map((p) => p.link)]),
+);
 ```
 
 ## Other Dataview Shenanigans

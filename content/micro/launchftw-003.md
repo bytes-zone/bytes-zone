@@ -5,16 +5,16 @@ date = 2023-06-20
 
 Lesson 2 is fairly light, but has an important lesson. Big takeaway: learn what people need, want, and are willing to buy. (That was the first rule last time, as well.) I like the framing of "**find misery and fix it.**" This is familiar to me from 30x500, but getting a compressed version like this helps me see the process at a high level!
 
-Well, then, on to lesson 3. Emphasizing that you need to make something people are *already* willing to buy—"it's a million times easier to capture a need than create one." In other words, skip the traditional startup advice of having an idea and then finding a customer. Instead, find the customer first, then build a custom solution to their problem. To do that, you need to find:
+Well, then, on to lesson 3. Emphasizing that you need to make something people are _already_ willing to buy—"it's a million times easier to capture a need than create one." In other words, skip the traditional startup advice of having an idea and then finding a customer. Instead, find the customer first, then build a custom solution to their problem. To do that, you need to find:
 
 > What does your audience
-> 
+>
 > 1. actually do
 > 2. actually talk about
 > 3. actually complain about
 > 4. actually read, share, try, recommend and, of course
 > 5. actually buy
-> 
+>
 > The answers are Sales Safari gold.
 
 So who are your ideal customers? What is your ideal audience? It's "the people you are best suited to serve." In other words, people you already know things about because they're people like you.
@@ -93,7 +93,7 @@ Fourth question is just to pick one to move forward with for launch ftw. This is
 … and after 15 minutes of flailing about trying to think through it ("well, this, but no, then again, that…") I've got to try a different approach. I've put the lines into [elo.bytes.zone](https://elo.bytes.zone) (a tool that I wrote to help with analysis paralysis) and done head-to-head comparisons until each of them got at least 10 tries. Here's the results
 
 | Rank | Item                | Rating | Difference from Last |
-| ----:| ------------------- | ------:| --------------------:|
+| ---: | ------------------- | -----: | -------------------: |
 |    1 | Sorbet users        |   1307 |                    - |
 |    2 | Ruby programmers    |   1305 |                   -2 |
 |    3 | frontend developers |   1279 |                  -26 |
@@ -110,7 +110,7 @@ So, OK, that leaves basically four things (or more like three, since Sorbet and 
 
 - Folks who are interested in Sorbet are generally interested in making Ruby code more predictable and safe. Reading between the lines in their marketing and docs, it's a similar attraction to folks who have moved from JavaScript to TypeScript.
 - Rubyists generally are a nice bunch. It's a really big circle since it was so popular for so long, which means more eyeballs and dollars in a really general sense.
-- "Frontend developers" is a little vague… but I really mean people who are interested in developing on the web as a platform. There's a ton of stuff happening every year in CSS, HTML, new JS features, new platform features. Hard to keep up! The nature of the web means that this audience should *stay* pretty large as well.
+- "Frontend developers" is a little vague… but I really mean people who are interested in developing on the web as a platform. There's a ton of stuff happening every year in CSS, HTML, new JS features, new platform features. Hard to keep up! The nature of the web means that this audience should _stay_ pretty large as well.
 - Alloy users is more niche. It'd be nice to grow interest in it, but that's counter to the advice here about addressing a need rather than creating one (although the need could be "I spent weeks developing this feature, only to find a design flaw that means I have to start over… ARGH!") Promoting the tool as an alternative seems good, but I'm not sure where I'd find people who had that particular pain.
 
 So out of those, folks who are getting into Sorbet seems like the best fit. It's a good combination of a large-enough audience and a relevant topic (e.g. there are people starting Ruby projects today as well as folks who are dealing with code written in 2008.)

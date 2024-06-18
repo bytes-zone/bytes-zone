@@ -8,13 +8,13 @@ Lesson 4! This one asks things like "What's one thing that people need to know, 
 In this lesson, they said that Sales Safari would come later, but I think I need to get into it now. I don't have anything better than guessing otherwise! From what I remember from 30x500, the first step is to find places ("watering holes") that people gather, and then to read through forum threads etc. Then look for the things mentioned in the guidebook in today's lesson:
 
 > - Pain (3 major types)
-> 	- **waste** — of time, money, energy, and other resources
-> 	- **lack** — of knowledge, skill, awareness, time, money, connections, resources
-> 	- **feeling** — of exhaustion, fear, anger, irritation, stress, isolation, inability, uncertainty
+>   - **waste** — of time, money, energy, and other resources
+>   - **lack** — of knowledge, skill, awareness, time, money, connections, resources
+>   - **feeling** — of exhaustion, fear, anger, irritation, stress, isolation, inability, uncertainty
 > - Value (3 major types)
-> 	- **saving** — spending less money
-> 	- **earning** — earning more money
-> 	- **psychological** — pride, acclaim, confidence, respect, satisfaction, relief, etc
+>   - **saving** — spending less money
+>   - **earning** — earning more money
+>   - **psychological** — pride, acclaim, confidence, respect, satisfaction, relief, etc
 
 I also remember some specific things to look out for, but that's putting the cart before the horse… first I gotta find watering holes!
 
@@ -34,7 +34,7 @@ I confirmed those first two on [sorbet.org](https://sorbet.org). Let's look at [
 - [conferences](https://www.ruby-lang.org/en/community/conferences/)
 - a [list of blogs](https://www.ruby-lang.org/en/community/weblogs/)
 
-OK, those don't seem *super* helpful off the bat, but I'm sure there's *something*.
+OK, those don't seem _super_ helpful off the bat, but I'm sure there's _something_.
 
 I also took a look at [the Sorbet tag on StackOverflow](https://stackoverflow.com/questions/tagged/sorbet) and there's, like, a lot of unanswered questions? Not to mention only 151 questions overall. Is that enough to base something nice off of? (doubt doubt doubt!)
 

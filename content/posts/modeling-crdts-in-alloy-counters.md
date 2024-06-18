@@ -22,7 +22,7 @@ Last time our document was a single boolean. That's useful, but we can't build a
 1. Everyone starts at zero.
 2. Person A sees a hawk! Ka-kaw! They increment the counter by one.
 3. Person B sees another hawk! Screeee! They increment the counter by one, too.
-4. Person C sees *two* hawks. Wow! Of course, they increment the counter by two.
+4. Person C sees _two_ hawks. Wow! Of course, they increment the counter by two.
 5. Day's over; good job everyone! Sync up your apps and lets see how many hawks we saw total.
 
 At first glance, we might want to use `+` as the merge function. But remember, that's not idempotent. So this might happen among three people:
@@ -35,7 +35,7 @@ At first glance, we might want to use `+` as the merge function. But remember, t
 
 In other words, we can return with a huge number of hawks when really we only saw four. That's not what we wanted! This fails because `+` is not idempotent: adding any meaningful number will always change the result.
 
-What if we used `max` instead? It's commutative, associative, and idempotent, but the semantics don't work out here: if we used `max` to merge, we'd only get to see the max of hawks that any *one person* had seen.
+What if we used `max` instead? It's commutative, associative, and idempotent, but the semantics don't work out here: if we used `max` to merge, we'd only get to see the max of hawks that any _one person_ had seen.
 
 However, `max` would work if we synced one counter for each person and then added them together locally to get the result! Let's look at an example:
 
@@ -44,9 +44,10 @@ However, `max` would work if we synced one counter for each person and then adde
 3. Person A and person C sync their totals, going from person A's `{a: 1, b: 1}` and person C's `{c: 2}` to `{a: 1, b: 2, c: 2}`.
 4. Person B and person C sync their totals, finishing the sync. Now everyone has `{a: 1, b: 1, c: 2}` and anyone can compute that we've seen four hawks total.
 
-When you have a conflicting value (say B saw another hawk later) you take the `max` of *that person's* count when syncing.[^1]
+When you have a conflicting value (say B saw another hawk later) you take the `max` of _that person's_ count when syncing.[^1]
 
 This also has the nice property of moving information through the system without requiring everyone to talk to everyone else. Consider what would happen if we did A+B, A+C, A+B instead of ending with B+C. We'd end up with the same value, since A+C would have given A the count to pass along to B, except that B and C never have to talk directly. It's eventually consistent!
+
 ## Moving to Alloy
 
 Let's model this scheme in Alloy. We'll model an ID to represent each individual birdwatcher:
@@ -86,6 +87,7 @@ With this change, we can get some more interesting instances of the data structu
 ![An Alloy instance showing two documents with various counts in need of syncing.](/images/two-counters-with-conflicting-counts.png)
 
 (You don't need to know how to read this example, but if you want to: the keys in the map are represented by the labels on the arrows. For example, "Document 0 has a count for ID 1 of 0".)
+
 ## Merging
 
 We don't have a way to sync yet, so let's start fixing that. Let's define `merge`, as well as adding checks that it satisfies our three laws:
@@ -118,6 +120,7 @@ check MergeIsIdempotent {
 ```
 
 Alloy says it can't find a counterexample for these three checks, so it looks like we might be in business.
+
 ## Actions
 
 Next let's set up some things our documents can do. First, we should be able to increment a number in a document by removing the old count for this document and ID and addign the new one:
@@ -143,11 +146,12 @@ fun bounded_inc[n: Natural]: Natural {
 }
 ```
 
-This was necessary because Alloy's numbers are actually just regular `sig`s with an ordering.[^3] 
+This was necessary because Alloy's numbers are actually just regular `sig`s with an ordering.[^3]
 
 Since we only deal with a bounded number of instances for each sig, addition and counting has a gotcha. Say you only knew the numbers 1 and 2: counting works fine up to a certain point, but if someone asked you "ok, and what's after two?" you wouldn't know. This is exactly what's going on with Alloy, which will return a blank set if you run out of numbers. Specs can define semantics specific to their applications, though, and in ours I've decided that incrementing past the max is simply not allowed—a number will just stop growing a certain point.
 
 This should not really affect the soundness of our spec, but choosing limits like this requires careful thought. Alloy is not designed for numerical computing, and forcing it means dealing with weird edge cases like this. Fortunately, that's the only place in the spec we should have to deal with this.
+
 ## Now We Can Sync!
 
 Let's move on to `sync`, which should merge two documents:
@@ -198,9 +202,6 @@ You might also look at this and think "yikes, that looks like a lot of memory fo
 Thanks to [Alcino Cunha on the Alloy forums for helping me understand how set comprehensions could be used for `merge`](https://alloytools.discourse.group/t/merging-two-sets-of-relations-by-some-rule/407), as well as pointing out that it should be possible to specify our checks with only events. Thanks also to Jake Lazaroff for reviewing an early draft and suggesting better ways to structure this.
 
 [^1]: This only works if you can trust the people doing the counts, though. If person B says "wow, I heard person A saw FIFTY HAWKS" then that information will spread without any recourse for A to say "er, no, I only saw one." These kind of security and sharing situations seems to be open questions in the field. I guess you could sign values, but that'd add a lot of overhead in any decently-sized document. Tricky!
-
 [^2]: Images throughout this post are generated by Alloy—that's one of the things I like best about it. Visualizing edge cases like this makes it really easy to talk about potential drawbacks to modeling with other engineers or people making product decisions.
-
-[^3]: That is, the numbers you work with *in sigs*. You can get the cardinality of a set (e.g. `#Document`) without these restrictions. However, you can't store the cardinality in a `sig`, so we still have to work around this restriction.
-
+[^3]: That is, the numbers you work with _in sigs_. You can get the cardinality of a set (e.g. `#Document`) without these restrictions. However, you can't store the cardinality in a `sig`, so we still have to work around this restriction.
 [^4]: Briefly: you can make a GSet (grow-only set) whose `merge` is the union of two sets. That gives you the set equivalent of our GCounter—it can only add new items. To remove items, you do the same trick as PNCounter and keep two sets, then get the final value by computing `union(add) - union(remove)`. This means that you can never re-add an item that you've removed, though. We'll touch on how to get around that next time.

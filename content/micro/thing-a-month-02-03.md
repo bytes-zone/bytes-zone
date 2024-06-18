@@ -19,11 +19,11 @@ So that leaves me with another shopping list to make: how do I run my stuff in K
 - **Routing and load balancing:** Bunch of good options. Traefik, the Nginx ingress controller, etc. I'm most interested in Istio, though. Seems like it has a gateway thing? Worth playing around with, anyway.
 - **Container storage:** Harbor graduated from the CNCF, so probably that if I don't get something built in with the Vultr cluster. But maybe Dragonfly, which does P2P stuff? Seems cool but I probably don't have the problem it solves.
 - **Misc:**
-	- A very experienced friend told me that cert-manager and external-dns were pretty much required, so I'm going to look into them.
-	- I've also used and loved Argo Rollouts, so that's going on the list. Not *required*, but they worked enough better for me than the core deployment object before and give you options for healthy rollouts so I'm going to use them for sure.
-	- I'll need to set up the CSI driver for Vultr too so that my persistent volumes will persist.
-	- How do secrets work in Kubernetes now? Do I need to run some component or is the builtin stuff usually good enough?
+  - A very experienced friend told me that cert-manager and external-dns were pretty much required, so I'm going to look into them.
+  - I've also used and loved Argo Rollouts, so that's going on the list. Not _required_, but they worked enough better for me than the core deployment object before and give you options for healthy rollouts so I'm going to use them for sure.
+  - I'll need to set up the CSI driver for Vultr too so that my persistent volumes will persist.
+  - How do secrets work in Kubernetes now? Do I need to run some component or is the builtin stuff usually good enough?
 
-But, zooming out, I don't want to spend *too* much time on this. It's really easy to tweak and tweak and then never move on to the rest of what needs to happen.
+But, zooming out, I don't want to spend _too_ much time on this. It's really easy to tweak and tweak and then never move on to the rest of what needs to happen.
 
 So, guess I'll start grabbing stuff and shoving it into Terraform and see what happens!

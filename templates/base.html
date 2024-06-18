@@ -3,29 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link href="/style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" />
 
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" sizes="any">
-    <link rel="apple-touch-icon" href="/icons/180.png">
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" href="/icons/180.png" />
 
     <title>{% block title %}bytes.zone{% endblock %}</title>
-    <link rel="canonical" href="{{ current_url | safe }}">
-    <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
+    <link rel="canonical" href="{{ current_url | safe }}" />
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}" />
 
     {% block rss -%}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="index.xml", trailing_slash=false) | safe }}">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="index.xml", trailing_slash=false) | safe }}" />
     {% endblock -%}
 
     {% block metadata -%}
-    <meta property="og:title" content="bytes.zone">
-    <meta property="og:url" content="{{ current_url | safe }}">
-    <meta property="og:description" content="{{ config.description }}">
-    <meta property="og:site_name" content="{{ config.title }}">
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:title" content="{{ config.title }}">
-    <meta property="twitter:description" content="{{ config.description }}">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="bytes.zone" />
+    <meta property="og:url" content="{{ current_url | safe }}" />
+    <meta property="og:description" content="{{ config.description }}" />
+    <meta property="og:site_name" content="{{ config.title }}" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="{{ config.title }}" />
+    <meta property="twitter:description" content="{{ config.description }}" />
+    <meta property="og:type" content="website" />
     {% endblock -%}
   </head>
   <body>

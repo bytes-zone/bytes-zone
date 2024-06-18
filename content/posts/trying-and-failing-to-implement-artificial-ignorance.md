@@ -7,9 +7,9 @@ summary = "Artificial ignorance seems nice but OH BOY that's a lot of events"
 I like the ideas behind [artificial ignorance](https://ranum.com/security/computer_security/papers/ai/index.html). Summed up:
 
 1. You can't know all the "bad" events that can happen in a system. Modern attackers have basically unlimited kinds of attacks.
-2. You *can* know all the unexceptional, boring events that could happen. That list might go on for a long time, but it'll end at *some* point.
+2. You _can_ know all the unexceptional, boring events that could happen. That list might go on for a long time, but it'll end at _some_ point.
 
-System logs tend to contain all the events, so removing the unexceptional events should leave you with just the "interesting" ones. *Hypothetically* you could make yourself a big regex and then use `grep` and other shell tools to look over the logs and email yourself interesting events. This won't catch just security events, either: you'll get warnings about bad configurations, disk space, etc. You'll refine this over time, too—new unexceptional events will happen over time and you’ll add them to the list. Doing this means you’ll only ever see novel things you need to deal with.
+System logs tend to contain all the events, so removing the unexceptional events should leave you with just the "interesting" ones. _Hypothetically_ you could make yourself a big regex and then use `grep` and other shell tools to look over the logs and email yourself interesting events. This won't catch just security events, either: you'll get warnings about bad configurations, disk space, etc. You'll refine this over time, too—new unexceptional events will happen over time and you’ll add them to the list. Doing this means you’ll only ever see novel things you need to deal with.
 
 I find this idea compelling. It seems analogous to running a linter on code: you get things you would not have caught otherwise that might have caused problems later. Saves time and stress, right?
 

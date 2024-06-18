@@ -3,8 +3,8 @@ title = "Learning Requires Effort"
 date = 2021-01-05
 +++
 
-I recently finished [*How to Take Smart Notes*](https://takesmartnotes.com).
-The core idea I took away from the book is that *learning requires effort*.
+I recently finished [_How to Take Smart Notes_](https://takesmartnotes.com).
+The core idea I took away from the book is that _learning requires effort_.
 
 ## Two Kinds of Effort
 
@@ -18,7 +18,7 @@ For example, I've made the mistake many times of assuming I learned something ju
 With that in mind, I can think of at least two ways of putting in the effort to learn.
 There are definitely more, though!
 
-*How to Take Smart Notes* recommends using the Zettelkasten (slip-box) system [covered](https://zettelkasten.de/posts/overview/) [many](https://www.fastcompany.com/90535318/this-simple-but-powerful-analog-method-will-rocket-your-productivity) [places](https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125) this past summer.
+_How to Take Smart Notes_ recommends using the Zettelkasten (slip-box) system [covered](https://zettelkasten.de/posts/overview/) [many](https://www.fastcompany.com/90535318/this-simple-but-powerful-analog-method-will-rocket-your-productivity) [places](https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125) this past summer.
 In this method, "effort" looks like making notes by rephrasing and making connections to things you already know.
 Educationally speaking, this is called elaboration.
 
@@ -34,7 +34,7 @@ If not, I'm probably not learning!
 ## Someone Else Can't Learn For You
 
 "Learning requires effort" also means that someone else can't learn for you.
-Think about it: if learning requires effort, and someone else is putting in the effort, then it's not *you* doing the learning.
+Think about it: if learning requires effort, and someone else is putting in the effort, then it's not _you_ doing the learning.
 That's another mistake I've made many times over the years!
 It's natural for me to try and find the perfect resource when what I actually need to just get into the work of effortful learning as quickly as I can.
 
@@ -46,7 +46,7 @@ If you're not putting in the effort to connect new stuff to what you already kno
 The second is similar, but a little more specific: using other people's flashcards.
 I've seen quite a few places where you can download flashcard decks for various computer science concepts.
 At first glace, that seems fine, but where's the learning there?
-It's certainly a lot of *effort* to memorize a flashcard deck by rote, but it's the kind of effort that makes you learn the deck, not the subject.
+It's certainly a lot of _effort_ to memorize a flashcard deck by rote, but it's the kind of effort that makes you learn the deck, not the subject.
 Making flashcards, on the other hand, can actually create connections as you think about how best to structure the subject in flashcard form.
 
 ## Put It All Together
@@ -54,7 +54,7 @@ Making flashcards, on the other hand, can actually create connections as you thi
 So, if learning requires effort, how can we learn?
 Simple: just put in the effort.
 
-But, oops, it's actually not so simple: *what* effort?
+But, oops, it's actually not so simple: _what_ effort?
 What's right for you and for what you're learning?
 If you just thrash and flail, by trying things that are way beyond your current skill or level of understanding, you won't actually learn much.
 To be effective, the things you're trying to learn have to be just beyond what you can do already (in the [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development).)

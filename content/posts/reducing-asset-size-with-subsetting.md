@@ -5,7 +5,7 @@ description = "I reduced the size of my site's fonts by 87% with subsetting!"
 +++
 
 **Note:** as of December 2020, this site no longer uses custom fonts.
-This script is still useful, but you're not loading the output in your browser *right now*.
+This script is still useful, but you're not loading the output in your browser _right now_.
 
 When I was building this site, I noticed that my web fonts were kind of big:
 
@@ -96,7 +96,7 @@ Aside: I don't know if these should be `const` or `let`... I've heard both but t
 Then let's walk the DOM to find all the text nodes:
 
 ```javascript
-const fileOut = await page.evaluate(function() {
+const fileOut = await page.evaluate(function () {
   // we have to define everything we need inline here, since `page.evaluate`
   // runs everything in the browser context.
   function uniqChars(text) {
@@ -119,7 +119,7 @@ const fileOut = await page.evaluate(function() {
   let todo = [window.document];
 
   while (todo.length !== 0) {
-    let node = todo.shift()
+    let node = todo.shift();
 
     // `childNodes` is not an array, but you can still access its children by
     // index. We are descending into the node so we just push all the children
@@ -212,7 +212,7 @@ If I had passed more files into the script (for example, the output of `find`) I
 There are some interesting things happening here.
 First, I mentioned that I only was using ASCII… well, that's a bit of a lie; I'm also using a few emoji.
 The script found and included these.
-Second, I'm not even using *all* the ASCII characters; `q` and `x` are absent from Open Sans (my body font.)
+Second, I'm not even using _all_ the ASCII characters; `q` and `x` are absent from Open Sans (my body font.)
 
 True, this is just for one page, but it holds across the rest of the content: each font ends up only needing to include well under 100 glyphs to be able to render everything on the whole site.
 

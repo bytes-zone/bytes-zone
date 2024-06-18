@@ -19,7 +19,7 @@ type alias Cat =
     }
 ```
 
-This particular implementation has a problem: you can do *whatever* with `id` since it's a `String`.
+This particular implementation has a problem: you can do _whatever_ with `id` since it's a `String`.
 Wanna concatenate it with another one?
 Go right ahead.
 Regex match?

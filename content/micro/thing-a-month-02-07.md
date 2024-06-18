@@ -11,6 +11,6 @@ I got Woodpecker working, but the first job I did (a `nix build`) totally froze 
 
 <!-- more -->
 
-After doing some investigation, it looks like I'm going to end up on GitHub actions for now. I don't *love* that—part of the reason I started self-hosting my own stuff was to get away from GitHub, but the price is right and it enables me to get going on things that I care about more than fiddling with CI runners.
+After doing some investigation, it looks like I'm going to end up on GitHub actions for now. I don't _love_ that—part of the reason I started self-hosting my own stuff was to get away from GitHub, but the price is right and it enables me to get going on things that I care about more than fiddling with CI runners.
 
 Tradeoffs, as always: if I don't want to run my own thing, I have to put up with what someone else is willing to run. That seems annoying, but fine.

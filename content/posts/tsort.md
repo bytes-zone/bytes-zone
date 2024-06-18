@@ -33,6 +33,6 @@ Shoes
 Belt
 ```
 
-It kinda suggests lanes of parallelism, too. For example, you could hypothetically put socks, undershirt, and underwear at the same time. Granted, you'd have to have some machine like in Wallace and Gromit in *The Wrong Trousers*, but that turned out so well for them! 😆
+It kinda suggests lanes of parallelism, too. For example, you could hypothetically put socks, undershirt, and underwear at the same time. Granted, you'd have to have some machine like in Wallace and Gromit in _The Wrong Trousers_, but that turned out so well for them! 😆
 
 On a more serious note, I've used this to order tasks in projects in [Linear](https://linear.app). Combined with blocker relationships, it makes it clear to everyone which tasks should go first.

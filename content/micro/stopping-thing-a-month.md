@@ -10,7 +10,7 @@ I'm going to have to stop doing thing-a-month. I really love it as an idea, but 
 
 - it turns out I'm pretty good at planning projects like this, but when I have such limited free time it's way too easy to overcommit.
 - trying to figure out how to build a business around a tiny idea in a month is a bit much.
-- doing that *and writing about it* is even more work.
+- doing that _and writing about it_ is even more work.
 
 Taken together, it basically means I'm overcommitting, then having to be accountable for it in public. Not a great combination for me mentally; I'm avoiding building things that I want and that I think sound fun to make!
 

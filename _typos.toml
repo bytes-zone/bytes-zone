@@ -1,0 +1,13 @@
+[default.extend-words]
+Hashi = "Hashi" # as in HashiCorp
+iterm = "iterm" # as in "iterm2.com"
+OT = "OT"
+PN = "PN" # as in PNCounter
+Welp = "Welp"
+
+[files]
+extend-exclude = [
+  "content/posts/crunch-str.md", # lots of intentionally-misspelled words
+  "syntaxes/*",
+  "public/*",
+]

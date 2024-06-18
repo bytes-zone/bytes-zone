@@ -3,7 +3,7 @@
 
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:NixOS/nixpkgs/release-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/release-24.05";
   };
 
   outputs = { self, nixpkgs, flake-utils }:
@@ -21,6 +21,8 @@
             ./syntaxes
             ./templates
             ./config.toml
+            ./_typos.toml
+            ./.prettierignore
           ];
 
           unpackPhase = ''
@@ -35,7 +37,12 @@
             done
           '';
 
-          buildInputs = [ pkgs.zola pkgs.nodePackages.html-minifier ];
+          buildInputs = [
+            pkgs.zola
+            pkgs.nodePackages.html-minifier
+            pkgs.typos
+            pkgs.nodePackages.prettier
+          ];
           buildPhase = ''
             zola build
 
@@ -57,6 +64,12 @@
           installPhase = ''
             mkdir -p $out/share
             mv public $out/share/bytes.zone
+          '';
+
+          doCheck = true;
+          checkPhase = ''
+            typos
+            prettier --check .
           '';
         };
 
@@ -272,6 +285,13 @@
         overlay = final: prev: { bytes-zone = packages.bytes-zone; };
 
         # `nix develop`
-        devShell = pkgs.mkShell { buildInputs = with pkgs; [ zola pngcrush vale ]; };
+        devShell = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            zola
+            pngcrush
+            typos
+            nodePackages.prettier
+          ];
+        };
       });
 }

@@ -42,7 +42,7 @@ One way to do this might be to consider making this a web app instead of a local
 - **Who bears the cost for the storing the data set?** I do! And because of that my costs go up and one-time purchases become less sustainable (since I'd have a constant stream of cost paired with an intermittent stream of revenue.)
 - **New question: will this work on a plane?** Not without buying wifi!
 
-That seems worse on first read. It does have some clear benefits, though: there aren't nearly as many gatekeepers for web apps, and I wouldn't have to pay platform fees on sales (other than, say, Stripe's normal fees.) But I have a hard time thinking this is the *best* way forward.
+That seems worse on first read. It does have some clear benefits, though: there aren't nearly as many gatekeepers for web apps, and I wouldn't have to pay platform fees on sales (other than, say, Stripe's normal fees.) But I have a hard time thinking this is the _best_ way forward.
 
 But what about a hybrid approach? Local-first software is looking pretty good these days. What if the client stored its own data and then could sync with a server to get the data everywhere? Seems like that could work alright. Then what if the tags were encrypted somehow and could only be decrypted by the user on their devices? Then…
 

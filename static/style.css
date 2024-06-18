@@ -1,326 +1,356 @@
-@media(prefers-color-scheme: light) {
-    :root {
-        --primary: #161F17;
-        --deemphasized: #6E8971;
-        --verydim: #EEF0EE;
-        --dim: #E2E7E2;
-        --accent: #78E2A0;
-        --background: #FDFFFD;
-    }
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: #161f17;
+    --deemphasized: #6e8971;
+    --verydim: #eef0ee;
+    --dim: #e2e7e2;
+    --accent: #78e2a0;
+    --background: #fdfffd;
+  }
 }
 
-@media(prefers-color-scheme: dark) {
-    :root {
-        --primary: #F0F3F0;
-        --deemphasized: #8FA68F;
-        --verydim: #233127;
-        --dim: #2B3B30;
-        --accent: #2d5c3f;
-        --background: #121A12;
-    }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #f0f3f0;
+    --deemphasized: #8fa68f;
+    --verydim: #233127;
+    --dim: #2b3b30;
+    --accent: #2d5c3f;
+    --background: #121a12;
+  }
 }
 
 @font-face {
-  font-family: 'Barlow Condensed';
-  src: url('/fonts/BarlowCondensed-SemiBold.woff2') format('woff2');
+  font-family: "Barlow Condensed";
+  src: url("/fonts/BarlowCondensed-SemiBold.woff2") format("woff2");
 }
 
 body {
-    background-color: var(--background);
-    color: var(--primary);
+  background-color: var(--background);
+  color: var(--primary);
 
-    margin: 1em auto;
-    max-width: 40em;
-    padding: 0 1em;
-    font: 1.2em/1.62 sans-serif;
+  margin: 1em auto;
+  max-width: 40em;
+  padding: 0 1em;
+  font: 1.2em/1.62 sans-serif;
 }
 
 @media print {
-    body {
-        max-width: none
-    }
+  body {
+    max-width: none;
+  }
 }
 
 /* HEADINGS */
 
-h1 { font-size: 3em; }
-
-h2, h1.deemphasized { font-size: 2.5em; }
-
-h3, h2.deemphasized { font-size: 2em; }
-
-h1, h2, h3, h4 {
-    margin: .2em 0 .2em -0.1em;
-    padding: 0 .1em;
-    line-height: 1.4;
-    font-family: 'Barlow Condensed', sans-serif;
+h1 {
+  font-size: 3em;
 }
 
+h2,
+h1.deemphasized {
+  font-size: 2.5em;
+}
 
-h1 > a, h2 > a, h3 > a, h4 > a {
-    text-decoration: none;
-    color: var(--primary);
+h3,
+h2.deemphasized {
+  font-size: 2em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.2em 0 0.2em -0.1em;
+  padding: 0 0.1em;
+  line-height: 1.4;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a {
+  text-decoration: none;
+  color: var(--primary);
 }
 
 /* This happens on the post/talk listing. */
-h1 + article, article + article {
-    margin-top: 1em;
+h1 + article,
+article + article {
+  margin-top: 1em;
 }
 
 dt {
-    float: left;
-    text-align: right;
+  float: left;
+  text-align: right;
 }
 
 dd {
-    padding-left: 1em;
-    margin-top: 0.4em;
+  padding-left: 1em;
+  margin-top: 0.4em;
 }
 
 /* LINKS */
 
 a {
-    color: var(--primary);
-    text-decoration: none;
-    background: linear-gradient(to top, var(--accent), var(--accent) 30%, rgba(255,255,255,0) 30%);
-    padding: 0 0.1em;
-    transition: background 0.2s;
+  color: var(--primary);
+  text-decoration: none;
+  background: linear-gradient(
+    to top,
+    var(--accent),
+    var(--accent) 30%,
+    rgba(255, 255, 255, 0) 30%
+  );
+  padding: 0 0.1em;
+  transition: background 0.2s;
 }
 
 a:hover {
-    background-color: var(--accent);
+  background-color: var(--accent);
 }
 
 #zola-continue-reading a {
-    padding: 0
+  padding: 0;
 }
 
 /* BODY STUFF */
 
-p > code, li > code {
-    font-size: 1.1em;
-    padding: 0.1em 0.3em;
-    background-color: var(--dim);
-    border-radius: 0.3em;
+p > code,
+li > code {
+  font-size: 1.1em;
+  padding: 0.1em 0.3em;
+  background-color: var(--dim);
+  border-radius: 0.3em;
 }
 
 pre {
-    padding: 0.2em 0.5em;
-    border-radius: 0.5em;
-    overflow-x: auto;
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
+  overflow-x: auto;
 }
 
 article > p > img:only-child {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
-blockquote, aside {
-    border-left: 2px solid var(--accent);
-    margin-left: 0.5em;
-    padding-left: 0.75em;
+blockquote,
+aside {
+  border-left: 2px solid var(--accent);
+  margin-left: 0.5em;
+  padding-left: 0.75em;
 }
 
 .youtube-embed {
-    padding: 0;
-    margin: 2em 0;
+  padding: 0;
+  margin: 2em 0;
 }
 
 .youtube-embed > div {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .youtube-embed > div > iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 /* TABLES */
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 thead {
-    border-bottom: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
 }
 
 tbody > tr {
-    border-bottom: 1px solid var(--deemphasized);
+  border-bottom: 1px solid var(--deemphasized);
 }
 
-th, td {
-    padding: 0.5em 0.25em;
+th,
+td {
+  padding: 0.5em 0.25em;
 }
 
 /* HEADER */
 
 header {
-    display: flex;
-    margin-top: 2.5em;
-    margin-bottom: 2.5em;
+  display: flex;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
 }
 
 header > p {
-    margin: 0;
+  margin: 0;
 }
 
 nav > ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav > ul > li {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
 nav > ul > li > a {
-    background-image: none;
+  background-image: none;
 }
 
 #site-title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* SIGNUP FORM */
 
 .convertkit {
-    margin-top: 3em;
-    padding: 1em;
-    background-color: var(--verydim);
+  margin-top: 3em;
+  padding: 1em;
+  background-color: var(--verydim);
 }
 
 .convertkit > p:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .convertkit > p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .convertkit > form {
-    display: flex;
-    margin: 1em auto;
-    max-width: 30em;
+  display: flex;
+  margin: 1em auto;
+  max-width: 30em;
 }
 
-.convertkit > form > input[type=email] {
-    flex-grow: 1;
-    font-size: 1em;
-    padding: 0.5em;
-    margin-right: 0.5em;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    border-bottom: 1px solid var(--deemphasized);
+.convertkit > form > input[type="email"] {
+  flex-grow: 1;
+  font-size: 1em;
+  padding: 0.5em;
+  margin-right: 0.5em;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--deemphasized);
 }
 
-.convertkit > form > input[type=email]::placeholder {
-    color: var(--primary);
+.convertkit > form > input[type="email"]::placeholder {
+  color: var(--primary);
 }
 
 .convertkit > form > button {
-    min-width: 10em;
-    border: 0;
-    border-bottom: 1px solid var(--accent);
-    background: var(--accent);
-    color: var(--primary);
-    font-size: 1em;
+  min-width: 10em;
+  border: 0;
+  border-bottom: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--primary);
+  font-size: 1em;
 }
 
-@media(max-width: 30em) {
-    .convertkit > form { flex-direction: column; }
-    .convertkit > form > input[type=email] { margin-right: 0; margin-bottom: 0.5em; }
-    .convertkit > form > button { width: 100%; padding: 0.5em; }
+@media (max-width: 30em) {
+  .convertkit > form {
+    flex-direction: column;
+  }
+  .convertkit > form > input[type="email"] {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+  .convertkit > form > button {
+    width: 100%;
+    padding: 0.5em;
+  }
 }
 
 /* FOOTER */
 
 hr {
-    height: 0.2em;
-    border: 0;
-    background-color: var(--accent);
+  height: 0.2em;
+  border: 0;
+  background-color: var(--accent);
 }
 
 footer {
-    margin-top: 5em;
+  margin-top: 5em;
 }
 
 /* FOOTNOTES */
 
 .footnote-definition {
-    padding-left: 1em;
-    font-size: 0.8em;
-    display: flex;
-    align-items: baseline;
+  padding-left: 1em;
+  font-size: 0.8em;
+  display: flex;
+  align-items: baseline;
 }
 
 .footnote-definition > sup {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 
 /* HOMEPAGE */
 
 @media screen and (width > 800px) {
-    #home-grid {
-        display: grid;
+  #home-grid {
+    display: grid;
 
-        grid-template-areas: "greeting now" "post now" "post now" "post micro";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content auto auto auto;
-        border-bottom: 1px dashed var(--accent);
-    }
+    grid-template-areas: "greeting now" "post now" "post now" "post micro";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content auto auto auto;
+    border-bottom: 1px dashed var(--accent);
+  }
 
-    #home-grid .greeting {
-        grid-area: greeting;
-        border-bottom: 1px dashed var(--accent);
-        border-right: 1px dashed var(--accent);
-        padding: 0 1em 1em 0;
-    }
+  #home-grid .greeting {
+    grid-area: greeting;
+    border-bottom: 1px dashed var(--accent);
+    border-right: 1px dashed var(--accent);
+    padding: 0 1em 1em 0;
+  }
 
-    #home-grid .now {
-        grid-area: now;
-        border-bottom: 1px dashed var(--accent);
-        padding: 0 0 1em 1em;
-    }
+  #home-grid .now {
+    grid-area: now;
+    border-bottom: 1px dashed var(--accent);
+    padding: 0 0 1em 1em;
+  }
 
-    #home-grid .post {
-        grid-area: post;
-        border-right: 1px dashed var(--accent);
-        padding: 1em 1em 1em 0;
-    }
+  #home-grid .post {
+    grid-area: post;
+    border-right: 1px dashed var(--accent);
+    padding: 1em 1em 1em 0;
+  }
 
-    #home-grid .micro {
-        grid-area: micro;
-        padding: 1em 0 1em 1em;
-    }
+  #home-grid .micro {
+    grid-area: micro;
+    padding: 1em 0 1em 1em;
+  }
 }
 
 @media screen and (width <= 800px) {
-    #home-grid > * {
-        padding: 1em 0;
-        border-bottom: 1px dashed var(--accent);
-    }
+  #home-grid > * {
+    padding: 1em 0;
+    border-bottom: 1px dashed var(--accent);
+  }
 }
 
 .text-button {
-    display: inline-block;
-    border: 1px solid var(--accent);
-    border-radius: 0.5em;
-    background: none;
-    padding: 0.25em 0.5em;
-    margin-top: 1em;
-    font-size: 0.8em;
+  display: inline-block;
+  border: 1px solid var(--accent);
+  border-radius: 0.5em;
+  background: none;
+  padding: 0.25em 0.5em;
+  margin-top: 1em;
+  font-size: 0.8em;
 }

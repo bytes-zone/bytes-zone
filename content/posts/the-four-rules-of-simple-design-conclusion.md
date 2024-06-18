@@ -25,7 +25,7 @@ Of course, it's not the only way by a long shot! One of my [colleagues at NoRedI
 That could certainly work too! It's up to you how you apply these, if you want to apply them at all.
 
 There's also some tension between the rules. For example, in [Rule 3: Centralize Behavior](@/posts/rule-3-centralize-behavior.md) I talked a lot about making a `Point2d` class.
-But… is that structure really *necessary*?
+But… is that structure really _necessary_?
 Couldn't it violate [Rule 4: Code for Now](@/posts/rule-4-code-for-now.md)?
 How do you decide which to apply?
 In the end, you've either got to choose randomly or find a tiebreaker: for example, you could use [Sandi Metz' Rules For Developers](https://thoughtbot.com/blog/sandi-metz-rules-for-developers), which emphasize very small classes.
