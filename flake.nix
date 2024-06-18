@@ -272,6 +272,6 @@
         overlay = final: prev: { bytes-zone = packages.bytes-zone; };
 
         # `nix develop`
-        devShell = pkgs.mkShell { buildInputs = with pkgs; [ zola pngcrush typos ]; };
+        devShell = pkgs.mkShell { buildInputs = with pkgs; [ zola pngcrush typos nodePackages.prettier ]; };
       });
 }
