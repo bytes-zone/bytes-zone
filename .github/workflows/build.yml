@@ -25,12 +25,10 @@ jobs:
           generate_summary_for: "workflow"
 
       - name: check for typos
-        uses: crate-ci/typos@v1.22.7
+        run: nix shell . --command typos
 
       - name: check formatting
-        uses: actionsx/prettier@v2
-        with:
-          args: --check .
+        run: nix shell . --command prettier --check .
 
       - name: build and load container
         run: |
