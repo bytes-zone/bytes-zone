@@ -37,7 +37,12 @@
             done
           '';
 
-          buildInputs = [ pkgs.zola pkgs.nodePackages.html-minifier pkgs.typos pkgs.nodePackages.prettier ];
+          buildInputs = [
+            pkgs.zola
+            pkgs.nodePackages.html-minifier
+            pkgs.typos
+            pkgs.nodePackages.prettier
+          ];
           buildPhase = ''
             zola build
 
@@ -280,6 +285,13 @@
         overlay = final: prev: { bytes-zone = packages.bytes-zone; };
 
         # `nix develop`
-        devShell = pkgs.mkShell { buildInputs = with pkgs; [ zola pngcrush typos nodePackages.prettier ]; };
+        devShell = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            zola
+            pngcrush
+            typos
+            nodePackages.prettier
+          ];
+        };
       });
 }
