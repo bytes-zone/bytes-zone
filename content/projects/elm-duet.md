@@ -5,7 +5,7 @@ date = 2024-04-01
 updated = 2024-05-07
 
 [extra]
-when = "now"
+when = "past"
 +++
 
 While building tinyping, I had a lot of trouble syncing complex types between Elm and TypeScript, so I started building elm-duet.
