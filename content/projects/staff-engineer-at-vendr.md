@@ -2,10 +2,10 @@
 title = "engineering design systems at Vendr"
 description = "making user experience more consistent"
 date = 2023-10-23
-updated = 2024-05-06
+updated = 2024-08-30
 
 [extra]
-when = "now"
+when = "past"
 +++
 
 In late October 2023, I started working at [Vendr](https://vendr.com) as a staff design systems engineer.
