@@ -4,7 +4,7 @@ description = "figure out how you're spending your life"
 date = 2024-05-13
 
 [extra]
-when = "now"
+when = "past"
 +++
 
 Tinyping is a tool to help people (myself included) to make sure they're using their time in accordance with their values.
