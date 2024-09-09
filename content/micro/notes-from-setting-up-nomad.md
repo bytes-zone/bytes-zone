@@ -7,11 +7,11 @@ A couple people have asked me for my impressions of [Nomad](https://nomadproject
 
 The "stack" here is Vault, Consul, and Nomad. Here's a snippet of what they do:
 
-<!-- more -->
-
 - Vault: secrets management. As well as basic key/value stuff, it can provision things like database credentials on demand.
 - Consul: service discovery and configuration store.
 - Nomad: container scheduling. Basically, give it declarative manifests of apps to run and it'll figure out placements. Pretty advanced in terms of scheduling; it can do blue/green by default, plus any constraints you'd like (e.g. keeping services from being all on the same node/rack, or running one instance of a service on every node.) Not just containers either; it can do raw exec, Java, firecracker VMs, etc.
+
+<!-- more -->
 
 I tried to get as much as possible configured declaratively (either with Nix or Terraform) and I think I've mostly succeeded, although secrets management needs a little bit of cleanup (maybe with agenix?)
 
