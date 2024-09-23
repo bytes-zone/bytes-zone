@@ -4,7 +4,7 @@ description = "a better definition for platform engineering"
 date = 2024-09-23
 +++
 
-In [[what is platform engineering?]], I gave this definition:
+In [what is platform engineering?](@/posts/what-is-platform-engineering.md), I gave this definition:
 
 > Platform engineering, as a discipline, takes a coherent approach to improving an engineering organization's output in ways that the rest of the business can see and understand.
 
