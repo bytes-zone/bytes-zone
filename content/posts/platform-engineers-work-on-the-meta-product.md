@@ -10,6 +10,8 @@ In [[what is platform engineering?]], I gave this definition:
 
 I've had some thoughts and discussions since then, though, and I think that definition needs revising. Specifically, I tried to be very clear in the last post that I didn't think platform engineering could/should be gatekept. Problem is, that previous definition has some scoping issues—mostly around vagueness—that could work against that goal.
 
+<!-- more -->
+
 For one thing, it gives a bad-faith interpretation some gotchas: you could be doing the work of platform engineering, but have someone argue that your approach is not "coherent" or that the business cannot see and understand your work. I gave examples in the last post, but that feels like a bad substitute for the definition itself being clearer.
 
 For another, the language here is too broad: there are differences between SRE, devops, and platform engineering, but this definition does not give you the tools to distinguish between them. To be fair, I think this is minor; this definition gives enough information to get started, or to explain what you're doing to someone outside your immediate work. But I also think definitions should allow for clear distinctions, and this one doesn't.
