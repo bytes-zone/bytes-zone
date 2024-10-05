@@ -22,3 +22,5 @@ So I'm going to try that. A successful solution should:
 Ideally, this should all happen in a stable way (e.g. reliably setting the next ping with PCR instead of using system randomness) but it's fine if it doesn't.
 
 Just to prove I could do it quickly, I spent a little time (maybe two, three hours?) making a barebones version in Rust that just does the core part of the collection loop, nothing more. It lives at https://github.com/bytes-zone/beeps. You can download the binaries and try it, if you like (it always tries to invoke `say`, so the Windows and Linux binaries are a slight lie; get in touch if it matters to you.)
+
+[^1]: having a project in mind to use for learning new tools is fine, but I've spent more time trying to figure out ways around the constraints of the tools I've chosen than I have actually building. It feels like an artificial hindrance that I could just opt out of, and that I might be better off just doing so.
