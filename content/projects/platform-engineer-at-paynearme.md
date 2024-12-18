@@ -2,7 +2,7 @@
 title = "platform engineer at PayNearMe"
 description = "removing friction, shipping faster"
 date = 2024-09-09
-updated = 2024-12-17
+updated = 2024-12-16
 
 [extra]
 when = "now"

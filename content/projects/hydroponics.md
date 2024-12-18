@@ -2,7 +2,7 @@
 title = "growing hydroponic lettuce"
 description = "delicious lettuce in the basement"
 date = 2023-10-01
-updated = 2024-12-17
+updated = 2024-12-15
 
 [extra]
 when = "now"
