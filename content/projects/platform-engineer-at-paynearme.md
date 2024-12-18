@@ -2,10 +2,10 @@
 title = "platform engineer at PayNearMe"
 description = "removing friction, shipping faster"
 date = 2024-09-09
+updated = 2024-12-17
 
 [extra]
 when = "now"
 +++
 
-In early September, I'll be starting at [PayNearMe](https://paynearme.com) as a platform engineer.
-There's a lot to do there, but the theme will be making it easier to scale both the engineering department and the product.
+In Septempber 2024, I started at [PayNearMe](https://paynearme.com) as a platform engineer. I wrote some early thoughts during the interview process in [what is platform engineering?](@/posts/what-is-platform-engineering.md) and refined them in [platform engineers work on the meta-product](@/posts/platform-engineers-work-on-the-meta-product.md).
