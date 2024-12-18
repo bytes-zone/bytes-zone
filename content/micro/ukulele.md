@@ -1,7 +1,9 @@
 +++
-title = "Ukelele seems nice"
+title = "Ukulele seems nice"
 description = "and now for something completely different"
 date = 2024-02-23
+
+aliases = ["/micro/ukelele"]
 +++
 
 I've wanted to pick up an instrument again for a while now. I considered the guitar, but:
