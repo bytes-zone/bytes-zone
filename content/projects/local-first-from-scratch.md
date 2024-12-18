@@ -2,6 +2,7 @@
 title = "Local-First From Scratch"
 description = "a book about building local-first software"
 date = 2024-11-29
+updated = 2024-12-17
 
 [extra]
 when = "now"
