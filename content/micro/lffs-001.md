@@ -8,6 +8,8 @@ project = "Local-First From Scratch"
 
 Since around Thanksgiving, I've been working on the draft of a book I'm tentatively calling "Local-First from Scratch." The idea is basically to write [tinyping](@/projects/tinyping.md), but do it in book form.
 
+<!-- more -->
+
 One thing I had to decide right away was whether this would use some off-the-shell local-first library or if I was going to explain and implement everything from first principles. I chose the latter, which I think will make for a more interesting read, and has a nice side benefit that it doesn't tie the book to the libraries and frameworks that are popular (or exist!) today. Hopefully that will mean that it stays pretty evergreen!
 
 This choice has also made me dive deeply into the theory behind CRDTs. I've found a lot of things that I just misunderstood on previous learning expeditions, just by following the little voice in my head that says "hey… is that right, actually?" I want to get things right so that I'm not misleading people, and that turns out to be a pretty powerful motivator for learning!
