@@ -27,4 +27,4 @@ Here's a basic outline:
 7. **Second Client:** Building a browser-based client using the same codebase and sync server, and extending the app model to support time reporting.
 8. **Sync Revisited:** Making the sync protocol way more efficient by only sending the parts of the data that have changed.
 9. **Conclusion:** What we've learned, what we could do next, and where to go from here.
-9. **Appendix, Sequence CRDTs:** Extending our CRDT building blocks to support sequences.
+10. **Appendix, Sequence CRDTs:** Extending our CRDT building blocks to support sequences.
