@@ -12,14 +12,14 @@ Let me explain.
 
 <!-- more -->
 
-When you have a state-based CRDT, you have a `merge` operation. The details don't *really* matter for this explanation, but basically if `merge` is commutative, idempotent, and associative, you can make use it for a CRDT and syncing state is as simple as:
+When you have a state-based CRDT, you have a `merge` operation. The details don't _really_ matter for this explanation, but basically if `merge` is commutative, idempotent, and associative, you can make use it for a CRDT and syncing state is as simple as:
 
 1. Exchanging states with a peer.
 2. Both sides call `merge` to get the final state.
 
 With a few more supporting details, that's easy to understand and explain! (Even easier because in the book the only peer is a sync server.)
 
-However this sync protocol gives up efficiency for that simplicity: you have to send all the data back and forth over the network. *Most* of the time, you're gonna be sending a bunch of duplicate data with a few changes, which means you're actually sending all the data *twice*.
+However this sync protocol gives up efficiency for that simplicity: you have to send all the data back and forth over the network. _Most_ of the time, you're gonna be sending a bunch of duplicate data with a few changes, which means you're actually sending all the data _twice_.
 
 You can improve efficiency by sending only the things that changed: if I've got a grow-only set, and I add `1` to it, I only send `1` to my peer. In fact, you can keep track of all the tiny pieces of data as separate instances of the CRDT, and only send the ones you care about. For example, the set `{1, 2, 3}` and the sets `{1}`, `{2}`, and `{3}` (when merged) represent the same data.
 
