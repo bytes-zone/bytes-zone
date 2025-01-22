@@ -20,7 +20,7 @@ This has a bunch of consequences. We like some of them:
 2. You are in control of your data and control who gets access to it.
 3. A company going through an "incredible journey" acquihire doesn't mean you lose access to your work.
 
-Of course, *implementing* these ideas is a little harder than just storing data in a local SQLite database. There's a cost paid in complexity and figuring out new ways of doing things. For example, we'd typically enable sharing by having a central server hold all the state. But we can't do that if the user is offline and can't reach the server![^local-first-business-case] So local-first also raises some questions we need to answer:
+Of course, _implementing_ these ideas is a little harder than just storing data in a local SQLite database. There's a cost paid in complexity and figuring out new ways of doing things. For example, we'd typically enable sharing by having a central server hold all the state. But we can't do that if the user is offline and can't reach the server![^local-first-business-case] So local-first also raises some questions we need to answer:
 
 1. You probably have more than one device (phone, computer, etc.) Which one is the "real" copy?
 2. If you want to share your work with someone else, how?
@@ -28,8 +28,7 @@ Of course, *implementing* these ideas is a little harder than just storing data 
 
 We want satisfying answers to these without giving up local control. The typical approach—and the one we'll implement in this book—is CRDTs.
 
-[^lf-manifesto]: If you want to learn more about local-first principles, Ink & Switch's essay [*Local-first software: You own your data, in spite of the cloud*](https://www.inkandswitch.com/local-first/) is a great place to keep going. You may hear folks refer to the "local-first manifesto"—this is the thing they're talking about.
-
+[^lf-manifesto]: If you want to learn more about local-first principles, Ink & Switch's essay [_Local-first software: You own your data, in spite of the cloud_](https://www.inkandswitch.com/local-first/) is a great place to keep going. You may hear folks refer to the "local-first manifesto"—this is the thing they're talking about.
 [^local-first-business-case]: This blows up a lot of SaaS business models that depend on a subscription to a central server. We're not going to address the business ramifications of local-first software in this book. If you're interested in that, as of early 2025 the Local-first Software Discord hosts frequent online meetups where people share their experiences.
 
 ---
