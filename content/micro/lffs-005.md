@@ -20,7 +20,7 @@ Anyway, let's do the analysis now that I've got a bit over a month of data.
 
 What you'll see below:
 
-- The "tag" is what I'm doing. This is a dot-separated hierarchy (e.g. `work.meeting.standup`.) For analysis, I split that into three tags (`work`, `work.meeting`, and `work.meeting.standup`) so I can see the proportions in differen categories.
+- The "tag" is what I'm doing. This is a dot-separated hierarchy (e.g. `work.meeting.standup`.) For analysis, I split that into three tags (`work`, `work.meeting`, and `work.meeting.standup`) so I can see the proportions in different categories.
 - The average daily time is the percentage representation of the tag in the data set times the number of minutes in the day. (E.g. if I had 100 pings, 30 of which were tagged `sleep`, I'd have `30 / 100 * 1440` to get 432 minutes, or 7h12m.)
 - The margin of error is a 95% confidence interval of the average daily time, rounded to the nearest minute.
 
