@@ -45,4 +45,4 @@ So, here are the top places I've been spending my time recently:
 
 There are a lot of improvements I could make here. For example, I've had a lot of time off recently due to holidays. If I applied that insight and re-analyzed `work` for only weekdays I worked, I'm sure I'd get more like 7.5 to 8 hours per day. Overall, though, I'm pretty happy with this level of insight!
 
-If you'd like to try this for yourself, [you can get the source or pre-build binaries on GitHub](https://github.com/bytes-zone/beeps).
+If you'd like to try this for yourself, [you can get the source or pre-built binaries on GitHub](https://github.com/bytes-zone/beeps).
