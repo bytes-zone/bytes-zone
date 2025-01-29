@@ -28,20 +28,20 @@ In this data, I've censored a few things—either because they felt too personal
 
 So, here are the top places I've been spending my time recently:
 
-| Tag | Average Daily Time ± Margin of Error |
-|-|-|
-| Unknown | 7h17m ± 43m |
-| `sleep` | 6h58 ± 43m |
-| `work` | 2h56m ± 31m |
-| `beeps` | 48m ± 17m |
-| `tv` | 28m ± 13m |
-| `lunch` | 25m ± 12m |
-| `work.meeting` | 24m ± 12m |
-| `breakfast` | 16m ± 10m |
-| `k8s` | 14m ± 9m |
-| `coffee` | 12m ± 9m |
-| `driving` | 9m ± 8m |
-| `dishes` | 8m ± 7m |
+| Tag            | Average Daily Time ± Margin of Error |
+| -------------- | ------------------------------------ |
+| Unknown        | 7h17m ± 43m                          |
+| `sleep`        | 6h58 ± 43m                           |
+| `work`         | 2h56m ± 31m                          |
+| `beeps`        | 48m ± 17m                            |
+| `tv`           | 28m ± 13m                            |
+| `lunch`        | 25m ± 12m                            |
+| `work.meeting` | 24m ± 12m                            |
+| `breakfast`    | 16m ± 10m                            |
+| `k8s`          | 14m ± 9m                             |
+| `coffee`       | 12m ± 9m                             |
+| `driving`      | 9m ± 8m                              |
+| `dishes`       | 8m ± 7m                              |
 
 There are a lot of improvements I could make here. For example, I've had a lot of time off recently due to holidays. If I applied that insight and re-analyzed `work` for only weekdays I worked, I'm sure I'd get more like 7.5 to 8 hours per day. Overall, though, I'm pretty happy with this level of insight!
 
