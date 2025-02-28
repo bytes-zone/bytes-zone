@@ -14,6 +14,8 @@ But then… I committed to giving a talk to a local meetup group about implement
 
 Well… no, not so much.
 
+<!-- more -->
+
 It turns out that the time tracker, while valuable, can be represented almost entirely with extremely simple CRDTs. I think a last-write-wins register based on a hybrid logical clock is the most complex thing you need. That's not exactly CRDTs 101… but, it is like CRDTs 102.
 
 This is not necessarily a bad thing, of course: it doesn't make the time tracker any less valuable _as software I use_, but it does mean that if you learn just enough to make it, then you have not learned enough to make something that acts like a normal CRUD app with records. Whoops! If I stop there, the book will not generalize to the problems that the reader actually might have to work through.
