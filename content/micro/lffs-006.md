@@ -6,7 +6,7 @@ date = 2025-01-27
 project = "Local-First From Scratch"
 +++
 
-So I thought I had a pretty good thing going: in my last post, I documented some [early results from the time-tracking software that I wrote for *Local-First From Scratch*](@/content/micro/lffs-005.md). I thought I was on track for an easy conversion to prose, then an easy beta-reading, then becoming a thousandaire and retiring to my ~~private island~~ couch to drink a budget mojito or whatever.
+So I thought I had a pretty good thing going: in my last post, I documented some [early results from the time-tracking software that I wrote for *Local-First From Scratch*](@/micro/lffs-005.md). I thought I was on track for an easy conversion to prose, then an easy beta-reading, then becoming a thousandaire and retiring to my ~~private island~~ couch to drink a budget mojito or whatever.
 
 But then… I committed to giving a talk to a local meetup group about implementing CRDTs in Rust.
 
