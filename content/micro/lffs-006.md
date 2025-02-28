@@ -1,6 +1,6 @@
 +++
 title = "a dilemma, or is it a conundrum? Maybe it's a dilendrum!"
-date = 2025-01-27
+date = 2025-02-27
 
 [extra]
 project = "Local-First From Scratch"
