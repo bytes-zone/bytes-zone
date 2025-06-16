@@ -52,4 +52,5 @@ If you don't clarify intent, you'll also miss out on great refactoring opportuni
 In summary, remember that code is read many more times than it's written. Keeping that in mind can go a long way to making things better for your coworkers (or just you, 6 months from now.) There are lot of ways to do this—way more than we can go over here—but you can get a long way by focusing on names, comments, and constructors.
 
 [^four-rules-are-about-communication]: In fact, I think the entirety of the four rules is secretly about communication: write tests to communicate, remove duplication to make sure you're not saying the same thing twice, remove any unnecessary distractions, and here where we're being pretty explicit about intention!
+
 [^process-data-inspiration]: Example inspired by Corey Haines' [_Understanding the Four Rules of Simple Design_](https://leanpub.com/4rulesofsimpledesign)

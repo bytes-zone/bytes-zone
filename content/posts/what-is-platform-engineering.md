@@ -32,5 +32,7 @@ There are a couple other interesting things that fall out of this definition too
 At any rate, I found this definition helpful and I hope you do too!
 
 [^jobnum]: Third-ish, anyway. Maybe fourth, as the eldest of those was a devops-ish role focused entirely on building a deployable PaaS on top of Apache Mesos. At any rate, at least two of the four jobs predate the term "platform engineering" as we know it now by a couple of years. The principles here have been relevant in all those positions, though!
+
 [^idp]: Integrated developer platform, basically an integrated portal to an organization's docs, best practices, deployment patterns, service catalog, etc.
+
 [^devops]: This hints at the fact that platform engineers, devops, and SREs have very closely related responsibilities. I'd say the defining difference is what work each would consider "the inner loop." DevOps and SREs I've worked with have been primarily concerned with safely delivering and running software while platform engineers I've worked with tend to focus more on developer productivity and "shift left" work. This has not been globally true, though.

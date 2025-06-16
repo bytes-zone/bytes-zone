@@ -96,6 +96,9 @@ I think it's worth considering a couple of scenarios in the parts of your softwa
 This is also a very US-centric view, plus it doesn't consider latency from distance between your data center and your user's device. Still, though, I think this shows that this problem is real and we should take it into account when designing software.
 
 [^satellite]: Despite these drawbacks, satellite has high availability because you just need to have access to power instead of laying cable or building towers. It's still the best option for a lot of the rural US.
+
 [^my-history]: I grew up in a semi-rural area (mountains) and this was the only real option. As a kid, I really hated it! The latency was too bad to play games with my friends online, and I also regularly hit our household's download cap and got us all throttled to basically-dialup for the rest of the month.
+
 [^mobile]: I'm not going to embed a screenshot, but mobile coverage looks pretty much the same if you set the same bandwidth requirements. According to the FCC, that's [5G-NR](https://en.wikipedia.org/wiki/5G_NR) at 35/3Mbps. 4G has far better coverage in rural areas, but only gets 5/1Mbps.
+
 [^speed-stat-third-party]: The ones published by various speed testing companies vary so wildly that I don't think they're worth paying attention to, even for broad decision-making.
