@@ -1,5 +1,5 @@
 +++
-title = "Should we design for bad internet?"
+title = "Should we design for iffy internet?"
 description = "Around 97% of US households have internet access, but bandwidth and latency are likely worse than you expect."
 date = 2025-06-16
 +++
