@@ -92,5 +92,7 @@ I want to make some improvements already, though:
 So that's where I'm at on hydroponics! I'm really excited to improve on this, but I'm already pretty happy with where things are right now.
 
 [^1]: If you don't think hydroponics are cool, that's fine. But if the other stuff in this list resonates with you, consider looking up local farmers markets or produce co-ops, which address some of these problems in similar ways.
+
 [^2]: Ok, so there's actually a bunch more here. Plants need the right temperature, humidity, protection from insects or animals, a place to put down roots, etc. But you need to solve for these four to even get started.
+
 [^3]: I call it the "weed tax", although I can't recall if I read that or came up with it.

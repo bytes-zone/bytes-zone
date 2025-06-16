@@ -29,6 +29,7 @@ Of course, _implementing_ these ideas is a little harder than just storing data 
 We want satisfying answers to these without giving up local control. The typical approach—and the one we'll implement in this book—is CRDTs.
 
 [^lf-manifesto]: If you want to learn more about local-first principles, Ink & Switch's essay [_Local-first software: You own your data, in spite of the cloud_](https://www.inkandswitch.com/local-first/) is a great place to keep going. You may hear folks refer to the "local-first manifesto"—this is the thing they're talking about.
+
 [^local-first-business-case]: This blows up a lot of SaaS business models that depend on a subscription to a central server. We're not going to address the business ramifications of local-first software in this book. If you're interested in that, as of early 2025 the Local-first Software Discord hosts frequent online meetups where people share their experiences.
 
 ---

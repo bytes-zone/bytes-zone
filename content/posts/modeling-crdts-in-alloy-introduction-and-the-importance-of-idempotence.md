@@ -200,9 +200,15 @@ That's it for today. Next time we'll go from booleans-of-dubious-usefulness to c
 Big thanks to [Jake Lazaroff](https://jakelazaroff.com/) for his help reviewing this post. If you're interested in this stuff, he also recently published [an interactive intro to CRDTs](https://jakelazaroff.com/words/an-interactive-intro-to-crdts/) that you may enjoy!
 
 [^1]: This is generally true but it's not always true when syncing. There's a further distinction here between operation- and state-based CRDTs. I'm not going to get into it right now, but if I understand correctly, this distinction is about reducing the data you have to transfer by relaxing one of the three requirements while adding strict causal message ordering. For now, we're going to model state-based CRDTs, where this won't come up.
+
 [^2]: I think argument position doesn't matter for idempotency, since commutativity and associativity should mean we can rearrange the arguments however we like, but I don't have a proof of this.
+
 [^3]: Alloy has a boolean type I could just import, but it's useful to define exactly the operations you want to understand the system better, so I've done that instead.
+
 [^4]: Note that I'm not saying "Alloy _proved_ that this is correct." That's intentional! Alloy doesn't do proofs; it only exhaustively checks models up to a certain bound (four instances of each `sig` by default.) I have only had a handful of times where I've had to increase the bound, though. In practice, I've been more than happy to trade exhaustiveness for speed.
+
 [^5]: Exclusive OR. In other words, "both of these can't be `True`." [Wikipedia has more details, as usual](https://en.wikipedia.org/wiki/Exclusive_or).
+
 [^6]: I'm skipping over a lot of detail here. If this is your first time seeing this, there are more details and explanation on the setup here at [modeling Git internals in Alloy](@/posts/modeling-git-internals-in-alloy-part-1-blobs-and-trees.md).
+
 [^7]: I'm _pretty sure_ this is the right way to check this, but I had some trouble working it out and [had to ask on the Alloy forum](https://alloytools.discourse.group/t/how-to-assert-an-operation-is-idempotent/405). If you try to do something similar and run into difficult, you might try asking there too!
