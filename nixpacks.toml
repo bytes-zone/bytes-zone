@@ -16,6 +16,3 @@ cmds = [
     'find public -type f -name "*.png" -exec pngcrush -rem alla -reduce -m 7 {} \;',
     'find public -type f -name "*.jpg" -exec jpegoptim --max=90 --strip-all --all-progressive --overwrite {} \;',
 ]
-
-[start]
-cmd = 'bash'
