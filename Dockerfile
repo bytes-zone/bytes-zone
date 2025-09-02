@@ -47,7 +47,7 @@ COPY static/images/*/*.jpeg /app/public/images/
 RUN find /app/public -type f -not -name '*.jpeg' -delete
 RUN find /app/public -type f -name "*.jpeg" -exec jpegoptim --max=90 --strip-all --all-progressive --overwrite {} \;
 
-FROM alpine:latest
+FROM scratch
 COPY --from=html /app/public /public/
 COPY --from=css /app/public /public/
 COPY --from=png /app/public /public/
