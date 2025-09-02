@@ -19,7 +19,7 @@ jobs:
       - uses: cachix/cachix-action@v16
         with:
           name: bytes-zone
-      - uses: nixbuild/nixbuild-action@v20
+      - uses: nixbuild/nixbuild-action@v22
         with:
           nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
           generate_summary_for: "workflow"
