@@ -3,9 +3,6 @@ title = "Colophon"
 template = "post.html"
 +++
 
-This is the most self-indulgent page on this whole website.
-Don't say I didn't warn you!
-
 ## Source and Licensing
 
 The source of this site is available for inspection at [git.bytes.zone/bytes.zone/bytes.zone](https://git.bytes.zone/bytes.zone/bytes.zone).
