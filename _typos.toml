@@ -4,6 +4,7 @@ iterm = "iterm" # as in "iterm2.com"
 OT = "OT"
 PN = "PN" # as in PNCounter
 Welp = "Welp"
+WHOOSHIN = "WHOOSHIN"
 
 [files]
 extend-exclude = [
