@@ -22,7 +22,7 @@ sig Tool {}
 
 We can ask Alloy to generate examples for this small model. They won't be super useful at this point—we haven't modeled any interactions between `Member` and `Tool`—but they let us get a sense of what Alloy can provide us. For example, here's an instance with two members and two tools:
 
-![two members and two tools, not conntected in any way](/images/two-members-two-tools.png)
+![two members and two tools, not connected in any way](/images/two-members-two-tools.png)
 
 We can ask Alloy for any number of instances, and we'll be looking at these frequently to find the kinds of edge cases we're interested in.
 

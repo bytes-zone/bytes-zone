@@ -39,7 +39,7 @@ Then why am I continuing? Because I think there are two ways to avoid being a sc
 1. improve at the game despite your restricted rules
 2. don't complain if you lose
 
-My hedge against the first is that I'm working on transferrable skills while building tinyping. For example, [elm-duet](@/projects/elm-duet.md) is useful for projects outside this one. I'm also thinking hard about how to design a tricky interaction, which I hope leads to some wisdom about how to solve cart-before-the-horse product design problems in general.
+My hedge against the first is that I'm working on transferable skills while building tinyping. For example, [elm-duet](@/projects/elm-duet.md) is useful for projects outside this one. I'm also thinking hard about how to design a tricky interaction, which I hope leads to some wisdom about how to solve cart-before-the-horse product design problems in general.
 
 Against the second, I suppose I've just got to have a good attitude, or not worry too much if tinyping doesn't take off as a product. (Although that's not far off from "commit less" which could also sink it!)
 
