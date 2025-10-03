@@ -1,10 +1,10 @@
 [default.extend-words]
 Hashi = "Hashi" # as in HashiCorp
-iterm = "iterm" # as in "iterm2.com"
+MAKIN = "MAKIN"
 OT = "OT"
 PN = "PN" # as in PNCounter
 Welp = "Welp"
-WHOOSHIN = "WHOOSHIN"
+iterm = "iterm" # as in "iterm2.com"
 
 [files]
 extend-exclude = [
