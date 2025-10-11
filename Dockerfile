@@ -7,12 +7,12 @@ COPY config.toml /app/config.toml
 WORKDIR /app
 RUN ["zola", "build"]
 
-FROM oven/bun:1.2.23 AS bun
+FROM oven/bun:1.3.0 AS bun
 COPY package.json bun.lock /app/
 WORKDIR /app
 RUN bun install
 
-FROM oven/bun:1.2.23 AS html
+FROM oven/bun:1.3.0 AS html
 COPY --from=bun /app/node_modules /app/node_modules
 COPY --from=zola /app/public /app/public
 WORKDIR /app
@@ -29,7 +29,7 @@ RUN node_modules/.bin/html-minifier \
     --input-dir public \
     --output-dir public
 
-FROM oven/bun:1.2.23 AS css
+FROM oven/bun:1.3.0 AS css
 COPY --from=bun /app/node_modules /app/node_modules
 COPY static/style.css /app/public/style.css
 WORKDIR /app
