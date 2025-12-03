@@ -35,13 +35,13 @@ COPY static/style.css /app/public/style.css
 WORKDIR /app
 RUN ./node_modules/.bin/cleancss -O 1 -o public/style.css public/style.css
 
-FROM alpine:3.22.2 AS png
+FROM alpine:3.23.0 AS png
 RUN apk add --no-cache pngcrush
 COPY static /app/public
 RUN find /app/public -type f -not -name '*.png' -delete
 RUN find /app/public -type f -name "*.png" -exec pngcrush -rem alla -reduce -m 7 {} \;
 
-FROM alpine:3.22.2 AS jpeg
+FROM alpine:3.23.0 AS jpeg
 RUN apk add --no-cache jpegoptim
 COPY static/images/*/*.jpeg /app/public/images/
 RUN find /app/public -type f -not -name '*.jpeg' -delete
