@@ -3,6 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "format": "prettier --check ."
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "clean-css-cli": "5.6.3",
