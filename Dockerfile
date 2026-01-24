@@ -53,3 +53,8 @@ COPY --from=css /app/public /public/
 COPY --from=png /app/public /public/
 COPY --from=jpeg /app/public /public/
 CMD ["caddy", "file-server", "--root", "/public"]
+
+LABEL org.opencontainers.image.vendor=bytes.zone
+LABEL org.opencontainers.image.title=bytes.zone
+LABEL org.opencontainers.image.description="bytes.zone static site"
+LABEL org.opencontainers.image.source=https://github.com/bytes-zone/bytes-zone
