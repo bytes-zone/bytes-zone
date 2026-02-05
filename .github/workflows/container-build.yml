@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  build:
+  container-build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
