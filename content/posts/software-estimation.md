@@ -11,9 +11,9 @@ You've been asked to give an estimate about when you're gonna be able to ship so
 
 But software estimates are notoriously inaccurate, to the degree that people frequently double or halve them depending on what they think of the team. Think about that for a sec: a change of **50% in either direction based solely on personal factors.** Absolutely wild.
 
-Part of that is that software engineers have a weird aversion to figuring out how to do better here. As a result, a lot of people never get better than off-the-cuff "I can knock that out in a week" style estimates, and develop a reputation for being inaccurate. These skills are worth learning, though, if only because giving useful estimates means that you have the time you need to do the rest of your job correctly! You can also build credibility as someone who understands how to navigate complex systems, and end up with more of a say in the processes you're a part of.
-
 <!-- more -->
+
+Part of that is that software engineers have a weird aversion to figuring out how to do better here. As a result, a lot of people never get better than off-the-cuff "I can knock that out in a week" style estimates, and develop a reputation for being inaccurate. These skills are worth learning, though, if only because giving useful estimates means that you have the time you need to do the rest of your job correctly! You can also build credibility as someone who understands how to navigate complex systems, and end up with more of a say in the processes you're a part of.
 
 I'm going to share a process that I've personally used to prepare and update estimates for all sorts of software projects. It's based based off the advice in [_Software Estimation: Demystifying the Black Art_](https://www.microsoftpressstore.com/store/software-estimation-demystifying-the-black-art-9780735690851) by Steve McConnell. I'm not following this book to the letter, but the process ends up being enough to communicate with to some degree of accuracy. That's fine, since that's typically what you're really after. However, it's possible that I've fatally compromised some important statistical property. If you read this and you notice, I'd appreciate a heads-up!
 
