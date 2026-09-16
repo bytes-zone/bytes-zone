@@ -1,5 +1,5 @@
 [tools]
-zola = "0.22.1"
+zola = "0.23.6"
 bun = "1.4.2"
 
 [tasks."deps:js"]
