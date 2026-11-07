@@ -1,0 +1,16 @@
+when:
+  event: [push, manual]
+
+steps:
+  - name: lint
+    image: jdxcode/mise:debian
+    pull: true
+    environment:
+      MISE_TASK_OUTPUT: prefix
+      MISE_DATA_DIR: /root/mise/data
+      MISE_CACHE_DIR: /root/mise/cache
+      MISE_STATE_DIR: /root/mise/state
+    commands:
+      - mise run lint
+    volumes:
+      - bytes-zone-mise:/root/mise

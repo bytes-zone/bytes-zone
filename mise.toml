@@ -1,11 +1,43 @@
 [tools]
-zola = "0.22.1"
+"aqua:woodpecker-ci/woodpecker/woodpecker-cli" = "3.20.1"
+"github:oxipng/oxipng" = "10.2.1"
+"npm:clean-css-cli" = "5.6.3"
+"npm:html-minifier" = "5.0.1"
+"npm:prettier" = "3.9.10"
 bun = "1.4.4"
+node = "26.13.0"
+typos = "1.52.0"
+zola = "0.22.1"
 
-[tasks."deps:js"]
-sources = ["package.json", "bun.lock"]
-run = "bun install"
+[tasks.lint]
+depends = ["typos", "prettier"]
 
-[tasks.format]
-depends = ["deps:js"]
-run = "bun run format"
+[tasks.typos]
+run = "typos"
+
+[tasks.prettier]
+run = "prettier --check ."
+
+[tasks.fix]
+depends = ["fix:prettier"]
+
+[tasks."fix:prettier"]
+run = "prettier -w ."
+
+[tasks.build]
+run = ["rm -rf public", "zola build"]
+
+[tasks."build:html-minifier"]
+depends = ["build"]
+run = "html-minifier --preset comprehensive --verbose --file-ext html --input-dir public --output-dir public"
+
+[tasks."build:cleancss"]
+depends = ["build"]
+run = "cleancss -O 1 -o public/style.css public/style.css"
+
+[tasks."build:oxipng"]
+depends = ["build"]
+run = "oxipng --opt 2 --recursive public"
+
+[tasks."build:release"]
+depends = ["build:html-minifier", "build:cleancss", "build:oxipng"]
