@@ -20,7 +20,7 @@ steps:
     settings:
       repo: ghcr.io/bytes-zone/bytes-zone
       tag:
-        - latest
+        - main
         - ${CI_COMMIT_SHA}
       dockerfile: Dockerfile
 
@@ -29,5 +29,5 @@ steps:
         from_secret: ghcr_username
       password:
         from_secret: ghcr_password
-    # when:
-    #   - branch: main
+    when:
+      - branch: main
