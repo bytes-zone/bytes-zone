@@ -4,7 +4,9 @@
 
 {% block content %}
 <h1>{{ section.title }}</h1>
-{% for year, pages in section.pages | group_by(attribute="year") %}
+{% set grouped = section.pages | group_by(attribute="year") %}
+{% for year in grouped | keys | sort | reverse %}
+{% set pages = grouped[year] %}
 <div>
   <h2>{{ year }}</h2>
   <p>

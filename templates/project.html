@@ -25,11 +25,14 @@
   {% set posts = get_section(path="posts/_index.md") -%}
   {% set talks = get_section(path="talks/_index.md") -%}
   {% set micros = get_section(path="micro/_index.md") -%}
-  {% set updates = posts.pages | concat(with=talks.pages) | concat(with=micros.pages) | filter(attribute="extra.project", value=page.title) -%}
+  {% set all_updates = [...posts.pages, ...talks.pages, ...micros.pages] -%}
+  {% set updates = [u for u in all_updates if u.extra?.project == page.title] -%}
   {%- if updates %}
   <h2>Updates</h2>
   <dl>
-  {% for year, by_year in updates | group_by(attribute="year") %}
+  {% set grouped = updates | group_by(attribute="year") %}
+  {% for year in grouped | keys | sort | reverse %}
+  {% set by_year = grouped[year] %}
   <dt>{{ year }}</dt>
   {% for update in by_year %}
   <dd>

@@ -15,7 +15,9 @@
 
 <h2>Past Projects</h2>
 
-{% for year, pages in projects["past"] | group_by(attribute="year") %}
+{% set past = projects["past"] | group_by(attribute="year") %}
+{% for year in past | keys | sort | reverse %}
+{% set pages = past[year] %}
 <dl>
   <dt>{{ year }}</dt>
   {% for page in pages %}
