@@ -6,4 +6,4 @@ date = 2017-06-16
 event = "Oslo Elm Day"
 +++
 
-{{ youtube(id="NKl0dtSe8rs", title="The State of Elm 2017 (Extended Edition)") }}
+{{<youtube id="NKl0dtSe8rs" title="The State of Elm 2017 (Extended Edition)" />}}

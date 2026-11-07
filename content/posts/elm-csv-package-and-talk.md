@@ -14,4 +14,4 @@ I gave talk to the Elm London user group about it, which you can see at [elm-csv
 
 If you'd just like to see the code, it lives at [github.com/BrianHicks/elm-csv](https://github.com/BrianHicks/elm-csv).
 
-{{ youtube(id="_z6V1143TDE", title="elm-csv: be as boring—and as fast—as possible") }}
+{{<youtube id="_z6V1143TDE" title="elm-csv: be as boring—and as fast—as possible" />}}
