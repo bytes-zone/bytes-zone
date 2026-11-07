@@ -10,13 +10,18 @@ typos = "1.52.0"
 zola = "0.22.1"
 
 [tasks.lint]
-depends = ["typos", "prettier"]
+depends = ["typos", "prettier", "woodpecker-lint"]
 
 [tasks.typos]
 run = "typos"
 
 [tasks.prettier]
 run = "prettier --check ."
+
+[tasks.woodpecker-lint]
+sources = [".woodpecker/*.yaml"]
+env = {WOODPECKER_PLUGINS_PRIVILEGED = "woodpeckerci/plugin-docker-buildx"}
+run ="woodpecker-cli lint .woodpecker/*.yaml"
 
 [tasks.fix]
 depends = ["fix:prettier"]
