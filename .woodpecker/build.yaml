@@ -1,0 +1,33 @@
+when:
+  event: [push, manual]
+
+steps:
+  - name: build
+    image: jdxcode/mise:debian
+    pull: true
+    environment:
+      MISE_TASK_OUTPUT: prefix
+      MISE_DATA_DIR: /root/mise/data
+      MISE_CACHE_DIR: /root/mise/cache
+      MISE_STATE_DIR: /root/mise/state
+    commands:
+      - mise run build:release
+    volumes:
+      - bytes-zone-mise:/root/mise
+
+  - name: push container
+    image: woodpeckerci/plugin-docker-buildx@sha256:22008d33ac0973296438cb62dba877ca5d6fab455d2576662fee026022b5f971
+    settings:
+      repo: ghcr.io/bytes-zone/bytes-zone
+      tag:
+        - latest
+        - ${CI_COMMIT_SHA}
+      dockerfile: Dockerfile
+
+      registry: ghcr.io
+      username:
+        from_secret: ghcr_username
+      password:
+        from_secret: ghcr_password
+    # when:
+    #   - branch: main
