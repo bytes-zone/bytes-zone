@@ -5,7 +5,7 @@
 "npm:html-minifier" = "5.0.1"
 "npm:prettier" = "3.9.10"
 bun = "1.4.4"
-node = "26.13.0"
+node = "26.13.1"
 typos = "1.52.2"
 zola = "0.23.6"
 
