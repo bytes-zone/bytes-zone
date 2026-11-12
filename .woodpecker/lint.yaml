@@ -3,7 +3,7 @@ when:
 
 steps:
   - name: lint
-    image: jdxcode/mise:debian@sha256:19c31905419154f917a96da6036a0cbed5c3553b88933ef87a3e25a5dc0a18c2
+    image: jdxcode/mise:debian@sha256:0e4c7634244a6e09b99bf2b5aa2934d29837c400a6af53dd6fb3690b92b1d31f
     pull: true
     environment:
       MISE_TASK_OUTPUT: prefix
