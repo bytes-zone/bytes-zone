@@ -2,7 +2,7 @@
 "aqua:woodpecker-ci/woodpecker/woodpecker-cli" = "3.20.1"
 "github:oxipng/oxipng" = "10.2.1"
 "npm:clean-css-cli" = "5.6.3"
-"npm:html-minifier" = "5.0.3"
+"npm:html-minifier" = "5.0.4"
 "npm:prettier" = "3.9.10"
 bun = "1.4.4"
 node = "26.13.1"
