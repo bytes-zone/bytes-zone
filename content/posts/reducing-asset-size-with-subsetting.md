@@ -158,7 +158,7 @@ for (let face of styles.fontFamily.split(", ")) {
   let info = {
     face: face,
     weight: styles.fontWeight,
-    style: styles.fontStyle
+    style: styles.fontStyle,
   };
   let key = JSON.stringify(info);
 
@@ -167,7 +167,7 @@ for (let face of styles.fontFamily.split(", ")) {
   } else {
     out[key] = {
       font: info,
-      chars: uniqChars(node.textContent)
+      chars: uniqChars(node.textContent),
     };
   }
 }
