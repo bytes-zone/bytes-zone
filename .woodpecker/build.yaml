@@ -3,7 +3,7 @@ when:
 
 steps:
   - name: build
-    image: jdxcode/mise:debian@sha256:05f1da9a5dc6697b36220cf1d3a3cd0e7f462456983eb56d6c1870088d0afa3e
+    image: jdxcode/mise:debian@sha256:e2efdfd1243dfa8f24831208ab4d91ef811d0640f8ead9e25aa604307961a019
     pull: true
     environment:
       MISE_TASK_OUTPUT: prefix
