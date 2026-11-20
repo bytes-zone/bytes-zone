@@ -4,7 +4,7 @@
 "npm:clean-css-cli" = "5.6.3"
 "npm:html-minifier" = "5.2.0"
 "npm:prettier" = "3.10.1"
-bun = "1.4.4"
+bun = "1.4.5"
 node = "26.13.1"
 typos = "1.52.2"
 zola = "0.23.6"
