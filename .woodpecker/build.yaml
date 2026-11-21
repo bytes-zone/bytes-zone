@@ -16,7 +16,7 @@ steps:
       - bytes-zone-mise:/root/mise
 
   - name: push container
-    image: woodpeckerci/plugin-docker-buildx@sha256:8fe4611bce67b130e5c6167b524ce0bb29001e41e3a2066f6212f9b6797f3ee0
+    image: woodpeckerci/plugin-docker-buildx@sha256:968d23281a2a8b0aae73576906d81b10246644f83599d4149f6376c7e58d746f
     settings:
       repo: ghcr.io/bytes-zone/bytes-zone
       tag:
